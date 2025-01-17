@@ -1,0 +1,80 @@
+<div class="flexi pt80 mt100 m_mt50 m_mb100 mhv100">
+    <div class="cc w90 z10" style="opacity: 0.2; height: 50%; background: linear-gradient(to right, var(--main), var(--purple), var(--green)); filter: blur(300px);"></div>
+    <div class="fs40 m_fs30 lh60 md_lh40 z20" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Contact Us!</div>
+    <div class="lh30 fs20 m_fs18 mt30 g_nm mb50" style="max-width: 700px; letter-spacing: 0.9px; color: var(--secondary-grey);">If you're already part of the "--" Cloud family, access our Technical Support Team efficiently via your account Control Panel for speedy assistance.</div>
+    <grid class="z10">
+        <div class="w30 vt l pr40">
+            <div class="fs18 m_fs16 mb40 m_mb20 b500" style="color: var(--secondary-grey);">We are available 24/24 around the clock to provide the needed technical support for your company</div>
+            <grid_nm class="pv10">
+                <div style="width: 50px;">
+                    <span class="iconify fs36 m_fs30 vm mr20" style="color: var(--green);" data-icon="clarity:email-solid"></span>
+                </div>
+                <div style="width: calc(100% - 60px);">
+                    <span class="vm fs18 m_fs16" style="color: var(--secondary-grey);">email@gmail.com</span>
+                </div>
+            </grid_nm>
+            <grid_nm class="pv10">
+                <span class="iconify fs36 m_fs30 vm mr20" style="color: var(--main);" data-icon="ion:call"></span>
+                <div class="vm">
+                    <div class="fs18 m_fs16" style="color: var(--secondary-grey);">+96171299411</div>
+                    <div class="fs18 m_fs16" style="color: var(--secondary-grey);">+96171299411</div>
+                </div>
+            </grid_nm>
+            <grid_nm class="pv10">
+                <div style="width: 50px;">
+                    <span  class="iconify fs36 m_fs30 vm mr10" style="color: var(--purple);" data-icon="ion:location-sharp"></span>
+                </div>
+                <div class="vm fs18 m_fs16" style="width: calc(100% - 60px); color: var(--secondary-grey);">Tripoli,1300 Al Nour Square, Libano-francaise Bldg, 5th Floor</div>
+            </grid_nm>
+        </div>
+        <div class="w70">
+            <div class="ov z10" style="background: linear-gradient(to right, var(--purple), var(--green)); filter: blur(20px); opacity: 0.5;"></div>
+            <grid_nm class="round4x p20 z20" style="margin-left: -10px; margin-right: -10px; background-color: var(--primary-grey); border: 1px solid var(--border);">
+                <div class="w50 p10">
+                    <div style="border-bottom:1px solid var(--secondary-grey)">
+                        <input type="text" class="contact-input w100 lh40" name="fname" placeholder="First Name" style="background:transparent; border:none; color:white">
+                    </div>
+                </div>
+                <div class="w50 p10">
+                    <div style="border-bottom:1px solid var(--secondary-grey)">
+                        <input type="text" class="contact-input w100 lh40" name="lname" placeholder="Last Name" style="background:transparent; border:none; color:white">
+                
+                    </div>
+                </div>
+                <div class="w50 p10">
+                    <div style="border-bottom:1px solid var(--secondary-grey)">
+                        <input type="text" class="contact-input w100 lh40" name="email" placeholder="Email" style="background:transparent; border:none; color:white">
+                    </div>
+                </div>
+                <div class="w50 p10">
+                    <div style="border-bottom:1px solid var(--secondary-grey)">
+                        <input type="text" class="contact-input w100 lh40" name="phone" placeholder="Phone" style="background:transparent; border:none; color:white">
+                
+                    </div>
+                </div>
+                <div class="p10 w100">
+                    <div style="border-bottom:1px solid var(--secondary-grey)">
+                        <textarea name="message" rows="6" class="contact-textarea w100" placeholder="Message.." style="resize: none;border:none;color:white;background: transparent;"></textarea>
+                    </div>
+                </div>
+                <div class="p10 mt20">
+                    <div class="submit-btn opacity ez pointer ph4" style="backdrop-filter: saturate(100%) blur(40px); border-image-source: linear-gradient(90deg, var(--green) 0%, var(--purple) 52.6%, var(--main) 100%) !important; border-bottom: 1px solid; border-image-slice: 1;">
+                        <span class="vm mr8 fs16">Submit</span>
+                        <span class="iconify vm ez" data-icon="line-md:arrow-right"></span>
+                        <style>
+                            .submit-btn:hover .iconify{
+                                transform: translateX(3px);
+                            }
+                            .contact-textarea::placeholder{
+                                color: var(--secondary-grey);
+                            }
+                        </style>
+                    </div>
+                </div>
+            </grid_nm>
+        </div>
+    </grid>
+</div>
+<script>
+    st(0);
+</script>

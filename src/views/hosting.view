@@ -1,0 +1,253 @@
+<style>
+    .top_con{
+        padding-bottom: 170px !important;
+    }
+</style>
+<div class="top_con pt150 m_m_pt120" style="padding-bottom: 200px; background-color: var(--primary-grey); color: var(--second);">
+    <div class="flexi">
+        <div class="fs50 m_fs30 m_m_fs22 m_m_lh30 b g_nm mb20" style="max-width: 700px; font-family: 'Bitter', serif; letter-spacing: 1px;">Hosting Haven: Elevate Your Online Presence</div>
+        <div class="fs22 m_fs20 m_m_fs18 m_m_lh25 g_nm" style="max-width: 800px; color: var(--secondary-grey);">Elevate your online presence with our robust hosting service. Enjoy fast, reliable, and secure hosting tailored to meet the demands of your website, backed by our dedicated support team</div>
+        <div>
+            <div @click="st($('#plans').offset().top - 95);" class="sbtn dark mt30 fs16 m_m_fs14">Get Started</div>
+            <div class="fs16 b600 mt20" style="color: var(--green);">30-Day Money-Back Guarantee</div>
+        </div>
+    </div>
+    <div class="custom-shape-divider-bottom-1707131950">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+        </svg>
+        <style>
+            .custom-shape-divider-bottom-1707131950 {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                overflow: hidden;
+                line-height: 0;
+                transform: rotate(180deg);
+            }
+
+            .custom-shape-divider-bottom-1707131950 svg {
+                position: relative;
+                display: block;
+                width: calc(100% + 1.3px);
+                height: 150px;
+            }
+
+            .custom-shape-divider-bottom-1707131950 .shape-fill {
+                fill: var(--primary);
+            }
+        </style>
+    </div>
+</div>
+<div style="margin-top: -150px;">
+    <div class="flexi">
+        <div class="round4x" style="border: 0.4rem solid var(--secondary-grey); box-shadow: 0 0 1rem 0 var(--secondary-grey);">
+            <grid_nm class="pv5 ph10 m_ph0" style="background:var(--secondary-grey);">
+                <div class="w20 l vm">
+                    <grid_nm>
+                        <div class="ph2">
+                            <div style="width:10px;height:10px;border-radius:50px;background:#f0cd4e"></div>
+                        </div>
+                        <div class="ph2">
+                            <div style="width:10px;height:10px;border-radius:50px;background:rgb(197,82,164)"></div>
+                        </div>
+                        <div class="ph2">
+                            <div style="width:10px;height:10px;border-radius:50px;background:rgb(91,160,224)"></div>
+                        </div>
+                    </grid_nm>
+                </div>
+                <div class="w60 vm m_fs10">
+                    <div class="round2x pv5 b" style="background: var(--primary-grey);">
+                        www.hosting.com/dashboard
+                    </div>
+                </div>
+                <div class="w20 r vm" style="color:white">
+                    <span class="iconify ph2 vm fs24 m_fs14" data-icon="fe:minus"></span>
+                    <span class="iconify ph2 vm fs24 m_fs14" data-icon="ph:square-light"></span>
+                    <span class="iconify ph2 vm fs30 m_fs16" data-icon="carbon:close"></span>
+                </div>
+            </grid_nm>
+            <div class="cov sq50" style="background-image: url('../images/blog_page.png');"></div>
+        </div>
+    </div>
+</div>
+<div id="plans" bind="nodes" class="mt100 m_m_mt70 flexi">
+    <div view="hosting_plans" :data="{{nodes[1]}} as hostingPlan"></div>
+    <div class="opacity pointer ez fs18 m_m_fs16 mt30">
+        <div class="b500" style="color: var(--green);">Compare Plans</div>
+        <div @click="st($('#compare-plans').offset().top - 95);">
+            <span class="iconify inf" style="color: var(--green);" data-icon="line-md:chevron-down"></span>
+        </div>
+    </div>
+</div>
+<div class="flexi mt100 m_m_mt50">
+    <div wrapper>
+        <div class="grab round4x" dgsc style="scrollbar-color: transparent transparent">
+            <grid_nm gap20 m_gap10>
+                <div class="w33 m_w40 m_m_w90 vt wr">
+                    <span class="iconify fs60 m_fs44" style="color: var(--green);" data-icon="mdi:account-multiple-check-outline"></span>
+                    <div class="fs22 m_fs18 b600 mb20">Reliability</div>
+                    <div class="fs18 m_fs16" style="color: var(--secondary-grey);">With a resilient infrastructure and advanced technology, we assure a steadfast online presence for your website. Our redundant systems, constant monitoring, and secure data centers ensure unparalleled uptime, providing a dependable hosting environment</div>
+                </div>
+                <div class="w33 m_w40 m_m_w90 vt wr">
+                    <span class="iconify fs60 m_fs44" style="color: var(--green);" data-icon="fluent:person-support-28-regular"></span>
+                    <div class="fs22 m_fs18 b600 mb20">Technical Support</div>
+                    <div class="fs18 m_fs16" style="color: var(--secondary-grey);">Our commitment to exceptional technical support sets us apart. Our dedicated team of experts is available around the clock to assist you with any queries or technical challenges you may encounter, ensuring a smooth and hassle-free hosting experience</div>
+                </div>
+                <div class="w33 m_w40 m_m_w90 vt wr">
+                    <span class="iconify fs60 m_fs44" style="color: var(--green);" data-icon="ep:platform"></span>
+                    <div class="fs22 m_fs18 b600 mb20">Platform Flexibility</div>
+                    <div class="fs18 m_fs16" style="color: var(--secondary-grey);">The inherent flexibility of our platform empowers you to tailor your online experience. Whether it's custom configurations, scalability, or adaptability to diverse needs, we provide a versatile hosting environment that evolves with your digital ambitions</div>
+                </div>
+            </grid_nm>
+        </div>
+    </div>
+</div>
+<div class="flexi mt100 m_m_mt70">
+    <div class="mb100 m_mb50">
+        <div class="fs40 m_fs26 m_m_fs22 g_nm" style="max-width: 600px; font-family: 'Bitter', serif; letter-spacing: 1px;">Scalable and high performant infrastructure</div>
+        <div class="cc sq10 z10" style="width: 300px; background-color: var(--green); filter: blur(90px);"></div>
+    </div>
+    <div wrapper>
+        <div class="grab round4x" dgsc style="scrollbar-color: transparent transparent">
+            <grid_nm gap20 m_gap10>
+                <div class="w33 m_w40 m_m_w90 vt wr">
+                    <div class="p40 fs18 m_m_fs16 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                        Embrace <span class="b600" style="color: var(--green);">seamless TB Network Connectivity</span> and ensure uninterrupted operations during peak traffic times</div>
+                    </div>
+                <div class="w33 m_w40 m_m_w90 vt wr">
+                    <div class="p40 fs18 m_m_fs16 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                        Experience a digital revolution with our <span class="b600" style="color: var(--green);">ultra-low latency network</span>, ensuring seamless connections and lightning-fast data transfer speeds</div>
+                    </div>
+                <div class="w33 m_w40 m_m_w90 vt wr">
+                    <div class="p40 fs18 m_m_fs16 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                        Maximize performance with <span class="b600" style="color: var(--green);">NVMe storage</span>, revolutionizing data processing with lightning-fast speeds and unparalleled efficiency</div>
+                    </div>
+                <div class="w33 m_w40 m_m_w90 vt wr">
+                    <div class="p40 fs18 m_m_fs16 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                        Enhance your website's performance with <span class="b600" style="color: var(--green);">multi-caching</span> using Varnish, Redis, and Memcached, optimizing speed and efficiency for seamless user experiences</div>
+                    </div>
+                <div class="w33 m_w40 m_m_w90 vt wr">
+                    <div class="p40 fs18 m_m_fs16 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                        Optimize your network's efficiency with <span class="b600" style="color: var(--green);">internal load balancing</span> ensuring smooth and efficient distribution of traffic across servers for enhanced performance and reliability</div>
+                    </div>
+                <div class="w33 m_w40 m_m_w90 vt wr">
+                    <div class="p40 fs18 m_m_fs16 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                        Expand your reach and ensure resilience with <span class="b600" style="color: var(--green);">multi-data centers</span>, strategically distributed to enhance redundancy, scalability, and reliability for seamless operations</div>
+                    </div>
+            </grid_nm>
+        </div>
+    </div>
+    <div @click="st($('#plans').offset().top - 95);" class="sbtn green mt30 m_m_mt10 fs16 m_m_fs14">Get Started</div>
+</div>
+<div class="mt100 m_m_mt70 w90 cov sh50 _cw" style="border-top-right-radius: 10rem; border-bottom-right-radius: 10rem; background-image: url('../images/migrate (2).jpg');">
+    <div class="ov bgb80" style="border-radius: inherit;"></div>
+    <div class="flexi pv100">
+        <grid gap10 class="l">
+            <div class="w40 vt ">
+                <div class="fs50 m_fs26 m_m_fs22 b mb20 m_m_mb0 vt">Seamlessly Transition to "--" Cloud</div>
+            </div>
+            <div class="w60">
+                <div class="fs30 m_fs18 mb30">Effortlessly move numerous websites for free using our Automatic Website Migration tool. Relax as our dedicated migration team ensures a seamless transfer, keeping your website online throughout the entire process. Whether small or medium, we've got your migration covered without any disruptions.</div>
+                <div class="sbtn b600 fs16 m_fs14" style="border: 1px solid #fcfcfc;">Request Now!</div>
+            </div>
+        </grid>
+    </div>
+</div>
+<div class="flexi mt150 m_m_mt70">
+    <div class="mb100 m_mb50">
+        <div class="fs40 m_fs26 m_m_fs22 g_nm" style="max-width: 600px; font-family: 'Bitter', serif; letter-spacing: 1px;">Security</div>
+        <div class="cc sq10 z10" style="width: 250px; background-color: var(--green); filter: blur(90px);"></div>
+    </div>
+    <div wrapper>
+        <div class="grab round4x" dgsc style="scrollbar-color: transparent transparent">
+            <grid_nm gap20 m_gap10>
+                <div class="w33 m_w40 m_m_w90 vt wr">
+                    <div class="p40 fs18 m_m_fs16 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                        Safeguard your visitors' sensitive data with our <span class="b600" style="color: var(--green);">SSL certificate</span>, providing peace of mind as they interact securely with your website, whether it's logging in or making purchases
+                    </div>
+                </div>
+                <div class="w33 m_w40 m_m_w90 vt wr">
+                    <div class="p40 fs18 m_m_fs16 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                        Secure your web applications (WordPress, Joomla, PrestaShop, etc.) from hacker attacks by enabling <span class="b600" style="color: var(--green);">ModSecurity</span>
+                </div>
+                </div>
+                <div class="w33 m_w40 m_m_w90 vt wr">
+                    <div class="p40 fs18 m_m_fs16 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                        Stay protected against digital threats with our advanced <span class="b600" style="color: var(--green);">antivirus detection</span>, ensuring a secure and worry-free online experience for you and your visitors
+                    </div>
+                </div>
+                <div class="w33 m_w40 m_m_w90 vt wr">
+                    <div class="p40 fs18 m_m_fs16 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                        Fortify your digital fortress with our robust <span class="b600" style="color: var(--green);">DDoS attack protection</span>, shielding your online presence from malicious threats and ensuring uninterrupted accessibility for your users
+                    </div>
+                </div>
+                <div class="w33 m_w40 m_m_w90 vt wr">
+                    <div class="p40 fs18 m_m_fs16 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                        Elevate your digital defenses with our comprehensive <span class="b600" style="color: var(--green);">DNS security</span> solutions, safeguarding your online assets from unauthorized access and ensuring uninterrupted connectivity for your users
+                    </div>
+                </div>
+                <div class="w33 m_w40 m_m_w90 vt wr">
+                    <div class="p40 fs18 m_m_fs16 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                        Shield your inbox from unwanted intrusions with our comprehensive mail protection suite, featuring <span class="b600" style="color: var(--green);">anti-spam measures, blacklist checks, and SPF protection</span>, ensuring a secure and streamlined communication experience
+                    </div>
+                </div>
+            </grid_nm>
+        </div>
+    </div>
+    <div @click="st($('#plans').offset().top - 95);" class="sbtn green fs16 m_m_fs14 mt30 m_m_mt10">Get Started</div>
+</div>
+<div class="flexi mt100" bind>
+    <div class="fs40 m_fs26 m_m_fs22 m_m_lh30 mb40 m_m_mb20" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Discover the voices that echo our success</div>
+    <div class="fs22 m_m_fs18 m_m_lh25 g_nm mb50" style="max-width: 700px; color: var(--secondary-grey);">Delve into our testimonials and hear the stories of those who've experienced excellence firsthand</div>
+    <div wrapper>
+        <div class="grab round4x" dgsc style="scrollbar-color: transparent transparent">
+            <grid_nm gap20 m_gap10>
+                <div :for="3" class="w33 m_w40 m_m_w90 wr">
+                    <div class="round2x p20" style="background-color: var(--second); color: var(--primary);">
+                        <span :for="5" class="iconify fs20 mb10" style="color: var(--green);" data-icon="solar:star-bold"></span>
+                        <div class="sq20 w40 h100 con" style="margin: 0 auto; filter: brightness(1) invert(0); color: var(--primary); opacity: 0.8; background-image: url('/images/magma.png');"></div>
+                        <div class="testimonial b900 fs22 m_m_fs18 mt10">Good Support</div>
+                        <div class="mt10 mb10 fs16 m_m_fs14" style="color: var(--primary-grey);">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga dolor ex maiores inventore fugiat asperiores assumenda accusantium libero labore? Explicabo, sapiente quo harum nemo ea enim veritatis cumque suscipit minus.</div>
+                    </div>
+                </div>
+            </grid_nm>
+        </div>
+    </div>    
+</div>
+<div class="mt100 m_m_mt70 r">
+    <div class="w90 cov g_nm c" style="color: var(--second); border-top-left-radius: 10rem; border-bottom-left-radius: 10rem; background-color: var(--primary-grey);">
+        <!-- <div class="ov" style="border-radius: inherit; background-color: var(--primary); opacity: 0.1;"></div> -->
+        <div class="flexi p100 m_pv100 m_ph60">
+            <grid gap10 class="l">
+                <div class="w50 vt">
+                    <div class="fs40 m_fs26 m_m_fs22 b mb20 vt">Entreprise partenrship with Cloudflare</div>
+                    <div class="con cloudflare_logo" style="width: 150px; height: 150px; background-image: url('/images/cloudflare-svgrepo-com.svg');"></div>
+                    <style>
+                        @media screen and (max-width: 768px){
+                            .cloudflare_logo{
+                                width: 60px !important;
+                                height: 60px !important;
+                            }
+                        }
+                    </style>
+                </div>
+                <div class="w50">
+                    <div class="fs28 m_fs18 mb30">Cloudflare is a leading web performance and security company that provides a range of services to optimize and protect websites and online applications. Trusted by millions of websites worldwide.</div>
+                </div>
+            </grid>
+        </div>
+    </div>
+</div>
+<div id="compare-plans" class="flexi mt100 m_m_mt70" bind="nodes">
+    <div :if="nodes[1] === 'pro'" view="services_plans" :data="pro as servicePlan"></div>
+    <div :if="nodes[1] === 'cloud'" view="services_plans" :data="cloud as servicePlan"></div>
+</div>
+<div class="flexi mt100 m_m_mt50">
+    <div class="fs50 m_fs26 m_m_fs22 m_m_lh30 b600 mb50 m_m_mb20" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Frequently Asked Questions</div>
+    <div view="faqs"></div>
+</div>
+<script>
+    st(0);
+</script>

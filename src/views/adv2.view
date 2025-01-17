@@ -1,0 +1,46 @@
+<div class="fs50 m_fs40 m_m_fs22 m_m_lh30" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Keen on discovering more?</div>
+<div class="fs22 m_m_fs18 m_m_lh25 mt20 mb50 m_m_mb20 g_nm" style="max-width: 600px; color: var(--secondary-grey);">To gain a clearer understanding of "--" Cloud, we invite you to explore our company pages.</div>
+<grid gap10>
+    <div class="w33 vt">
+        <div class="round4x" style="background-color: var(--second); color: var(--primary); border: 1px solid var(--border);">
+            <div class="p20 l fs18 m_m_fs16">
+                <div class="b600">Stay ahead of the curve with the latest web hosting trends by exploring our insightful blog.</div>
+                <a href="/blog">
+                    <div class="b500 u pointer mt10">
+                        <span>Explore More!</span>
+                        <span class="iconify vm" data-icon="line-md:arrow-right"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="cov w90 sq m_sq50" style="border-top-right-radius: 1rem; background-image: url('/images/blog_page.png');"></div>
+        </div>
+    </div>
+    <div class="w33 vt">
+        <div class="round4x" style="background-color: var(--second); color: var(--primary); border: 1px solid var(--border);">
+            <div class="p20 l fs18 m_m_fs16">
+                <div class="b600">Unlock a wealth of information and solutions by exploring our Knowledge Base page.</div>
+                <a href="help_center">
+                    <div class="b500 u pointer mt10">
+                        <span>Explore More!</span>
+                        <span class="iconify vm" data-icon="line-md:arrow-right"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="cov w90 sq m_sq50" style="margin: auto; border-top-left-radius: 1rem; border-top-right-radius: 1rem; background-image: url('/images/help_center.png');"></div>
+        </div>
+    </div>
+    <div class="w33 vt">
+        <div class="round4x" style="background-color: var(--second); color: var(--primary); border: 1px solid var(--border);">
+            <div class="p20 l fs18 m_m_fs16">
+                <div class="b600">Dive into our "About Us" page to gain a comprehensive insight into our mission.</div>
+                <a href="/about">
+                    <div class="b500 u pointer mt10">
+                        <span>Explore More!</span>
+                        <span class="iconify vm" data-icon="line-md:arrow-right"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="cov w90 sq m_sq50" style="margin-left: auto; border-top-left-radius: 1rem; background-image: url('/images/blog_page.png');"></div>
+        </div>
+    </div>
+</grid>

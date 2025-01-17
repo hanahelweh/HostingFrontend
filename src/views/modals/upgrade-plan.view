@@ -1,0 +1,35 @@
+<div bind="nodes,plans,currentPlan" class="p20" style="">
+    <grid gap20 m_gap10>
+        <div :for="plans" class="c w33">
+            <div class="round4x ez" style="border: 1px solid var(--border);">
+                <div :if="currentPlan == objectId" class="p10 b600 cap" style="border-radius: 1rem 1rem 0 0;">current plan</div>
+                <div :else class="_bgw p10 b600 cap _cw _bgmain" style="border-radius: 1rem 1rem 0 0;">upgrade to</div>
+                <div class="p30" style="background-color: var(--primary-grey); border-top-left-radius: inherit; border-top-right-radius: inherit;">
+                    <div class="fs20 b600 mb10">{{Name}}</div>
+                    <div class="fs28 b600">${{Price}}</div><div class="_cdg n400 fs14 ml5 mb10">/month</div>
+                    <div class="pointer b600 lg mt10 sbtn ez _bgb sh-main _cw" modal="modals/checkout" modal-class="gen-modal plans" modal-title="{{Name}} plan" @modal-open="ModalOpen" data-id="{{ objectId }}">Get Plan</div>
+                    <!-- <div class="pointer b600 fs14 mt10 sbtn ez _bgb sh-main _cw" modal="modals/checkout" modal-class="gen-modal" modal-title="{{Name}} plan" @modal-open="el.data('id');" data-id="{{ objectId }}">Get Plan</div> -->
+                </div>
+                <div class="p30">
+                    <div class="fs16 b600 l mb10">Core features</div>
+                    <grid_nm :for="5" class="l pv4">
+                        <div class="vm roundc pa ra">
+                            <span class="iconify fs20 m_m_fs18" data-icon="bx:check"></span>
+                        </div>
+                        <div class="vm pl30">lorem ipsum db</div>
+                    </grid_nm>
+                </div>
+            </div>
+        </div>
+    </grid>
+</div>
+<script>
+    var plans = nodes[2] ? globals.plans[nodes[2]] : globals.plans[serv];
+    var currentPlan;
+    globals.User.Privileges[nodes[2]].forEach(priv => {
+        cl("priv",priv)
+        if(priv.Subscription.objectId == nodes[3]){
+            currentPlan=priv.Subscription._Plan.results[0].objectId;
+        }
+    });
+</script>

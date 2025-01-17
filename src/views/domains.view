@@ -1,0 +1,384 @@
+<style>
+    .domains-list:nth-of-type(odd){
+        background-color: #fcfcfc;
+    }
+    .domains-list:nth-of-type(even){
+        background-color: rgb(241, 241, 241);
+    }
+    .spec.active{
+        border-bottom: 2px solid var(--purple);
+    }
+    .onSale::after{
+        content: '';
+        background-color: var(--purple);
+        height: 2px;
+        bottom: 3px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+    .dropdown-con:hover .dropdown{
+        display: block;
+    }
+    @media screen and (max-width: 486px){
+        .catgegories{
+            width: 200px !important;
+            height: 200px !important;
+        }
+        .dropdown.cat{
+            transform: translateX(-70%);
+        }
+    }
+</style>
+<div class="flexi pt80" bind>
+    <div class="pt80 m_m_pt50" style="background-image: radial-gradient(circle at 20% 20%, var(--purple) -500px, transparent 12%), radial-gradient(circle at 60% 40%, var(--main) -500px, transparent 12%), radial-gradient(circle at 80% 70%, var(--purple) -500px, transparent 12%);">
+        <div class="fs50 m_fs30 m_m_fs22 m_m_lh30 b g_nm mb40 b" style="max-width: 700px; font-family: 'Bitter', serif; letter-spacing: 1px;"><span class="vm">Find your </span><span class="vm" style="background: linear-gradient(45deg, var(--purple) 50%, var(--main)); -webkit-background-clip: text; color: transparent;">perfect domain</span><span class="vm"> and secure it before it's gone</span></div>
+        <label>
+            <div class="round4x ph100 m_ph20 m_m_ph0">
+                <div class="input-domains-con round4x">
+                    <input type="email" name="" value="" style="background-color: var(--second);" class="input-domains b0 w100 ph20 m_m_ph10 lh60 m_m_lh40 round4x fs20 m_m_fs14 pr140 m_m_pr80" placeholder="Enter Domain Name.." :required value="" />
+                    <div @click="$('.domains-results').toggleClass('h')" class="pa t0 r0 b0 fs20 m_m_fs14 b500 pv15 m_m_pv10 ph30 m_m_ph10 pointer opacity ez _cw" style="background: linear-gradient(45deg, var(--purple) 30%, var(--main)); border-top-right-radius: 1rem; border-bottom-right-radius: 1rem;">Search</div>
+                </div>
+            </div>
+            <div class="error red fs16">
+                <span class="iconify vm ml5" data-icon="mdi:information-outline"></span><span class="vm">
+                    Kindly Enter a domain name..
+                </span>
+            </div>
+            <style>
+            .input-domains::placeholder{
+                color: #16191c !important;
+                font-size: 18px;
+                font-weight: 400;
+            }
+            body.light-theme .input-domains{
+                background-color: #f8fafc !important;
+                border: 1px solid #e2e3e3 !important;
+            }
+            @media screen and (max-width:486px) {
+                .input-email::placeholder{
+                    font-size: 14px;
+                }
+            }
+            .error{
+                display: none;
+            }
+            </style>
+        </label>
+        <div class="fs20 m_m_fs16 mt50 m_m_mt30 u opacity ez pointer" style="color: var(--secondary-grey);">Already Have A Domain? Transfer Now For Free!</div>
+    </div>
+    <div class="domains-results h">
+        <div class="mt50 round4x p30 l" style="background-color: #fcfcfc; color: var(--primary); border: 2px solid red;">
+            <grid_nm class="scrollaber">
+                <div class="fs40 m_m_fs30 m_m_mr10 vm"><span class="iconify" data-icon="streamline-emojis:sad-but-relieved-face"></span></div>
+                <div class="fs22 m_m_fs18 mb20 m_m_mb10 b600 vm ml15 m_m_ml0">Domain is not available</div>
+            </grid_nm>
+            <div class="fs20 m_m_fs16" style="color: var(--grey);">Consider refining your search or exploring one of the suggested alternatives below</div>
+        </div>
+        <div class="mt50 round4x p30 l" style="background-color: var(--second); color: var(--primary);">
+            <div class="fs22 m_fs18 mb20 m_mb10 b600 vm" style="color: var(--purple);">Domain is available</div>
+            <div class="oxa" style="scrollbar-color: transparent transparent;">
+                <div style="min-width: 600px;">
+                    <grid_nm class="round4x">
+                        <div class="w50">
+                            <grid_nm>
+                                <div class="w50 vm fs20 m_fs16 b600">Domain Name</div>
+                                <div class="w50 vm fs18 m_fs14 r"><span class="ph15 pv5" style="background-color: var(--purple); color: var(--second); border-radius: 2rem;">Save 50%</span></div>
+                            </grid_nm>
+                        </div>
+                        <div class="w50 vm r">
+                            <grid_nm>
+                                <div class="vm">
+                                    <div class="b500" style="color: var(--grey);">$old price</div>
+                                    <div class="b600 fs20 m_fs16">$new price/year</div>
+                                </div>
+                                <div class="round2x ph15 pv5 vm ml30 m_ml15 fs18 m_fs14 pointer opacity ez" style="background-color: var(--purple); color: var(--second);">Get Domain</div>
+                            </grid_nm>
+                        </div>
+                    </grid_nm>
+                </div>
+            </div>
+        </div>
+        <div class="mt50 round4x p40 m_p20 l" style="background-color: var(--second); color: var(--primary);">
+            <div class="fs30 m_m_fs20 b mb30 m_m_mb10 c">Suggestions</div>
+            <div class="oxa" style="scrollbar-color: transparent transparent;">
+                <div style="min-width: 600px;">
+                    <grid_nm class="domains-list round4x p20" :for="9">
+                        <div class="w50">
+                            <grid_nm>
+                                <div class="w50 vm fs20 m_fs16 m_m_fs14 b600">Domain Name</div>
+                                <div class="w50 vm fs18 m_fs14 m_m_fs12 r"><span class="ph15 pv5" style="background-color: var(--purple); color: var(--second); border-radius: 2rem;">Save 50%</span></div>
+                            </grid_nm>
+                        </div>
+                        <div class="w50 vm r">
+                            <grid_nm>
+                                <div class="vm">
+                                    <div class="b500" style="color: var(--grey);">$old price</div>
+                                    <div class="b600 fs20 m_fs16">$new price/year</div>
+                                </div>
+                                <div class="round2x ph15 pv5 vm ml30 m_ml15 fs18 m_fs14 pointer opacity ez" style="background-color: var(--purple); color: var(--second);">Get Domain</div>
+                            </grid_nm>
+                            
+                        </div>
+                    </grid_nm>
+                </div>
+            </div>
+            <div class="mt20 c">
+                <div class="fs18 m_fs14 ph20 pv10 round4x opacity ez g_nm pointer" style="background-color: var(--primary); color: var(--second);">Load More</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div bind class="mt100 m_m_mt50 p50 m_p20" style="background-color: var(--primary-grey);">
+    <div class="flexi">
+        <div class="fs40 m_fs26 m_m_fs22 m_m_lh30 b g_nm z20 mb50 m_m_mb30" style="max-width: 800px; font-family: 'Bitter', serif; letter-spacing: 1px;">Explore Popular Domains with Transparent Pricing</div>
+        <div wrapper>
+            <div class="grab round4x" dgsc style="scrollbar-color: transparent transparent">
+                <grid_nm gap20 m_gap10>
+                    <div class="w33 m_w60 m_m_w90 wr" :for="9">
+                        <div class="p5 round4x pointer scale-down ez _cb _bgw" style="">
+                            <div class="p20 l" style="background-color: rgb(247, 247, 247); border-top-left-radius: inherit; border-top-right-radius: inherit;">
+                                <div class="b500" style="color: var(--grey);">$old price</div>
+                                <div class="b fs20 m_fs18">$new price/year</div>
+                                <div class="fs28 md_fs22 m_fs18 b500 mt20 lh40 m_lh30 oh" style="height: 120px;">A top-level domain name alternative to .co or .com</div>
+                            </div>
+                            <div class="p20">
+                                <grid_nm>
+                                    <div class="vm w50 fs10">
+                                        <div style="background-position: -0.2em -41em; width: 10.455em; height: 2em; background-image: url('/images/tlds-sprite.svg');"></div>
+                                    </div>
+                                    <div class="vm w50 r fs18 pointer">
+                                        <span class="fs16 ph20 pv5 round4x opacity ez _bgb _cw"><span class="iconify cc" data-icon="tabler:plus"></span></span>
+                                    </div>
+                                </grid_nm>
+                            </div>
+                        </div>
+                    </div>
+                </grid_nm>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="flexi mt100 m_m_mt50">
+    <div class="fs40 m_fs26 m_m_fs22 b g_nm z20 mb70 m_mb30" style="max-width: 800px; font-family: 'Bitter', serif; letter-spacing: 1px;">Meet Our TLDS</div>
+    <grid_nm style="max-width: 600px; margin: 0 auto;">
+        <div class="w25 m_m_w50 m_m_pv5">
+            <span actv=".spec" class="spec ph10 fs18 m_fs14 pointer active">All</span>
+        </div>
+        <div class="w25 m_m_w50 m_m_pv5">
+            <span actv=".spec" class="spec ph10 fs18 m_fs14 pointer">Newest</span>
+        </div>
+        <div class="w25 m_m_w50 m_m_pv5">
+            <span actv=".spec" class="spec ph10 fs18 m_fs14 pointer">On Sale</span>
+        </div>
+        <div class="w25 m_m_w50 m_m_pv5 dropdown-con">
+            <div actv=".spec" class="spec ph10 fs18 m_fs14 pointer">By category</div>
+            <div class="dropdown cat h ch t100 l z100">
+                <div class="oya mt20 p20 round4x sh10 catgegories" style="width: 300px; background-color: var(--second); color: var(--primary); height: 300px;">
+                    <div>
+                        <label>
+                            <div class="vm g_nm">
+                                <input type="radio" checked style="accent-color: var(--primary); width: 20px; height: 20px;">
+                            </div>
+                            <span class="fs18 m_m_fs14 ml10 vm">All</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <div class="vm g_nm">
+                                <input type="radio" checked style="accent-color: var(--primary); width: 20px; height: 20px;">
+                            </div>
+                            <span class="fs18 m_m_fs14 ml10 vm">Business</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <div class="vm g_nm">
+                                <input type="radio" style="accent-color: var(--primary); width: 20px; height: 20px;">
+                            </div>
+                            <span class="fs18 m_m_fs14 ml10 vm">Commerce</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <div class="vm g_nm">
+                                <input type="radio" style="accent-color: var(--primary); width: 20px; height: 20px;">
+                            </div>
+                            <span class="fs18 m_m_fs14 ml10 vm">Education</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <div class="vm g_nm">
+                                <input type="radio" style="accent-color: var(--primary); width: 20px; height: 20px;">
+                            </div>
+                            <span class="fs18 m_m_fs14 ml10 vm">Food & Drink</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <div class="vm g_nm">
+                                <input type="radio" style="accent-color: var(--primary); width: 20px; height: 20px;">
+                            </div>
+                            <span class="fs18 m_m_fs14 ml10 vm">Health</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <div class="vm g_nm">
+                                <input type="radio" style="accent-color: var(--primary); width: 20px; height: 20px;">
+                            </div>
+                            <span class="fs18 m_m_fs14 ml10 vm">Government</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <div class="vm g_nm">
+                                <input type="radio" style="accent-color: var(--primary); width: 20px; height: 20px;">
+                            </div>
+                            <span class="fs18 m_m_fs14 ml10 vm">Industry</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <div class="vm g_nm">
+                                <input type="radio" style="accent-color: var(--primary); width: 20px; height: 20px;">
+                            </div>
+                            <span class="fs18 m_m_fs14 ml10 vm">Lifestyle</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <div class="vm g_nm">
+                                <input type="radio" style="accent-color: var(--primary); width: 20px; height: 20px;">
+                            </div>
+                            <span class="fs18 m_m_fs14 ml10 vm">Finance</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <div class="vm g_nm">
+                                <input type="radio" style="accent-color: var(--primary); width: 20px; height: 20px;">
+                            </div>
+                            <span class="fs18 m_m_fs14 ml10 vm">Professional</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <div class="vm g_nm">
+                                <input type="radio" style="accent-color: var(--primary); width: 20px; height: 20px;">
+                            </div>
+                            <span class="fs18 m_m_fs14 ml10 vm">Real Estate</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <div class="vm g_nm">
+                                <input type="radio" style="accent-color: var(--primary); width: 20px; height: 20px;">
+                            </div>
+                            <span class="fs18 m_m_fs14 ml10 vm">Sport</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <div class="vm g_nm">
+                                <input type="radio" style="accent-color: var(--primary); width: 20px; height: 20px;">
+                            </div>
+                            <span class="fs18 m_m_fs14 ml10 vm">Other</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </grid_nm>
+    <div bind class="mt50 m_mt30 round4x tlds-list _bgw _cb">
+        <div class="oxa" style="scrollbar-color: transparent transparent;">
+            <div style="min-width: 600px;">
+                <grid_nm class="p20 sh10 z10">
+                    <div class="w25 vm fs20 m_fs16 b600">TLD</div>
+                    <div class="w25 vm fs20 m_fs16 b600">Get</div>
+                    <div class="w25 vm fs20 m_fs16 b600">Transfer</div>
+                    <div class="w25 vm fs20 m_fs16 b600">Renew</div>
+                </grid_nm>
+                <div class="oya round4x" style="max-height: 565px;">
+                    <grid_nm :for="13" class="p20 domains-list round4x">
+                        <div class="w25 vm fs18 m_fs14">.com <span :if="!onSale" class="ml20 onSale b500" style="color: var(--purple);">Sale</span></div>
+                        <div class="w25 vm fs18 m_fs14">$8.99</div>
+                        <div class="w25 vm fs18 m_fs14">$8.99</div>
+                        <div class="w25 vm fs18 m_fs14">$8.99</div>
+                    </grid_nm>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        body.light-theme .tlds-list{
+            background-color: rgb(241, 241, 241) !important;
+        }
+    </style>
+</div>
+<div class="mt100 m_m_mt50 p50 flexi" style="border-bottom: 1px solid var(--border); border-top: 1px solid var(--border);">
+    <div class="fs30 m_fs26 m_m_fs22 m_m_lh30 mb20" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Unlock Your Free Domain Today with Our Hosting Plans!</div>
+    <div>
+        <div class="fs20 m_m_fs18 m_m_lh25 mb30 g_nm" style="max-width: 700px; color: var(--secondary-grey);">Experience the ultimate hosting solution with us and receive a complimentary domain name with every hosting plan. Don't miss out on this exclusive offer to kickstart your online presence hassle-free!</div>
+    </div>
+    <a href="/hosting/cloud">
+        <div class="sbtn fs16 m_m_fs14 _cw" style="background: linear-gradient(45deg, var(--purple), var(--main));">Go and see our plans</div>
+    </a>
+
+</div>
+<div class="mt100 m_m_mt50 flexi">
+    <grid>
+        <div class="vm w50 l m_c pr20 m_m_pr0">
+            <div class="fs40 m_fs26 m_m_fs22 m_m_lh30 b" style="font-family: 'Bitter', serif; letter-spacing: 1px;"><span class="vm">Discover the reason behind choosing from Our Domains Through Our</span><span class="vm" style="background: linear-gradient(45deg, var(--purple) 50%, var(--main)); -webkit-background-clip: text; color: transparent;"> essntial Key Features</span></div>
+            <div class="lh32 g_nm fs22 md_fs20 m_fs18 m_lh25 mt20" style="max-width: 400px; letter-spacing: 0.9px; color: var(--secondary-grey);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo recusandae mollitia quidem? Quaerat plac</div>
+        </div>
+        <div class="vm w50 p30 m_p20 round4x m_mt20" style="background: linear-gradient(45deg, var(--purple) 30%, var(--main) 90%);">
+            <grid_nm class="pv20 l">
+                <div class="ov round4x" style="background-color: var(--primary); opacity: 0.3;"></div>
+                <div class="fs50 m_fs36 vm" style="width: 50px; height: 60px; color: #f8fafc;"><span class="iconify" data-icon="fluent:person-support-28-regular"></span></div>
+                <div class="vm pl20 m_pl5" style="width: calc(100% - 50px);">
+                    <div class="fs20 m_fs16 mb5 b500 _cw">free Privacy Protection</div>
+                    <div class="fs18 m_fs16 lh30 oh" style="height: 60px; color: #f8fafc;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto provident, laborum quaerat ad consequatur labore assumenda, beatae facere deleniti mollitia numquam delectus necessitatibus earum sunt incidunt est rem ab.</div>
+                </div>
+            </grid_nm>
+            <grid_nm class="pv20 l">
+                <div class="fs50 m_fs36 vm" style="width: 50px; height: 60px; color: #f8fafc;"><span class="iconify" data-icon="gridicons:domains"></span></div>
+                <div class="vm pl20 m_pl5" style="width: calc(100% - 50px);">
+                    <div class="fs20 m_fs16 mb5 b500 _cw">Free Subdomains</div>
+                    <div class="fs18 m_fs16 lh30 oh" style="height: 60px; color: #f8fafc;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto provident, laborum quaerat ad consequatur labore assumenda, beatae facere deleniti mollitia numquam delectus necessitatibus earum sunt incidunt est rem ab.</div>
+                </div>
+            </grid_nm>
+            <grid_nm class="pv20 l">
+                <div class="fs50 m_fs36 vm" style="width: 50px; height: 60px; color: #f8fafc;"><span class="iconify" data-icon="icon-park-solid:folder-protection-one"></span></div>
+                <div class="vm pl20 m_pl5" style="width: calc(100% - 50px);">
+                    <div class="fs20 m_fs16 mb5 b500 _cw">24/7 Technical Support</div>
+                    <div class="fs18 m_fs16 lh30 oh" style="height: 60px; color: #f8fafc;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iusto provident, laborum quaerat ad consequatur labore assumenda, beatae facere deleniti mollitia numquam delectus necessitatibus earum sunt incidunt est rem ab.</div>
+                </div>
+            </grid_nm>
+        </div>
+    </grid>
+</div>
+<div class="flexi mt100 m_m_mt50">
+    <div class="round4x p40 m_p30 adv-domain _cb _border" style="background-color: var(--second);">
+        <div class="fs30 m_fs26 m_m_fs20 mb20" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Want A Specific Domain?</div>
+        <div>
+            <div class="fs20 m_m_fs16 mb30 g_nm" style="max-width: 450px; color: var(--secondary-grey);">Claim your ideal domain now! Request it today and make it yours before someone else does</div>
+        </div>
+        <a href="/contact_us">
+            <div class="sbtn dark fs16 m_m_fs14">Contact Us</div>
+        </a>
+    </div>
+    <style>
+        body.light-theme .adv-domain{
+            background-color: #f8fafc !important;
+        }
+    </style>
+</div>
+<div class="flexi mt100 m_m_mt50">
+    <div class="fs40 m_fs26 m_m_fs22 m_m_lh30 b600 mb50 m_m_mb20" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Frequently Asked Questions</div>
+    <div view="faqs"></div>
+</div>
+<script>
+    st(0);
+</script>

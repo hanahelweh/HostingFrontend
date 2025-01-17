@@ -1,0 +1,31 @@
+<div bind="questAns">
+    <grid_nm :for="questAns as value" @click="QA" class="l pv20 pointer" style="border-bottom: 1px solid var(--border);">
+        <div class="w90 fs20 m_m_fs16 b500 vt">
+            {{value.question}}
+        </div>
+        <div class="w10 r">
+            <span class="iconify m_m_fs10" data-icon="formkit:down"></span>
+        </div>
+        <div class="answers h mt20 fs16 m_m_fs14 w90" style="color: var(--secondary-grey);">
+            {{value.answer}}
+        </div>
+    </grid_nm>
+</div>
+<script>
+    var questAns = [
+        {question: 'What Payment methods do we accept?', answer: 'We accept all major credit cards, ACH, checks, and wire transfer payments.'},
+        {question: 'How can I pay?', answer: 'We accept all major credit cards. The subscriptions renew automatically at the end of each billing cycle. All listed prices are in USD.'},
+        {question: 'Are there any discounts available?', answer: 'Yes, you can get a 15% discount for subscribing for 12 months.'},
+        {question: 'Can I use LiveChat on several websites?', answer: 'Feel free to use your live chat on as many websites as you wish.'},
+        {question: 'Are there any additional costs?', answer: 'No, there are no additional costs and you won’t be charged anything extra.'},
+        {question: 'How many agents can I add to my account?', answer: 'You can invite up to 400 agents in the Starter, Team, and Business plans. We can set a custom number of agents if you subscribe to the Enterprise plan.'},
+        {question: 'How does the free trial work?', answer: 'Intercom’s free trial requires no credit card to sign up. During the 14-day trial, you’ll have access to all the products & features available in the Advanced plan as well as Proactive Support Plus. After the free trial period, simply add your credit card details to continue using Intercom. If you’re interested in a free trial of the Expert plan, contact sales.'},
+    ]; 
+    var QAOpen = false;
+    function QA(ev, el) {
+        $('.answers').not(el.find('.answers')).slideUp('show');
+        el.find('.answers').slideToggle('show');
+        el.find('.iconify').attr('data-icon', QAOpen ? 'formkit:down' : 'formkit:up');
+        QAOpen = !QAOpen;
+    }
+</script>

@@ -1,0 +1,297 @@
+<style>
+    .img-contain {
+      overflow: hidden;
+    }
+
+    .img-contain::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/images/DPS  Photo.jpeg');
+      background-size: cover;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .hover-effect:hover .img-contain::before {
+      transform: scale(1.1);
+    }
+    .hover-effect:hover{
+        box-shadow: 0px 7px 15px var(--border) !important;
+    }
+</style>
+<div class="flexi pt80 mt50" bind>
+    <div class="fs50 m_fs28 m_m_fs22 lh60 m_lh40 m_m_lh30 mb20" style="font-family: 'Bitter', serif; letter-spacing: 1px;">The "--" Blog</div>
+    <div class="fs22 m_m_fs18 m_m_lh25 mb30" style="color: var(--secondary-grey);">
+        <div class="g_nm" style="max-width: 800px; letter-spacing: 0.9px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quas eligendi tempore natus saepe nihil, unde, qui dolorum enim est magni placeat nisi adipisci velit nostrum voluptate dolor! Dolore, odit.</div>
+    </div>
+    <a href="">
+        <tbl class="hover-effect round4x mt50 m_m_mt30 p40 m_m_p20 ez" style="background-color: var(--main);">
+            <cl class="w60 l">
+                <div class="fs26 m_m_fs18 b600 lh38 m_m_lh30 oh mb20 _cw" style="max-height: 114px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse perspiciatis pariatur eos doloribus alias, corrupti unde natus, aperiam animi veritatis, saepe deleniti voluptas mollitia aliquam excepturi voluptate magni possimus expedita.</div>
+                <div class="fs18 m_m_fs16 lh25 oh cw60" style="max-height: 78px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis possimus, eligendi soluta illo laudantium dolorem, dolore similique dolorum adipisci quod neque! Consectetur ipsa adipisci minima qui vitae sint ipsam atque?</div>
+                <grid_nm class="mt20">
+                    <div class="vm con round4x sq mr10" style="background-color: var(--second); width: 50px; background-image: url('/images/tips_for_girls_to_choose_weave_bob_hairstyles-removebg-preview.png');"></div>
+                    <div class="vm" style="width: calc(100% - 60px);">
+                        <div class="fs16 m_m_fs14 _cw">Katrina Degbjh</div>
+                        <div class="cw50 m_m_fs12">Nov 28, 2023</div>
+                    </div>
+                </grid_nm>
+            </cl>
+            <cl class="w40 round4x sh40 m_mt50" style="background-color: var(--second);">
+                <div class="img-contain sq70 md_sq90 pa m_pr w90 round4x sh40" style="top: -30px; right: -10px;"></div>
+            </cl>
+        </tbl>
+    </a>
+    <grid_nm class="p10 mt50 round4x" style="border: 1px solid var(--border); background-color: var(--primary-grey);">
+        <div class="p10">
+            <a href="">
+                <div class="sbtn _cw" style="background-color: var(--main);">News</div>
+            </a>
+        </div>
+        <div class="p10">
+            <a href="">
+                <div class="sbtn _cw" style="background-color: var(--purple);">Product Updates</div>
+            </a>
+        </div>
+        <div class="p10">
+            <a href="">
+                <div class="sbtn _cw" style="background-color: var(--green);">Cloud education</div>
+            </a>
+        </div>
+        <div class="p10">
+            <a href="">
+                <div class="sbtn _cw" style="background-color: var(--orange);">Culture</div>
+            </a>
+        </div>
+        <div class="p10">
+            <a href="">
+                <div class="sbtn _cw" style="background-color: var(--pink);">Culture</div>
+            </a>
+        </div>
+        <div class="p10">
+            <a href="">
+                <div class="sbtn _cw" style="background-color: var(--main);">Culture</div>
+            </a>
+        </div>
+        <div class="p10">
+            <a href="">
+                <div class="sbtn _cw" style="background-color: var(--orange);">Culture</div>
+            </a>
+        </div>
+        <div class="p10">
+            <a href="">
+                <div class="sbtn _cw" style="background-color: var(--green);">Culture</div>
+            </a>
+        </div>
+        <div class="p10">
+            <a href="">
+                <div class="sbtn _cw" style="background-color: var(--purple);">Culture</div>
+            </a>
+        </div>
+        <div class="p10">
+            <a href="">
+                <div class="sbtn _cw" style="background-color: var(--orange);">Culture</div>
+            </a>
+        </div>
+        <div class="p10">
+            <a href="">
+                <div class="sbtn _cw" style="background-color: var(--orange);">Culture</div>
+            </a>
+        </div>
+        <div class="p10">
+            <a href="">
+                <div class="sbtn _cw" style="background-color: var(--orange);">Culture</div>
+            </a>
+        </div>
+    </grid_nm>
+    <div class="mt100 m_m_mt50">
+        <div class="fs32 m_fs22 m_lh30 mb50 m_m_mb0" style="font-family: 'Bitter', serif; letter-spacing: 1px;">"--"'s Top Picks for You</div>
+        <div view="blog_pick"></div>
+    </div>
+    <div class="carousel-container mt100 m_m_mt50">
+        <div class="fs32 m_fs22" style="font-family: 'Bitter', serif; letter-spacing: 1px;">News</div>
+        <grid_nm class="mb10">
+            <div class="w50 l vm">
+                <a href="/blogs_topic" class="l opacity ez" style="border-bottom: 1px solid var(--second);">
+                    <span class="vm mr5">View All</span>
+                    <span class="iconify fs18 vm" data-icon="ph:arrow-right-thin"></span>
+                </a>
+            </div>
+            <div class="w50 r vm">
+                <grid_nm>
+                    <div @click="Prev" style="background-color: var(--second); color: var(--primary);" class="round2x p10 pointer opacity ez">
+                        <div class="ph20 m_ph5 pv10">
+                            <span class="iconify fs26 m_fs16 cc" data-icon="ph:arrow-left-thin"></span>
+                        </div>
+                    </div>
+                    <div @click="Next" style="background-color: var(--second); color: var(--primary);" class="round2x p10 pointer opacity ez ml20 m_ml5">
+                        <div class="ph20 m_ph5 pv10">
+                            <span class="iconify fs26 m_fs16 cc" data-icon="ph:arrow-right-thin"></span>
+                        </div>
+                    </div>
+                </grid_nm>
+            </div>
+        </grid_nm>
+        <grid_nm class="carousel" style="margin-left: -20px; margin-right: -20px;">
+            <div :for="10" class="w33 m_w50 m_m_w100 p20 vm">
+                <a href="">
+                    <div class="round4x hover-effect ez" style="box-shadow: 0px 0px 1px var(--secondary-grey); background-color: var(--primary);">
+                        <div class="sq70 hover cov" style="background-image: url('/images//Finance  App  Design.jpeg'); border-top-right-radius: inherit; border-top-left-radius: inherit;"></div>
+                        <div class="p20 l">
+                            <div class="lh25 oh fs20 m_m_fs16 b600 mb10" style="height: 50px;">Does Web Migration Affect SEO</div>
+                            <div class="cw50 b600" style="color: var(--secondary-grey);">2022-05-10</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </grid_nm>
+    </div>
+    <div class="carousel-container mt100 m_m_mt50">
+        <div class="fs32 m_fs22" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Product Updates</div>
+        <grid_nm class="mb10">
+            <div class="w50 l vm">
+                <div class="g_nm l pointer opacity ez" style="border-bottom: 1px solid var(--second);">
+                    <span class="vm mr5">View All</span>
+                    <span class="iconify fs18 vm" data-icon="ph:arrow-right-thin"></span>
+                </div>
+            </div>
+            <div class="w50 r vm">
+                <grid_nm>
+                    <div @click="Prev" style="background-color: var(--second); color: var(--primary);" class="round2x p10 pointer opacity ez">
+                        <div class="ph20 m_ph5 pv10">
+                            <span class="iconify fs26 m_fs16 cc" data-icon="ph:arrow-left-thin"></span>
+                        </div>
+                    </div>
+                    <div @click="Next" style="background-color: var(--second); color: var(--primary);" class="round2x p10 pointer opacity ez ml20 m_ml5">
+                        <div class="ph20 m_ph5 pv10">
+                            <span class="iconify fs26 m_fs16 cc" data-icon="ph:arrow-right-thin"></span>
+                        </div>
+                    </div>
+                </grid_nm>
+            </div>
+         </grid_nm>
+        <grid_nm class="carousel" style="margin-left: -20px; margin-right: -20px;">
+            <div :for="10" class="w33 m_w50 m_m_w100 p20 vm">
+                <a href="">
+                    <div class="round4x hover-effect ez" style="box-shadow: 0px 0px 1px var(--secondary-grey); background-color: var(--primary);">
+                        <div class="sq70 hover cov" style="background-image: url('/images/✈️  Flight  Island.jpeg'); border-top-right-radius: inherit; border-top-left-radius: inherit;"></div>
+                        <div class="p20 l">
+                            <div class="lh25 oh fs20 m_m_fs16 b600 mb10" style="height: 50px;">Does Web Migration Affect SEO</div>
+                            <div class="cw50 b600" style="color: var(--secondary-grey);">2022-05-10</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </grid_nm>
+    </div>
+    <div class="carousel-container mt100 m_m_mt50">
+        <div class="fs32 m_fs22" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Cloud education</div>
+        <grid_nm class="mb10">
+            <div class="w50 l vm">
+                <div class="g_nm l pointer opacity ez" style="border-bottom: 1px solid var(--second);">
+                    <span class="vm mr5">View All</span>
+                    <span class="iconify fs18 vm" data-icon="ph:arrow-right-thin"></span>
+                </div>
+            </div>
+            <div class="w50 r vm">
+                <grid_nm>
+                    <div @click="Prev" style="background-color: var(--second); color: var(--primary);" class="round2x p10 pointer opacity ez">
+                        <div class="ph20 m_ph5 pv10">
+                            <span class="iconify fs26 m_fs16 cc" data-icon="ph:arrow-left-thin"></span>
+                        </div>
+                    </div>
+                    <div @click="Next" style="background-color: var(--second); color: var(--primary);" class="round2x p10 pointer opacity ez ml20 m_ml5">
+                        <div class="ph20 m_ph5 pv10">
+                            <span class="iconify fs26 m_fs16 cc" data-icon="ph:arrow-right-thin"></span>
+                        </div>
+                    </div>
+                </grid_nm>
+            </div>
+         </grid_nm>
+        <grid_nm class="carousel" style="margin-left: -20px; margin-right: -20px;">
+            <div :for="10" class="w33 m_w50 m_m_w100 p20 vm">
+                <a href="">
+                    <div class="round4x hover-effect ez" style="box-shadow: 0px 0px 1px var(--secondary-grey); background-color: var(--primary);">
+                        <div class="sq70 hover cov" style="background-image: url('/images/🛵  Food  delivery  tracking  -  Dynamic  Island.jpeg'); border-top-right-radius: inherit; border-top-left-radius: inherit;"></div>
+                        <div class="p20 l">
+                            <div class="lh25 oh fs20 m_m_fs16 b600 mb10" style="height: 50px;">Does Web Migration Affect SEO</div>
+                            <div class="cw50 b600" style="color: var(--secondary-grey);">2022-05-10</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </grid_nm>
+    </div>
+    <div class="carousel-container mt100 m_m_mt50">
+        <div class="fs32 m_fs22" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Culture</div>
+        <grid_nm class="mb10">
+            <div class="w50 l vm">
+                <div class="g_nm l pointer opacity ez" style="border-bottom: 1px solid var(--second);">
+                    <span class="vm mr5">View All</span>
+                    <span class="iconify fs18 vm" data-icon="ph:arrow-right-thin"></span>
+                </div>
+            </div>
+            <div class="w50 r vm">
+                <grid_nm>
+                    <div @click="Prev" style="background-color: var(--second); color: var(--primary);" class="round2x p10 pointer opacity ez">
+                        <div class="ph20 m_ph5 pv10">
+                            <span class="iconify fs26 m_fs16 cc" data-icon="ph:arrow-left-thin"></span>
+                        </div>
+                    </div>
+                    <div @click="Next" style="background-color: var(--second); color: var(--primary);" class="round2x p10 pointer opacity ez ml20 m_ml5">
+                        <div class="ph20 m_ph5 pv10">
+                            <span class="iconify fs26 m_fs16 cc" data-icon="ph:arrow-right-thin"></span>
+                        </div>
+                    </div>
+                </grid_nm>
+            </div>
+         </grid_nm>
+        <grid_nm class="carousel" style="margin-left: -20px; margin-right: -20px;">
+            <div :for="10" class="w33 m_w50 m_m_w100 p20 vm">
+                <a href="">
+                    <div class="round4x hover-effect ez" style="box-shadow: 0px 0px 1px var(--secondary-grey); background-color: var(--primary);">
+                        <div class="sq70 hover cov" style="background-image: url('/images/Browse  thousands  of  Island  images  for  design  inspiration.jpeg'); border-top-right-radius: inherit; border-top-left-radius: inherit;"></div>
+                        <div class="p20 l">
+                            <div class="lh25 oh fs20 m_m_fs16 b600 mb10" style="height: 50px;">Does Web Migration Affect SEO</div>
+                            <div class="cw50 b600" style="color: var(--secondary-grey);">2022-05-10</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </grid_nm>
+    </div>
+    <div view="adv"></div>
+</div>
+
+<script>
+    st(0);
+    setTimeout(() => {
+        let opts = '{"autoPlay":false,"cellAlign":"center","contain": true,"freeScroll":false,"wrapAround":false,"prevNextButtons":false,"pageDots":false,"draggable":true,"pauseAutoPlayOnHover":false, "adaptiveHeight": true}';
+        flkty = $(".carousel").show().flickity(JSON.parse(opts));
+    }, 10);
+
+    function Next(ev, el){
+        let parent = el.closest('.carousel-container');
+        let car = parent.find('.carousel:first');
+        car.flickity('next');
+    }
+
+    function Prev(ev, el){
+        let parent = el.closest('.carousel-container');
+        let car = parent.find('.carousel:first');
+        car.flickity('previous');
+    }
+
+</script>
+
+<settings>
+    {
+    hasFooter: true,
+    hasHeader: false,
+    hasNav: true
+    }
+</settings>

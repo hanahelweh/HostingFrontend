@@ -1,0 +1,13 @@
+<div bind>
+    <span class="colorful-svg iconify fs90" style="filter: drop-shadow(5px 2px 8px var(--main));" data-icon="streamline:startup"></span>
+    <div class="h m_db fs22 b mt20" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Getting Started</div>
+    <div class="fs18 mt20 mb20" style="color: var(--secondary-grey);">Everything you need to know to get started with "--" cloud</div>
+    <div :for="10" class="p10">
+        <a href="help_center/topic">
+            <grid_nm class="round2x p20 pointer boxes ez" style=" margin: 0 auto; max-width: 800px; background-color: var(--primary-grey); border: 1px solid var(--border); color: var(--secondary-grey);">
+                <div class="vm fs16 l pr20" style="width: calc(100% - 20px);"><span class="pointer">How to manage Backups?</span></div>
+                <div class="vm" style="width: 20px;"><span class="iconify fs24" data-icon="formkit:right"></span></div>
+            </grid_nm>
+        </a>
+    </div>
+</div>

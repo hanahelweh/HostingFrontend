@@ -1,0 +1,61 @@
+<style>
+    .dropdown.actv {
+        visibility: visible;
+        opacity: 1 !important;
+    }
+
+    .error {
+        display: none;
+    }
+
+    .navigate {
+        display: none;
+        visibility: hidden;
+    }
+
+    
+    .accordion.active .hov {
+        background-color: #f3f4f6;
+    }
+
+    .accordion.active .icon {
+        transform: rotate(180deg) !important;
+    }
+
+    .drop.active::before, .drop:hover::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 100%;
+        background-color: #100f0f;
+        padding: 3px;
+        left: 16px;
+        transition: all 1s linear;
+    }
+</style>
+<nav-secondary bind class="pf ov ra z300 _bgg _cb l ez br" style="width: 244px;">
+    <div @click="$('body').toggleClass('side_open');" class="h m_db p15 round2x _bgg _border pa z100000 pointer" style="top: 20px; right: -15px;"><span class="iconify fs18 cc" data-icon="line-md:chevron-double-left"></span></div>
+    <div view="widgets/nav-secondary/side_services"></div>
+    <div class="oya pv20 ov" style="top:80px; scrollbar-color: transparent transparent;">
+        <div class="b500 fs18 ph30 oe">Home</div>
+        <div :for="3">
+            <div class="_cdg fs13 ph30 pv10">Options</div>
+            <div :for="3" class="accordion ph20 pv2" @click="if(!$(ev.target).closest('.bfr').length) if(el.hasClass('active')) { el.removeClass('active'); el.find('.bfr').slideUp(500); } else { el.addClass('active'); el.find('.bfr').slideDown(500); }">
+                <div class="round2x pointer l lh40 oh ph40 hov" style="height: 40px;" :hover="background-color: #f3f4f6;">
+                    <div class="pa p20" style="top:0px; left:0px;">
+                        <span class="iconify fs20 cc" data-icon="streamline:dollar-coin"></span>
+                    </div>
+                    <div class="fs16 oe nw cap" tip="Notifications">Products</div>
+                    <div class="pa p20 icon ez" style="top:0px; right:0px;">
+                        <span class="iconify fs20 cc" data-icon="jam:chevron-up"></span>
+                    </div>
+                </div>
+                <div class="bfr oh ez-f h">
+                    <div :for="3" actv=".drop" class="drop vv db round2x pointer l lh40 oh fs15 oe cap"
+                        style="height: 40px; padding-left: 40px;" tip="Notifications">second phase</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav-secondary>

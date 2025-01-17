@@ -1,0 +1,128 @@
+<style>
+    .or::after {
+      content: "";
+      position: absolute;
+      border-top: 1px solid var(--main);
+      top: 60%;
+      left: 0;
+      right: 0;
+    }
+    .error {
+      display: none;
+    }
+    .is-invalid .error {
+      display: block;
+    }
+    .input-sign.focused{
+        border-color: var(--main) !important;
+    }
+    .ggl:hover{
+        background-color: var(--main);
+        color: var(--second) !important;
+    }
+  </style>
+    <div class="mb30 fs26 b600 m_m_fs18" style="color: var(--main);">Sign Up!</div>
+    <form class="l" style="color: var(--grey);">
+        <div class="mt15">
+            <label>
+                Email
+                <div
+                class="mt10 round2x"
+                >
+                <input
+                    style="border: 1px solid var(--secondary-grey);"
+                    type="email"
+                    name="Email"
+                    class="pl30 input-sign w100 p10 round2x ez"
+                    placeholder="Email"
+                    :required
+                />
+                <div class="search-icon ez pa cv z10" style="left: 15px; color: var(--main);">
+                    <span
+                    class="iconify cc fs20 pointer"
+                    data-icon="fluent:mail-32-regular"
+                    ></span>
+                </div>
+                </div>
+                <div class="error red fs12">
+                <span
+                    class="iconify vm fs16 ml5"
+                    data-icon="mdi:information-outline"
+                ></span
+                ><span class="vm">Kindly write your email </span>
+                </div>
+            </label>
+        </div>
+        <div class="mt15">
+            <label>
+                Password
+                <div
+                class="mt10 round2x"
+                >
+                <input
+                    style="border: 1px solid var(--secondary-grey);"
+                    type="password"
+                    password
+                    name="Password"
+                    class="pl30 input-sign w100 p10 round2x ez"
+                    placeholder="Password"
+                    :required
+                    value=""
+                />
+                <div class="search-icon ez pa cv z10" style="left: 15px; color: var(--main);">
+                    <span
+                    class="iconify cc fs20 pointer"
+                    data-icon="solar:lock-password-broken"
+                    ></span>
+                </div>
+                </div>
+                <div class="error red fs12">
+                <span
+                    class="iconify vm fs16 ml5"
+                    data-icon="mdi:information-outline"
+                ></span
+                ><span class="vm">Kindly write your password </span>
+                </div>
+            </label>
+        </div>
+        <button
+        class="w100 m_m_fs12 mt15 sbtn primary lh24"
+        type="submit"
+        >
+        SIGN UP
+        </button>
+        <div class="w50 l mt15">
+            <input
+            type="checkbox"
+            id="remember"
+            style="width: 17px; height: 17px"
+            class="vm"
+            />
+            <label for="remember" class="vm m_m_fs12 ml5">Remember Me!</label>
+        </div>
+    </form>
+    <span class="mt15 db or">
+        <span class="z10 ph30 fs16 m_m_fs14 _or" style="color: var(--main); background-color: var(--second);">or</span>
+    </span>
+    <grid_nm class="mt20" style="color: var(--primary-grey);">
+        <div class="pointer ez ggl lh40 w50 round2x">
+            <div class="cov sq vm g_nm mr5" style="width: 40px; background-image: url(/images/google-logo.png)"></div>
+            <div class="vm b500 fs15 m_m_fs12 g_nm lh20 _cb">Sign Up With Google</div>
+        </div>
+        <div class="pointer ez ggl lh40 w50 round2x">
+            <div class="cov sq vm g_nm mr10" style="width: 35px; background-image: url(/images/facebook-logo.png)"></div>
+            <div class="vm b500 fs15 m_m_fs12 g_nm lh20 _cb">Sign Up With Facebook</div>
+        </div>
+    </grid_nm>
+    <a href="/auth/signin">
+        <div class="mt20 pointer opacity ez m_m_fs12" style="color: var(--grey);">
+        Already User? Click Here To Sign In
+        </div>
+    </a>
+  <script>
+    setTimeout(() => {
+      AOS.init();
+    });
+  </script>
+  
+  <settings> { hasFooter: false, hasHeader: false, hasNav: false } </settings>

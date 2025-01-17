@@ -1,0 +1,16 @@
+<style>
+    body{
+        background-color: var(--primary);
+    }
+</style>
+<div bind="nodes">
+    <div view="_admin/{{nodes[1]}}"></div>
+</div>
+<settings>
+    {
+    hasFooter: false,
+    hasHeader: false,
+    hasNav: "nav_admin",
+    requireAuth: true
+    }
+</settings

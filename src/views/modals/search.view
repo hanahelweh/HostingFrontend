@@ -1,0 +1,34 @@
+<style>
+    .search-input::placeholder{
+        color: #8494a1;
+    }
+    .search.focused .search-icon{
+        color: var(--main);
+    }
+</style>
+<div bind class="_cb">
+    <!-- <div close-modal class="pa z10 ph10 pointer opacity ez mb2" style="right: 20px; top: 30px;">
+        <span class="iconify cc fs20" data-icon="mingcute:close-fill"></span>
+    </div> -->
+    <label class="search lh40">
+        <input type="text" name="serviceSearch" value="" class="search-input w100 ph50 lh60 b0 fs16" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; border-bottom: 1px solid rgba(0,0,0,0.2) !important;" placeholder="Search For Your Service" :required/>
+        <div class="search-icon ov ra z10 ph10 mb2 ez-f" style="left: 15px;">
+            <span class="iconify cc fs24" data-icon="mingcute:search-line"></span>
+        </div>
+        <div class="error red fs12">
+            <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+            <span class="vm"></span>
+        </div>
+    </label>
+    <div class="p20">
+        <div class="_cdg mb10">Popular searches</div>
+        <div :for="3" class="pl30 ez round2x pointer" :hover="background-color: #f3f4f6;">
+            <div class="fs16 oe nw" tip="hanahelweh97@gmail.com">fnejn</div>
+            <div class="ov ra ph10"><span class="iconify fs22 cc" data-icon="dashicons:admin-site-alt2"></span></div>
+        </div>
+    </div>
+</div>
+<script>
+    $('pop-c').attr('data-aos', 'fade-down').attr('data-aos-duration', '500');
+    AOS.init();
+</script>

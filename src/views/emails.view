@@ -1,0 +1,164 @@
+<style>
+    .chosenBill.active{
+        background-color: var(--purple) !important;
+    }
+    @media screen and (max-width: 768px){
+        .main-icon{
+            width: 80px !important;
+        }
+    }
+    @media screen and (max-width:486px){
+        .gradient_box{
+            height: 80% !important;
+        }
+    }
+    .plans pop-c{
+        max-width: 1000px;
+    }
+</style>
+<div class="flexi pt80 mt80 m_mt50">
+    <div class="main-icon round4x sq" style="margin: 0 auto; filter: drop-shadow(1px 1px 15px var(--purple)); width: 120px; background-color: var(--purple);">
+        <div class="pa bgw60 g_nm p10 round4x" style="left: -10px; bottom: -10px;">
+            <span class="iconify fs80 m_fs50" style="color: var(--purple);" data-icon="arcticons:spike-email"></span>
+        </div>
+    </div>
+    <div class="fs50 m_fs26 m_m_fs22 b g_nm mt40 mb50 m_mb30 b" style="max-width: 700px; font-family: 'Bitter', serif; letter-spacing: 1px;"><span class="vm">Elevate Your Identity with </span><span class="vm" style="background: linear-gradient(45deg, var(--purple) 50%, var(--main)); -webkit-background-clip: text; color: transparent;">Custom Domain Emails</span></div>
+    <div wrapper>
+        <div class="grab round4x" dgsc style="scrollbar-color: transparent transparent">
+            <grid_nm gap10>
+                <div class="w25 m_w40 m_m_w90 vt wr">
+                    <span class="iconify fs50 m_fs40 m_m_fs26 mb20 m_m_mb10" style="color: var(--purple);" data-icon="oui:app-uptime"></span>
+                    <div class="fs20 m_fs18 mb b500" style="color: var(--purple);">Steadfast Email Experience</div>
+                    <div class="fs18 m_fs16" style="color: var(--secondary-grey);">Seamless Connectivity, Always On</div>
+                </div>
+                <div class="w25 m_w40 m_m_w90 vt wr">
+                     <span class="iconify fs50 m_fs40 m_m_fs26 mb20 m_m_mb10" style="color: var(--purple);" data-icon="clarity:storage-line"></span>
+                     <div class="fs20 m_fs18 mb b500" style="color: var(--purple);">Spacious Storage</div>
+                     <div class="fs18 m_fs16" style="color: var(--secondary-grey);">Effortlessly Manage Your Emails with Generous Storage Capacity</div>
+                </div>
+                <div class="w25 m_w40 m_m_w90 vt wr">
+                     <span class="iconify fs50 m_fs40 m_m_fs26 mb20 m_m_mb10" style="color: var(--purple);" data-icon="streamline:user-protection-2"></span>
+                     <div class="fs20 m_fs18 mb b500" style="color: var(--purple);">Fortified Protection</div>
+                     <div class="fs18 m_fs16" style="color: var(--secondary-grey);">Shield Your Emails with Advanced Security Measures</div>
+                </div>
+                <div class="w25 m_w40 m_m_w90 vt wr">
+                     <span class="iconify fs50 m_fs40 m_m_fs26 mb20 m_m_mb10" style="color: var(--purple);" data-icon="tdesign:device"></span>
+                     <div class="fs20 m_fs18 mb b500" style="color: var(--purple);">Seamless Access</div>
+                     <div class="fs18 m_fs16" style="color: var(--secondary-grey);">Connect Anywhere, Anytime, on Any Device</div>
+                </div>
+            </grid_nm>
+        </div>
+    </div>
+    <div>
+        <div @click="st($('#plan').offset().top - 95);" class="email-getStarted sbtn light mt50 m_m_mt10 fs18 m_fs14 m_m_fs12 m_m_b500">Get Started - 1.5$/mailbox</div>
+        <style>
+            body.light-theme .email-getStarted{
+                background-color: var(--purple);
+                color: var(--primary);
+            }
+        </style>
+    </div>
+    <div id="plan" bind="globals,plan,period" class="round4x p30 mt100 m_m_mt70" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+        <tbl>
+            <cl class="vt l m_c w50">
+                <grid_nm class="g_nm round2x mb50" style="border: 1px solid var(--purple);">
+                    <div class="cc sq10" style="width: 300px; background-color: var(--purple); filter: blur(90px);"></div>
+                    <button @click="Period" data-id="1" actv=".bill" class="bill active chosenBill ph10 round2x lh40 m_m_lh30 m_m_fs13 pointer b0 opacity ez" style="color: var(--second); background-color: transparent;">1 year</button>
+                    <button @click="Period" data-id="2" actv=".bill" class="bill chosenBill ph10 round2x lh40 m_m_lh30 m_m_fs13 pointer b0 opacity ez" style="color: var(--second); background-color: transparent;">2 years (10% OFF)</button>
+                    <button @click="Period" data-id="3" actv=".bill" class="bill chosenBill ph10 round2x lh40 m_m_lh30 m_m_fs13 pointer b0 opacity ez" style="color: var(--second); background-color: transparent;">3 years (20% OFF)</button>
+                </grid_nm>
+                <div class="fs48 m_fs24 m_m_fs22 b cap pa b0 l0 m_pr mt30 m_mb30 m_c g_nm" style="max-width: 400px; font-family: 'Bitter', serif; letter-spacing: 1px;"><span class="vm">The perfect plan for your </span><span class="vm" style="background: linear-gradient(45deg, var(--purple) 50%, var(--main)); -webkit-background-clip: text; color: transparent;">Business Needs</span></div>
+            </cl>
+            <cl class="r w50 m_c">
+                <div :for="plans as plan" class="p20 g_nm round4x ez l" style="border: 2px solid var(--purple);">
+                    <div class="fs20 m_fs18 b600 mb10 cap">{{globals.services[nodes[0]].Identifier}}</div>
+                    <div class="fs28 m_fs22 m_m_fs18 b mb10" style="color: var(--purple);">${{((plan.Price)*(period==3? 0.8 :(period==2?0.9:1))).toFixed(2)}}/mo</div>
+                    <div class="fs16 m_fs14" style="color: var(--secondary-grey);">Optimized for business and eCommerce websites</div>
+                    <div class="sbtn purple w100 fs16 m_fs14 mt20 c"  modal="modals/checkout" modal-class="gen-modal plans" modal-title="{{plan.Name}} plan" @modal-open="ModalOpen" data-id="{{plan.objectId}}">Get Plan</div>
+                    <div class="fs18 m_fs16 b600 mt20 mb10">Core features</div>
+                    <grid_nm :for="3">
+                        <div class="vm roundc" style="width: 30px;">
+                            <span class="iconify fs20" style="color: var(--purple);" data-icon="bx:check"></span>
+                        </div>
+                        <div class="vm fs16 m_fs14" style="width: calc(100% - 30px);">lorem ipsum db</div>
+                    </grid_nm>
+                    <div class="fs18 m_fs16 b600 mt20 mb10">Plus</div>
+                    <grid_nm :for="2">
+                        <div class="vm" style="width: 30px;">
+                            <span class="iconify fs20" style="color: var(--purple);" data-icon="bx:check"></span>
+                        </div>
+                        <div class="vm fs16 m_fs14" style="width: calc(100% - 30px);">lorem ipsum db</div>
+                    </grid_nm>
+                </div>
+            </cl>
+        </tbl>
+    </div>
+    <div class="mt100 m_m_mt70 round4x">
+        <div class="fs50 m_fs24 m_m_fs22 m_m_lh30 b g_nm mb20 b" style="max-width: 800px; font-family: 'Bitter', serif; letter-spacing: 1px;">Unleash the Potential of Your Inbox with Our Key Features</div>
+        <div class="fs22 m_m_fs18 m_m_lh25 mb70 g_nm" style="color: var(--secondary-grey); max-width: 800px; letter-spacing: 0.9px;">Experience email at its finest with our key features. From robust security to seamless accessibility, our email solutions are designed to elevate your communication experience</div>
+        <grid_nm gap20 class="z10">
+            <div class="cc round4x w100 gradient_box" style="height: 70%; max-width: 900px; background: linear-gradient(135deg, var(--green), var(--purple) 60%, var(--main));">
+                <div class="ov" style="background-color: var(--primary); opacity: 0.3;"></div>
+            </div>
+            <div class="w33 m_w50 m_m_w100 vt">
+                <div class="p50 m_p20 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                    <span class="iconify fs40 m_m_fs30 mb20" data-icon="dashicons:admin-customizer"></span>
+                    <div class="fs18 m_m_fs16 mb b500">Custom Domain Emails</div>
+                    <div class="fs16 m_m_fs14" style="color: var(--secondary-grey);"> Personalize your email addresses using your own domain name for enhanced branding and professionalism</div>
+                </div>
+            </div>
+            <div class="w33 m_w50 m_m_w100 vt">
+                <div class="p50 m_p20 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                    <span class="iconify fs40 m_m_fs30 mb20" data-icon="oui:app-uptime"></span>
+                    <div class="fs18 m_m_fs16 mb b500">Reliable Uptime</div>
+                    <div class="fs16 m_m_fs14" style="color: var(--secondary-grey);">Ensure consistent access to emails with minimal downtime, guaranteeing uninterrupted communication channels</div>
+                </div>
+            </div>
+            <div class="w33 m_w50 m_m_w100 vt">
+                <div class="p50 m_p20 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                    <span class="iconify fs40 m_m_fs30 mb20" data-icon="carbon:security"></span>
+                    <div class="fs18 m_m_fs16 mb b500">Advanced Security</div>
+                    <div class="fs16 m_m_fs14" style="color: var(--secondary-grey);">Safeguard against threats with robust email security features, including spam filtering, antivirus protection, and encryption</div>
+                </div>
+            </div>
+            <div class="w33 m_w50 m_m_w100 vt">
+                <div class="p50 m_p20 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                    <span class="iconify fs40 m_m_fs30 mb20" data-icon="clarity:storage-line"></span>
+                    <div class="fs18 m_m_fs16 mb b500">Generous Storage</div>
+                    <div class="fs16 m_m_fs14" style="color: var(--secondary-grey);">Store and manage emails, attachments, and files efficiently with ample storage space provided</div>
+                </div>
+            </div>
+            <div class="w33 m_w50 m_m_w100 vt">
+                <div class="p50 m_p20 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                    <span class="iconify fs40 m_m_fs30 mb20" data-icon="ri:device-line"></span>
+                    <div class="fs18 m_m_fs16 mb b500">Cross-Device Compatibility</div>
+                    <div class="fs16 m_m_fs14" style="color: var(--secondary-grey);">Access emails seamlessly from any device, ensuring flexibility and convenience for users on the go</div>
+                </div>
+            </div>
+            <div class="w33 m_w50 m_m_w100 vt">
+                <div class="p50 m_p20 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                    <span class="iconify fs40 m_m_fs30 mb20" data-icon="tdesign:system-interface"></span>
+                    <div class="fs18 m_m_fs16 mb b500">Intuitive Interface</div>
+                    <div class="fs16 m_m_fs14" style="color: var(--secondary-grey);">Navigate your inbox effortlessly with a user-friendly interface, equipped with tools designed to enhance email management and productivity</div>
+                </div>
+            </div>
+        </grid_nm>
+    </div>
+</div>
+<div class="flexi mt100 m_m_mt70">
+    <div class="fs50 m_fs26 m_m_fs22 m_m_lh30 b600 mb50 m_m_mb20" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Frequently Asked Questions</div>
+    <div view="faqs"></div>
+</div>
+<script>
+    st(0);
+    var plans=globals.plans[nodes[0]];
+    function ModalOpen(ev,el,modal){
+        return{
+            "id":el.data('id'),
+            "serv":nodes[0]
+        }
+    }
+    function Period(ev, el){
+        period = el.data("id");
+    }
+</script>

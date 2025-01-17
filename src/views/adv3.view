@@ -1,0 +1,9 @@
+<div class="round4x flexi mt100 p40" style="background-color: white; color: var(--primary);">
+    <div class="fs30 m_m_fs20 mb20" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Need Help?</div>
+    <div>
+        <div class="fs20 m_m_fs16 mb30 g_nm" style="max-width: 450px; color: var(--grey);">Our Team Are Right Here For You!</div>
+    </div>
+    <a href="/contact_us">
+        <div class="fs16 m_m_fs14 sbtn round2x opacity ez" style="background-color: var(--primary); color: var(--second);">Contact Us</div>
+    </a>
+</div>

@@ -1,0 +1,41 @@
+<!-- <style>
+    .rto{
+        animation: rotate 20s linear infinite;
+    }
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<div class="flexi mt50 pt80" bind>
+    <a href="/blog">
+        <div class="mb20 l opacity ez" style="color: var(--purple);">
+            <span class="iconify vm fs28 mr5" data-icon="gg:arrow-left-o"></span>
+            <span class="vm fs16">Back To Blog HomePageee</span>
+        </div>
+    </a>
+    <div class="round4x p40" style="background-position: right; background-color: var(--purple);">
+        <div class="vm fs40 m_fs22 fs40" style="font-family: 'Bitter', serif; letter-spacing: 1px;">News</div>
+    </div>
+    <div class="mt100">
+        <grid_nm style="margin-left: -10px; margin-right: -10px;">
+            <div :for="9" class="w33 m_w50 m_m_w100 p10 vm">
+                <a href="">
+                    <div class="round4x hover-effect ez" style="box-shadow: 0px 0px 1px var(--secondary-grey);">
+                        <div class="sq70 hover cov" style="background-image: url('/images/Online\ Poker\ Casino\ App.jpeg'); border-top-right-radius: inherit; border-top-left-radius: inherit;"></div>
+                        <div class="p20 l">
+                            <div class="lh25 oh fs20 m_m_fs16 b mb10" style="height: 50px;">Does Web Migration Affect SEO</div>
+                            <div class="cw50 b">2022-05-10</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </grid_nm>
+    </div>
+    <div class="g_nm round2x sbtn fs16 mt30" style="background-color: var(--second); color: var(--primary);">Load More</div>
+    <div view="_blogs_topics/signup_adv"></div>
+</div> -->

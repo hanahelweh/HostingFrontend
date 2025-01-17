@@ -1,0 +1,249 @@
+<style>
+    lmlst-footer,
+    lmlst,
+    lmlst-header,
+    lmlst-tools,
+    lmlst-body {
+        display: block;
+    }
+
+    lmlst {
+        clear: both;
+        padding-bottom: 36px;
+    }
+
+    lmlst-header {
+        display: block;
+        z-index: 10;
+        top: 50px;
+        line-height: 60px;
+        height: 60px;
+        background-color: #f8fafc;
+    }
+
+    lmlst-header.pinned {
+        -webkit-box-shadow: 0 2px 2px rgb(0 0 0 / 20%);
+        box-shadow: 0 2px 2px rgb(0 0 0 / 20%);
+    }
+
+    lmlst-header ul {
+        padding: 0px;
+        list-style: none;
+        margin: 0px;
+        display: block;
+    }
+
+    lmlst-header ul>li,
+    lmlst-body ul>li {
+        display: table;
+        width: 100%;
+        padding: 0px 20px;
+    }
+
+    lmlst-header ul>li>div,
+    lmlst-body ul>li>div {
+        display: flex;
+        align-items: center;
+    }
+
+    lmlst-header ul>li>div>div{
+        color: #8494a1;
+        font-weight: normal;
+        
+    }
+
+    lmlst-header ul>li>div>div,
+    lmlst-body ul>li>div>div {
+        padding: 0px 5px;
+        text-align: center;
+        width: 140px;
+        min-width: 140px;
+        max-width: 140px;
+        letter-spacing: -0.5px;
+        text-shadow: none;
+        text-align: left;
+        
+        /* flex-direction: column; */
+        flex-grow: 1;
+    }
+
+    lmlst-body ul>li>div>div{
+        color: var(--black);
+    }
+
+    lmlst-header ul>li>div>div:first-of-type,
+    lmlst-body ul>li>div>div:first-of-type,
+    lmlst-header ul>li>div>div:last-of-type,
+    lmlst-body ul>li>div>div:last-of-type {
+        width: 50px;
+        min-width: 50px;
+        max-width: 50px;
+    }
+
+    /* lmlst-body ul>li>div::before {
+        position: absolute;
+        background: black;
+        border-radius: 0.25rem 0px 0px  0.25rem;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 4px;
+        overflow: hidden;
+        content: '';
+        
+    } */
+
+    lmlst-body ul>li>div.featured::before {
+        background: #ffc107;
+    }
+
+    lmlst ul>li>div.returned {
+        background-color: rgb(255 0 0 / 10%);
+    }
+
+    lmlst ul>li>div.cloned {
+        background-color: rgb(222 228 255);
+    }
+
+    lmlst ul>li>div.pending {
+        background-color: #e9f9f9;
+    }
+
+
+    lmlst .mini {
+        width: 120px;
+        min-width: 120px;
+        max-width: 120px;
+    }
+
+    lmlst-body ul>li>div {
+        line-height: 70px;
+        margin-bottom: 10px;
+        box-shadow: none !important;
+        border-bottom: 1px solid #e2e3e3 !important;
+    }
+
+    lmlst-body ul>li>div.shrink {
+        line-height: 40px;
+        margin-bottom: 8px;
+    }
+
+    lmlst-body {
+        padding-bottom: 26px;
+        display: block;
+        overflow-x: auto;
+        min-height: 75vh;
+    }
+
+    lmlst-footer ul {
+        text-align: left;
+        padding: 0px;
+    }
+
+    lmlst-footer li {
+        padding: 0px;
+        display: inline-block;
+        font-size: 13px;
+    }
+
+    [page] {
+        width: 25px;
+        height: 25px;
+        color: var(--black);
+        line-height: 25px;
+        border-radius: 0.25rem;
+        text-align: center;
+        margin: 0px 5px;
+    }
+
+    [page].active {
+        background-color: var(--main);
+        color: white;
+    }
+
+    [order],
+    [page] {
+        cursor: pointer;
+    }
+
+
+    .title {
+        letter-spacing: -0.5px;
+    }
+</style>
+<div class="pv100">
+    <div class="fs16 flexi">
+        <lmlst @query="queryList" :config="myConfig" class="_border _bgw" />
+    </div>
+</div>
+<script>
+    var myConfig = {
+        order: {
+            column: "objectId",
+            order: "asc",
+        },
+        show: 5,
+        page: 1,
+        columns: {
+            "ID": {
+                "title": "Order #",
+
+            },
+            "Date": {
+                "title":"Billing Date",
+            },
+            "Subscription": {
+                "title":"Subscription",
+            },
+            "Amount":{
+                "title":"Amount"
+            },
+            "Method":{
+                "title":"Payment Method"
+            }
+        },
+        pagination: {
+            middle: "...",
+        },
+        emptyRender: function () {
+            return `<div class="ov bgb op60"><span class="fs26 cc cb pb120">لا توجد نتائج!</span></div>`;
+        },
+        itemPlaceholder: function (key, item) {
+            return `<span class="" style="color: #ccc;">---------</span>`;
+        },
+        rowClassRender: function (item) {
+            let classes = "";
+            return classes;
+        },
+        itemRender: function (key, item) {
+            return item[key];
+        }
+    };
+
+
+    function queryList(ev, el, list, config, type) {
+
+        config.total = 10;
+        // list.setData([
+        //     {
+        //         "ID": "1234",
+        //         "Date":"24-04-2024",
+        //         "Subscription":"Pro Hosting",
+        //         "Amount":"$20",
+        //         "Method":"Paypal"
+        //     }
+        // ]);
+        
+        const invoicesData = globals.invoices.map(invoice => {
+            return {
+                "ID": invoice.objectId,
+                "Date": invoice.IssueDate,
+                "Subscription": invoice.subscription.Name,
+                "Amount": `$${invoice.Amount}`,
+                "Method": invoice.PaymentMethod
+            };
+        });
+        list.setData(invoicesData);
+
+    }
+</script>

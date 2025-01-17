@@ -1,0 +1,114 @@
+<style>
+    .notifications.active {
+        right: 0px !important;
+    }
+    .input-check .checkbox-box {
+        stroke-dasharray: 800;
+        stroke-dashoffset: 800;
+        transition: stroke-dashoffset 0.6s ease-in;
+    }
+
+    .input-check.is-checked .checkbox-box {
+        stroke-dashoffset: 0;
+    }
+    .input-check.is-checked .inputRadio .iconify {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .input-check.is-checked .over-effect {
+        animation: radioEffect 0.3s ease forwards;
+    }
+</style>
+<div bind="notifications,notifyme" class="h100">
+    <div :if="notifyme">
+        <style>
+            .side-icons .bil {
+                background-color: unset !important;
+                color: unset !important;
+            }
+
+            .side-icons.active.noti .bil {
+                background-color: #100f0f !important;
+                color: var(--second) !important;
+            }
+        </style>
+    </div>
+    <div class="p20 bb _bgw">
+        <div class="fs22 b600 oe nw l pr60" tip="Notifications">Notifications</div>
+        <div class="ov la mt5" style="top: 20px; right: 20px;">
+            <div class="filter-con g_nm">
+                <div h="show" s="filter" @click="el.closest('.filter-con').find('.filter').toggleClass('show');"><span
+                        class="iconify fs25 opacity ez pointer _cmain" data-icon="lets-icons:filter"></span></div>
+                <div class="filter pa _bgw p20 r0 round2x z200 sh10 _border h" style="width: 250px;">
+                    <div class="mb20">
+                        <div class="l fs16 b600 pr20">Filters</div>
+                        <div @click="$('input[name='filter']').removeClassName('is-checked');"
+                            class="ov la pointer ez opacity-blue mt5" tip="Clear Filter"><span class="iconify"
+                                data-icon="pajamas:clear-all"></span></div>
+                    </div>
+                    <form>
+                        <div class="l pv5" :for="5">
+                            <label class="input-check pointer">
+                                <input type="radio" name="filter" value="" class="h" :required />
+                                <div class="pa" style="top: 15px;">
+                                    <div class="inputRadio roundc _border _cmain z10" style="padding: 12px;">
+                                        <span class="iconify fs12 cc vh" data-icon="la:check"></span>
+                                    </div>
+                                    <div class="over-effect roundc cc p15"></div>
+                                    <svg class="checkbox-box cc" width="25" height="25" viewBox="0 0 31 31" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="15.5" cy="15.5" r="15" fill="transparent" stroke="#3C8CE6"
+                                            stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="pl40 cap">Action Needed</div>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="g_nm" @click="MarkAllRead"><span class="iconify fs25 opacity ez pointer ml10 _cmain"
+                    data-icon="game-icons:read"></span></div>
+        </div>
+    </div>
+    <div class="ov oya" style="top: 77px;">
+        <div class="oya">
+            <div :if="!notifications">
+                <div class="sq con" style="background-image: url('/images/notifications.png');"></div>
+                <div class="fs20 b600">You're all caught up</div>
+                <div class="_cdg fs16">Nothing to report at the moment, but keep an eye out for upcoming notifications
+                </div>
+            </div>
+            <div :for="55" class="l bb pointer pv15 pl30 pr20 ez" :hover="background-color: rgb(255, 255, 255);">
+                <div :if="!read" class="ov">
+                    <div class="pa round2x" style="left: 10px; top: 50%; transform: translateY(-50%);">
+                        <div class="round100 p3" style="background-color: var(--main);"></div>
+                    </div>
+                    <div class="ov op20" style="background-color: rgb(158, 195, 212);"></div>
+                </div>
+                <grid_nm class="mb8">
+                    <div class="w80 vm">
+                        <div class="pa _bgw round2x p10"><span class="iconify fs20 cc"
+                                data-icon="fluent-mdl2:reminder-time"></span></div>
+                        <div class="cap b600 fs16 oh lh20 pl25" style="height: 20px;">Reminder! Lorem, ipsum dolor sit
+                            amet consectetur adipisicing elit. Suscipit magni, et labore repudiandae ipsa, iste ad nemo
+                            doloribus ex voluptas expedita architecto sapiente! Cupiditate, reiciendis sunt totam quos
+                            beatae illum?</div>
+                    </div>
+                    <div class="w20 vm r">
+                        <div class="fs12 _cdg lh10 oh" style="height: 10px;" tip="1 day">10 year</div>
+                    </div>
+                </grid_nm>
+                <div class="lh20 oh _cdg" style="max-height: 40px;">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Voluptatibus et commodi veniam, ratione totam necessitatibus deserunt placeat facere corrupti
+                    in accusamus, sapiente error assumenda eum architecto soluta quam autem numquam!</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var notifyme = false;
+    var notifications = true;
+    var read = true;
+</script>

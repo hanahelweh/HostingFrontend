@@ -1,0 +1,17 @@
+<nav-secondary class="pf ov ra z300 l ez _border-right" style="background-color: var(--primary-grey); color: var(--second); width: 244px;">
+    <div @click="$('body').toggleClass('side_open');" class="h m_db p15 round2x _border pa z100000 pointer" style="background-color: var(--primary-grey); top: 20px; right: -15px;"><span class="iconify fs18 cc" data-icon="line-md:chevron-double-left"></span></div>
+    <div class="oya p30 ov" style="scrollbar-color: transparent transparent;">
+        <div class="b500 fs18 mb30 oe">Account</div>
+        <div class="fs13 cap" style="color: var(--primary-grey);">profile</div>
+        <div class="lh50">
+            <a href="/admin/account/personal-information">
+                <div n2="personal-information" class="accordion pointer l lh40 oh pr40 hov ez-f fs16 oe nw cap b600" tip="Notifications">personal information</div>
+            </a>
+        </div>
+        <div class="lh50">
+            <a href="/admin/account/account-settings">
+                <div n2="account-settings" class="accordion pointer l lh40 oh pr40 hov ez-f fs16 oe nw cap b600" tip="Notifications">Account Settings</div>
+            </a>
+        </div>
+    </div>
+</nav-secondary>

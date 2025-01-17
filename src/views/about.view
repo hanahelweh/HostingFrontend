@@ -1,0 +1,255 @@
+<style>
+    .expanded{
+        height: 100% !important;
+    }
+    @media screen and (max-width: 486px){
+        .features_imgs{
+            width: 80px !important;
+        }
+    }
+
+</style> 
+<div class="flexi pt80 mt50">
+    <grid gap10>
+        <div class="w50 vm l">
+            <div class="fs50 m_m_fs22 m_m_lh30 b g_nm z20" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Meet Cloud "--": Your Trusted Hosting Companion</div>
+            <div class="sq80 roundc cc w100 z10" style="background-color: var(--purple); opacity: 0.2; filter: blur(50px);"></div>
+            <div class="fs22 m_m_fs18 m_m_lh25 mt20" style="color: var(--secondary-grey);">At Cloud "--", we're more than hosting – we're your digital ally. Discover our commitment to seamless web solutions and embark on a journey where your online success is our priority</div>
+        </div>
+        <div class="w50 vm sq oh">
+            <div class="cc w120 h120 z20 op90">                
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="var(--purple)" d="M33.6,-58.3C38.8,-49,35.1,-31.6,35.8,-19.5C36.4,-7.3,41.6,-0.3,47.6,11.9C53.7,24,60.7,41.3,54.2,44.5C47.6,47.6,27.6,36.5,12.7,38.8C-2.1,41,-11.6,56.6,-22.8,61C-34,65.3,-46.8,58.5,-54.2,48C-61.6,37.6,-63.7,23.5,-60.9,11.6C-58.2,-0.3,-50.6,-10,-46.9,-22.8C-43.2,-35.6,-43.2,-51.5,-36.1,-59.9C-28.9,-68.4,-14.4,-69.4,-0.1,-69.2C14.2,-69,28.4,-67.6,33.6,-58.3Z" transform="translate(100 100)" />
+                </svg>
+            </div>
+                <div class="cc w120 h120 z10 op30 oh" style="transform: rotate(-45deg);">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="var(--main)" d="M38.1,-67.4C40.2,-57.8,26.5,-31.9,28.3,-16.3C30,-0.8,47.2,4.2,48.5,8.2C49.8,12.1,35.2,15,26.8,21.4C18.4,27.8,16.2,37.7,10,44.2C3.8,50.6,-6.4,53.6,-18.6,54.2C-30.8,54.8,-45,53,-44.9,44C-44.9,35,-30.7,18.7,-26.3,7.6C-21.9,-3.4,-27.2,-9.1,-31.6,-20.6C-36,-32.1,-39.4,-49.4,-34,-57.5C-28.6,-65.6,-14.3,-64.5,1.8,-67.4C18,-70.3,35.9,-77,38.1,-67.4Z" transform="translate(100 100)" />
+                    </svg>                                                  
+                </div>
+            <div class="cov sq70 z30 cc w70 m_m_w80 round4x ml70 mt30 m_m_lh20 m_m_ml20" style="filter: drop-shadow(0px 0px 10px var(--purple)); background-image: url('/images/Screenshot (183).png');"></div>
+        </div>
+    </grid>
+    <div class="mt50">
+        <div wrapper>
+            <div class="grab" dgsc>
+                <grid_nm gap20>
+                    <div class="w25 m_w40 m_m_w80 vt wr">
+                        <div class="round4x p40 m_m_p20" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                            <div>
+                                <div class="features_imgs sq con z20" style="width: 120px; margin: 0 auto; background-image: url('/images/jetpack-video-hosting.svg');"></div>
+                                <div class="cc roundc w60 sq80 z10" style="opacity: 1; filter: blur(100px); background-color: var(--purple);"></div>
+                            </div>
+                            <div class="fs22 m_m_fs14 m_m_lh25 mt20 lh30 oh" style="height: 60px; font-family: 'Bitter', serif; letter-spacing: 1px;">Unlimited storage</div>
+                        </div>
+                    </div>
+                    <div class="w25 m_w40 m_m_w80 vt wr">
+                        <div class="round4x p40 m_m_p20" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                            <div>
+                                <div class="features_imgs sq con z20" style="width: 120px; margin: 0 auto; background-image: url('/images/jetpack-dashboard.svg');"></div>
+                                <div class="cc roundc w60 sq80 z10" style="opacity: 1; filter: blur(100px); background-color: var(--main);"></div>
+                            </div>
+                            <div class="fs22 m_m_fs14 m_m_lh25 mt20 lh30 oh" style="height: 60px; font-family: 'Bitter', serif; letter-spacing: 1px;">Lightning Fast</div>
+                        </div>
+                    </div>
+                    <div class="w25 m_w40 m_m_w80 vt wr">
+                        <div class="round4x p40 m_m_p20" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                            <div>
+                                <div class="features_imgs sq con z20" style="width: 120px; margin: 0 auto; background-image: url('/images/jetpack-security.svg');"></div>
+                                <div class="cc roundc w60 sq80 z10" style="opacity: 1; filter: blur(100px); background-color: var(--green);"></div>
+                            </div>
+                            <div class="fs22 m_m_fs14 m_m_lh25 mt20 lh30 oh" style="height: 60px; font-family: 'Bitter', serif; letter-spacing: 1px;">Iron-Clad Security</div>
+                        </div>
+                    </div>
+                    <div class="w25 m_w40 m_m_w80 vt wr">
+                        <div class="round4x p40 m_m_p20" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                            <div>
+                                <div class="features_imgs sq con z20" style="width: 120px; margin: 0 auto; background-image: url('/images/jetpack-google-analytics.svg');"></div>
+                                <div class="cc roundc w60 sq80 z10" style="opacity: 1; filter: blur(100px); background-color: var(--pink);"></div>
+                            </div>
+                            <div class="fs22 m_m_fs14 m_m_lh25 mt20 lh30 oh" style="height: 60px; font-family: 'Bitter', serif; letter-spacing: 1px;">SEO Ready</div>
+                        </div>
+                    </div>
+                </grid_nm>
+            </div>
+        </div>
+    </div>
+    <div class="mt150 m_m_mt50">
+        <div class="fs50 m_fs40 m_m_fs22 m_m_lh30 mb50 m_m_mb20" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Our Mission</div>
+        <grid gap10>
+            <div class="w50 vm oh">
+
+                <div class="cov sq70 z30 w80 m_w100 round4x" style=" background-image: url('/images/space.jpeg');"></div>
+            </div>
+            <div class="w50 vm l">
+                <div class="fs22 m_m_fs16 m_m_lh25" style="color: var(--secondary-grey);">Brief intro emphasizing services. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, quis. Temporibus sint dolores ad blanditiis sunt reprehenderit dolor fugiat ut quod laborum, provident aspernatur, deserunt, culpa officiis quas libero ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore explicabo sequi excepturi dolorum quas nesciunt molestias debitis ut rem minima? Earum placeat quod repellat hic vitae. Fugiat quae ipsa architecto.</div>
+            </div>
+        </grid>
+    </div>
+    <div class="mt150 m_m_mt50">
+        <div class="fs50 m_fs40 m_m_fs22 m_m_lh30" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Platform-Tailored Hosting Solutions</div>
+        <div class="fs22 m_m_fs18 m_m_lh25 mt20 mb50 g_nm" style="max-width: 600px; color: var(--secondary-grey);">To gain a clearer understanding of "--" Cloud, we invite you to explore our company pages.</div>
+        <div class="height-contain">
+            <grid_nm class="height-change oh" gap10 style="height: 530px;">
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 692px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">Wordpress</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 0; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">4Images Gallery</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 173px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">Zen Cart</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 1384px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">vTiger</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 1903px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">SuiteCRM</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 2422px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">Revive Adserver</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 2595px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">PrestaShop</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 2768px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">Podcast Generator</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 3114px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">Piwigo</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 3806px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">phpList</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 4152px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">phpCollab</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 4498px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">phpBB3</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 4671px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">php-fusion</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 4844px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">OS Ticket</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 5017px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">OS Commerce</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 5190px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">OpenCart</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 5709px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">Open Real Estate</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 6228px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">Moodle</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 6747px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">Mautic</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 7439px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">Magento</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 7612px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">LuxCal</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 7958px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">Joomla</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 8996px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">Form Tools</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 9169px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">Drupal</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 9342px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">DOTproject</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 9688px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">DokuWiki</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 10380px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">ChurchCRM</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 10553px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">b2evolution</div>
+                </div>
+                <div class="w25 m_m_w50 vt">
+                    <div class="sq imgs-invert" style="margin: 0 auto; width: 110px; background-position: -10px 10726px; background-image: url('/images/scripts-sprite.svg');"></div>
+                    <div class="mt20 fs18 m_m_fs16 b600" style="color: var(--secondary-grey);">Abante Cart</div>
+                </div>
+            </grid_nm>
+            <div @click="Expand" class="sbtn light mt50 fs16 m_m_fs14">Tap Here To See More!</div>
+        </div>
+    </div>
+    <div class="mt150 m_m_mt50">
+        <div view="adv2"></div>
+    </div>
+    <div class="mt150 m_m_mt50">
+        <div class="sq30 m_m_sq round4x cov" style="background-image: url('/images/back.jpeg');">
+            <div class="ov bgb50"></div>
+            <div class="cc">
+                <div class="fs44 m_m_fs22 m_m_lh30 b g_nm z20 tsh _cw" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Spark a Connection with Us!</div>
+                <div class="sbtn light mt30 fs16 m_m_fs14">Contact Us!</div>
+            </div>
+        </div>
+    </div>
+    <div class="mt100 m_m_mt50 p50 m_m_p0">
+        <div class="fs50 m_m_fs22 m_m_lh30 b g_nm z20 mb50" style="max-width: 800px; font-family: 'Bitter', serif; letter-spacing: 1px;">Partnered with the best in the business</div>
+        <grid_nm>
+            <div class="w25 m_m_w50 m_m_p10 vm">
+                <div class="sq30 w80 m_m_w100 h100 con imgs-invert" style="margin: 0 auto; filter: brightness(0) invert(1); opacity: 0.8; background-image: url('/images/business-house.png');"></div>
+            </div>
+            <div class="w25 m_m_w50 m_m_p10 vm">
+                <div class="sq30 w60 m_m_w80 h100 con imgs-invert" style="margin: 0 auto; filter: brightness(0) invert(1); opacity: 0.8; background-image: url('/images/magma.png');"></div>
+            </div>
+            <div class="w25 m_m_w50 m_m_p10 vm">
+                <div class="sq30 w60 m_m_w80 h100 con imgs-invert" style="margin: 0 auto; filter: brightness(0) invert(1); opacity: 0.8; background-image: url('/images/cloudflare.png');"></div>
+            </div>
+            <div class="w25 m_m_w50 m_m_p10 vm">
+                <div class="sq30 w60 m_m_w80 h100 con imgs-invert" style="margin: 0 auto; filter: brightness(0) invert(1); opacity: 0.8; background-image: url('/images/petrikor.png');"></div>
+            </div>
+        </grid_nm>
+    </div>
+</div>
+<script>
+    st(0);
+    function Expand(ev, el){
+        var heightChange = el.closest('.height-contain').find('.height-change')
+        heightChange.toggleClass('expanded');
+        if (heightChange.hasClass("expanded")) {
+            el.html("Show Less");
+        } else {
+            el.html("Tap Here To See More!");
+        }
+    }
+</script>

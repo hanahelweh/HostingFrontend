@@ -1,0 +1,41 @@
+<style>
+    .select-field.focused .select-options{
+        display: block;
+    }
+    .select-field.focused ~ .over-effect{
+        animation: overEffect 0.2s ease forwards ;
+    }
+</style>
+<div class="p20 _cb" bind="globals">
+    <div>
+        <label class="select-field ez" style="animation: water 2s ease-in-out;">
+            <input type="" name="" value="" class="input pr40 w100 pl10 lh40 pointer _border round2x" placeholder="Choose Server Location" :required/>
+            <div class="select-options h round2x z100 pa w100 sh10 p10 _border" style="background-color: var(--primary); color: var(--secondary-grey); top: 35px;">
+                <div class="pointer p5 ez" :hover="background-color: var(--primary-grey);">North America (USA, AZ)</div>
+                <div class="pointer p5 ez" :hover="background-color: var(--primary-grey);">Europe (Lithuania)</div>
+            </div>
+            <div class="icon-text ov la z10 ph10 mb2 _cdg" style="right: 10px;">
+                <span class="iconify cc fs20 _cmain" data-icon="jam:chevron-down"></span>
+            </div>
+            <div class="error red fs12">
+                <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                <span class="vm">Kindly write your email</span>
+            </div>
+        </label>
+        <div class="over-effect pa round4x"></div>
+    </div>
+    <div class="detailsCon round2x p10 mt20" style="background-color: var(--primary-grey); color: var(--second);">
+        <div class="b600 pv10 pointer" @click="el.closest('.detailsCon').find('.details').toggleClass('h')">
+            Essential Details Regarding Your Transfer:
+        </div>
+        <ul class="details h">
+            <li>The transfer of servers is provided at no additional cost.</li>
+            <li>All websites associated with the hosting plan will be relocated to the Lithuania data center.</li>
+            <li>Your hosting plan's IP address will be updated.</li>
+            <li>Any modifications made during the transfer will not be saved and are discouraged.</li>
+            <li>The server transfer may require up to 12 hours to finalize.</li>
+            <li>Your hosting account will be temporarily locked during the transfer procedure.</li>
+        </ul>
+    </div>
+    <div class="sbtn primary cap w100 mt20">Change</div>
+</div>

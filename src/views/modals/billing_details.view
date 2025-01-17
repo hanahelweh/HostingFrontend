@@ -1,0 +1,68 @@
+<div class="detCon p40 cb" bind="globals">
+    <form o-sub="BillingDetails">
+        <div class="pv5">
+            <div class="search-con">
+                <label class="text lh40">
+                    <input type="text" name="firstName" value="{{globals.User.firstName ? globals.User.firstName : ''}}" class="w100 ph40 lh40 round2x input" placeholder="First Name" :required />
+                    <div class="ov ra z10 ph10 mb2" style="left: 10px;">
+                        <span class="iconify cc fs20 _cdg" data-icon="ph:user-fill"></span>
+                    </div>
+                    <div class="error red fs12">
+                        <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                        <span class="vm">Kindly write first name</span>
+                    </div>
+                </label>
+                <div class="over-effect pa round4x"></div>
+            </div>
+        </div>
+        <div class="pv5">
+            <div class="search-con">
+                <label class="text lh40">
+                    <input type="text" name="lastName" value="{{globals.User.lastName ? globals.User.lastName : ''}}" class="w100 ph40 lh40 round2x input" placeholder="Last Name" :required />
+                    <div class="ov ra z10 ph10 mb2" style="left: 10px;">
+                        <span class="iconify cc fs20 _cdg" data-icon="ph:user-light"></span>
+                    </div>
+                    <div class="error red fs12">
+                        <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                        <span class="vm">Kindly write your last name</span>
+                    </div>
+                </label>
+                <div class="over-effect pa round4x"></div>
+            </div>
+        </div>
+        <div class="pv5">
+            <div class="search-con">
+                <label class="text lh40">
+                    <input type="text" name="mobile" value="{{globals.User.Mobile ? globals.User.Mobile : ''}}" class="w100 ph40 lh40 round2x input" placeholder="Mobile" />
+                    <div class="ov ra z10 ph10 mb2" style="left: 10px;">
+                        <span class="iconify cc fs20 _cdg" data-icon="clarity:mobile-solid"></span>
+                    </div>
+                    <div class="error red fs12">
+                        <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                        <span class="vm">Kindly write a mobile number</span>
+                    </div>
+                </label>
+                <div class="over-effect pa round4x"></div>
+            </div>
+        </div>
+        <div class="r mt10">
+            <button type="submit" class="sbtn _bgmain _cw cap opacity round2x">Save</button>
+        </div>
+    </form>
+</div>
+<script>
+    function BillingDetails(f, d){
+        engine.put("/Users/"+globals.User.objectId,{
+            firstName:d.firstName,
+            lastName:d.lastName,
+            mobile:d.mobile
+        }).then((r)=>{
+            if(r?.results?.[0]?.objectId){
+                globals.User.firstName = d.firstName;
+                globals.User.lastName = d.lastName;
+                globals.User.mobile = d.mobile;
+                $("[close-modal]:last").click();
+            }
+        })
+    }
+</script>

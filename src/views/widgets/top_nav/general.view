@@ -1,0 +1,62 @@
+<style>
+    .drop-con.actv .dropdown{
+        display: block;
+    }
+</style>
+<nav-top bind="nodes" class="z100 _cb l pf ov ba ph20" style="background-color: var(--primary); border-bottom: 1px dotted var(--secondary-grey); height: 70px;">
+    <grid_nm class="lh70" gaph10>
+        <div class="h m_dib">
+            <div @click="$('body').toggleClass('side_open');" class="pointer ph10"><span
+                    class="iconify fs20 opacity ez cc" style="margin-top:-5px;" data-icon="simple-line-icons:menu"></span></div>
+        </div>
+        <div class="fs20 b600 cap">{{nodes[2]}}</div>
+    </grid_nm>
+    <div @mouse-over="Active" @mouse-out="DisActive" class="drop-con ov la ph20">
+        <div class="cov sq roundc pointer ez opacity mt15" style="color: var(--primary); background-color: var(--second); width: 40px;">
+            <div class="cc fs18 b500">H</div>
+        </div>
+        <div class="pa dropdown h l _border ez r0 _bgw sh10 round2x"
+            style="width: 320px; right: 20px;">
+            <div class="p20 round2x">
+                <div class="triangle-up pa r0" style="top: -10px;"></div>
+                <div class="pb20" style="border-bottom: 1px solid var(--secondary-grey);">
+                    <div class="p10">
+                        <grid_nm>
+                            <div class="vm cov sq roundc pointer ez opacity"
+                                style="width: 40px; background-color: var(--main);">
+                                <div class="cc b500" style="color: var(--second);">H</div>
+                            </div>
+                            <div class="vm md_fs15 ml5 lh20 oh" style="height: 20px;">
+                                hanahelweh97@gmail.com</div>
+                        </grid_nm>
+                    </div>
+                    <div class="p10 round4x"
+                        style="background-color: rgba(60, 140, 230, 0.1); border: 1px solid var(--main);">
+                        <grid_nm>
+                            <div class="vm cov sq roundc pointer ez opacity"
+                                style="width: 40px; background-color: var(--green);">
+                                <div class="cc b500" style="color: var(--second);">HH</div>
+                            </div>
+                            <div class="vm md_fs15 ml5 lh20 oh" style="height: 20px;">
+                                hanahelweh97@gmail.com</div>
+                        </grid_nm>
+                    </div>
+                </div>
+                <div class="pt20">
+                    <div class="opacity-blue ez mb15">
+                        <span class="iconify vm fs22 mr5" data-icon="lets-icons:setting-line-light"></span>
+                        <span class="vm">Manage Account</span>
+                    </div>
+                    <div class="opacity-blue ez mb15">
+                        <span class="iconify vm fs22 mr5" data-icon="ph:plus-light"></span>
+                        <span class="vm">Add Account</span>
+                    </div>
+                    <div class="opacity-blue ez pointer">
+                        <span class="iconify vm fs22 mr5" data-icon="iconamoon:exit-thin"></span>
+                        <span class="vm">Sign Out</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav-top>

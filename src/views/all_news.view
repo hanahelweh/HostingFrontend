@@ -1,0 +1,19 @@
+<div bind class="flexi pt80 mt100 m_m_mt70">
+    <div class="fs50 m_fs40 m_m_fs22 m_m_lh30 mb50 m_m_mb30" style="font-family: 'Bitter', serif; letter-spacing: 1px;">"--" Cloud News</div>
+    <div class="g_nm" style="max-width: 700px;">
+        <div :for="10" class="trans-right p40 round4x ez mt10 mb10 l" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+            <a href="single_new">
+                <div class="fs18 m_m_fs14 mb20" style="color: var(--secondary-grey);">"--" Cloud - Jan 24 2024</div>
+                <div class="lh30 oh b500 fs20 m_m_fs16" style="height: 90px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolor, nisi quia iure ad numquam non velit temporibus qui debitis cumque recusandae nihil excepturi eaque cupiditate iste quasi mollitia aspernatur.</div>
+                <div class="fs16 mt10 u pointer opacity ez" style="color: var(--purple);">
+                    <span>Read Article</span>
+                    <span class="iconify vm" data-icon="line-md:arrow-right"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div view="adv"></div>
+</div>
+<script>
+    st(0);
+</script>

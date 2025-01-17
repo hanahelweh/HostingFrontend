@@ -1,0 +1,35 @@
+<grid_nm style="margin-left: -20px; margin-right: -20px;">
+    <div class="w33 m_w50 m_m_w100 p20 vm">
+        <a href="/single_blog">
+            <div class="round4x hover-effect ez" style="box-shadow: 0px 0px 1px var(--secondary-grey); background-color: var(--primary);">
+                <div class="sq70 hover cov" style="background-image: url('/images/Online\ Poker\ Casino\ App.jpeg'); border-top-right-radius: inherit; border-top-left-radius: inherit;"></div>
+                <div class="p20 l">
+                    <div class="lh25 oh fs20 m_m_fs16 b600 mb10" style="height: 50px;">Does Web Migration Affect SEO</div>
+                    <div class="b600" style="color: var(--secondary-grey);">2022-05-10</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="w33 m_w50 m_m_w100 p20 vm">
+        <a href="">
+            <div class="round4x hover-effect ez" style="box-shadow: 0px 0px 1px var(--secondary-grey);  background-color: var(--primary);">
+                 <div class="sq70 hover cov" style="background-image: url('/images/jpeg'); border-top-right-radius: inherit; border-top-left-radius: inherit;"></div>
+                <div class="p20 l">
+                    <div class="lh25 oh fs20 m_m_fs16 b600 mb10" style="height: 50px;">Benefits Of SSL certificate</div>
+                    <div class="b600" style="color: var(--secondary-grey);">2022-04-14</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="w33 m_w50 m_m_w100 p20 vm">
+        <a href="">
+            <div class="round4x hover-effect ez" style="box-shadow: 0px 0px 1px var(--secondary-grey);  background-color: var(--primary);">
+                 <div class="sq70 hover cov" style="background-image: url('/images/Cloud\ Storage\ App\ ☁️\ Beyond\ Neumorphism.jpeg'); border-top-right-radius: inherit; border-top-left-radius: inherit;"></div>
+                <div class="p20 l">
+                    <div class="lh25 oh fs20 m_m_fs16 b600 mb10" style="height: 50px;">5 Ways To Optimise Website Speed and Performance</div>
+                    <div class="b600" style="color: var(--secondary-grey);">2022-04-04</div>
+                </div>
+            </div>
+        </a>
+    </div>
+</grid_nm>

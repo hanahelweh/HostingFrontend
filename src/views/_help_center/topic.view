@@ -1,0 +1,177 @@
+<style>
+    .liveTracker .navi.active::before {
+        position: absolute;
+        content: '';
+        width: 3px;
+        height: 100%;
+        background-color: var(--main);
+        left: -5px;
+        animation: borderAnimation 0.3s ease-out;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        top: 0;
+    }
+    @keyframes borderAnimation {
+        from {
+            height: 0;
+        }
+        to {
+            height: 100%;
+        }
+    }
+    .hover-effect:hover{
+        box-shadow: 0px 7px 15px var(--border) !important;
+    }
+    @media screen and (max-width:1024px){
+        .table-content{
+            width: 250px !important;
+        }
+        .content{
+            width: calc(100% - 250px) !important;
+        }
+    }
+    @media screen and (max-width:1024px){
+        .content{
+            width: 100% !important;
+        }
+    }
+</style>
+<div bind class="round4x ph20" style="max-width: 1000px; margin: 0 auto; background-color: var(--primary-grey); border: 1px solid var(--border);">
+    <grid_nm class="mt40 mb40">
+        <div class="content vt l ph20 md_pl0 m_ph0" style="width: calc(100% - 300px);">
+            <div class="mb40">
+                <div class="fs40 m_fs22 lh60 m_lh40" style="max-width: 700px; font-family: 'Bitter', serif; letter-spacing: 1px;">How to manage Backups?</div>
+                <div class="fs16 m_m_fs14 i">Last updated: July 11, 2022</div>
+            </div>
+            <section class="mb50" id="sec1" title="Introduction">                
+                <div class="b fs28" style="max-width: 700px; font-family: 'Bitter', serif; letter-spacing: 1px;">Introduction</div>
+                <div class="fs18 cw70 mt20">
+                    Website migration can be anything from redesigning your website to making structural changes, to moving the website to a new domain or content management system (CMS). Despite the many advantages that migrating your website can carry, it puts your SEO at risk, because these migrations can affect your site’s ongoing organic performance. When carrying out a website migration most marketers fail to consider how the search engine will react which can negatively impact your rankings, traffic, and conversions. Our team has migrated many websites, so in this article, we’ll share everything that we know will help you migrate your website as smoothly as possible while minimizing SEO pitfalls. 
+                </div>
+                <div class="note p20 round4x mt20" style="background-color: var(--primary-grey); border: 1px solid var(--main);">
+                    <span class="iconify fs28 vm mr10" data-icon="twemoji:eyes"></span>
+                    <span class="vm fs18 cw90">Relative Links: <a href="" class="u" style="color: var(--main);">How to Get Your Cloud Account</a></span>
+                </div>
+            </section>
+            <section class="mb50" id="sec2" title="Web migration risks">                
+                <div class="b fs28" style="max-width: 700px; font-family: 'Bitter', serif; letter-spacing: 1px;">Web migration risks</div>
+                <div class="fs18 cw70 mt20">
+                    A web migration can result in a massive decrease in rankings and loss of organic traffic. One of the reasons that can happen is 404 errors where some of the old pages might not have been mapped or redirected and some internal links within the content may still be pointing to the old version of the URL rather than the new version. Another risk of web migration is lower conversion rates. There’s a risk of your conversion rates plummeting after a web migration especially if you also changed your site’s design or added new steps or layers to the purchase process. In order to solve this issue, try to understand how customers interact with your website prior to the migration, and understand the user’s journey from discovering your business to buying your product. That can help you discover what’s working and what’s not and how you can get rid of any obstacles in the user’s flow. 
+                </div>
+                <div class="cov sq50 round4x mt20" style="background-image: url('/images/Smart\ Home\ App.jpeg');"></div>
+            </section>
+            <section class="mb50" id="sec3" title="Create a website migration strategy">                
+                <div class="b fs28" style="max-width: 700px; font-family: 'Bitter', serif; letter-spacing: 1px;">Create a website migration strategy</div>
+                <div class="fs18 cw70 mt20">
+                    A carefully executed site migration can minimize traffic fluctuations, and minimize search engine penalties. Here are our tips for creating your SEO web migration checklist:
+                </div>
+                <ul class="fs18 cw70">
+                    <li class="mt10">
+                        <div class="cw90">
+                            <a href="" class="u" style="color: var(--main);">Use a test server</a>
+                        </div>
+                        <div>Test everything on a test server before starting your web migration. You need to verify that all the redirects are working properly before going public.</div>
+                    </li>
+                    <li class="mt10">
+                        <div class="cw90">
+                            <a href="" class="u" style="color: var(--main);">Choose your migration date smartly</a>
+                        </div>
+                        <div>Make sure you’re planning your migration over the time of year when your site performance is usually slow. It’s crucial that you know no matter how well planned your site migration is, </div>
+                    </li>
+                    <li class="mt10">
+                        <div class="cw90">
+                            <a href="" class="u" style="color: var(--main);">Have a backup plan in place</a>
+                        </div>
+                        <div>You should definitely consider keeping a backup of your old site and all your data just in case things don’t go according to plan you’ll be able to restore your website, and not be unavailable while working to fix the issues.</div>
+                    </li>
+                    <li class="mt10">
+                        <div class="cw90">
+                            <a href="" class="u" style="color: var(--main);">Create a Custom 404 Page</a>
+                        </div>
+                        <div>It’s inevitable that when you’re migrating your site your users will encounter broken pages. That’s why you’ll need to create 404 pages that are engaging, and that makes it easy for the user to navigate back to the homepage and the other sections of your site. If your users end up on a blank page that they can’t navigate from, they will be leaving your site which can damage your ranking.</div>
+                    </li>
+                </ul>
+                <div class="note p20 round4x mt20" style="background-color: var(--primary-grey); border: 1px solid var(--main);">
+                    <span class="iconify fs28 vm mr10" data-icon="twemoji:spiral-notepad"></span>
+                    <span class="vm fs18 cw90">Pro tip: Carrie Melissa Jones, entrepreneur and community business advisor, recommends ordering the tasks in this list from lowest lift to highest lift, so members can accumulate small wins and build confidence as they make their way through the list. </span>
+                </div>
+            </section>
+            <section class="mb50" id="sec4" title="Conclusion">                
+                <div class="b fs28" style="max-width: 700px; font-family: 'Bitter', serif; letter-spacing: 1px;">Conclusion</div>
+                <div class="fs18 cw70 mt20">
+                    Planning your SEO strategy during your website migration can be a demanding and long process, however, if you put in the effort you’ll be able to maintain and increase your organic visibility. Isn’t the initial goal of any website migration to increase traffic and conversions, so why take the risk? If you’re looking to migrate your website and want to make sure you maintain your site’s SEO you can contact our team to help make your migration process as smooth as possible.
+                </div>
+                <div class="mt20 mb20 p20 round4x"  style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                    <div class="ov la ba p20 z100 cw">
+                        <span class="iconify fs18 pointer" data-icon="mynaui:copy" ctc=".code1"></span>
+                    </div>
+                    <div class="code1 oxa">
+                        <pre><code class="round language-javascript fs16 lh30">&lt;form action="/view-example"&gt;
+    &lt;input type="text" name="name"&gt;
+    &lt;input type="submit" value="submit"&gt;
+&lt;/form&gt;</code></pre>
+                    </div>
+                </div>
+            </section>
+            <div class="fs26 m_fs18 mb10" style="font-family: 'Bitter', serif; letter-spacing: 1px; color: var(--main);">Related Articles</div>
+            <div :for="4" class="pv5">
+                <a href="help_center/topic">
+                    <grid_nm class="round2x p20 pointer boxes ez" style="border: 1px solid var(--border); color: var(--secondary-grey);">
+                        <div class="vm fs16 l pr20" style="width: calc(100% - 20px);"><span class="pointer">How to manage Backups?</span></div>
+                        <div class="vm" style="width: 20px;"><span class="iconify fs24" data-icon="formkit:right"></span></div>
+                    </grid_nm>
+                </a>
+            </div>
+            <div class="mt40">
+                <div class="fs18">Was this article helpful?</div>
+                <grid_nm style="margin-left: -5px; margin-right: -5px;">
+                    <div class="w50 p5 c">
+                        <div class="pv10 ph20 round4x pointer" style="border: 1px solid var(--border);">
+                            <span class="vm iconify fs36 mr10" data-icon="noto:nerd-face"></span>
+                            <span class="vm fs18">Yes</span>
+                        </div>
+                    </div>
+                    <div class="w50 p5 c">
+                        <div class="pv10 ph20 round4x pointer" style="border: 1px solid var(--border);">
+                            <span class="vm iconify fs36 mr10" data-icon="fluent-emoji-flat:worried-face"></span>
+                            <span class="vm fs18">No</span>
+                        </div>
+                    </div>
+                </grid_nm>
+            </div>
+        </div>
+        <div class="table-content vt ps md_h" style="top: 95px; width: 300px; border-left: 1px solid var(--border);">
+            <div class="ph20 l">
+                <div class="liveTracker">
+                    <div class="p5 b fs18" style="color: var(--main);">Overview</div>
+                </div>
+            </div>
+        </div>
+    </grid_nm>
+</div>
+<script>
+    st(0);
+    $('section').each(function () {
+    $(".liveTracker").append(`<div class="navi p5 text2 pointer colorHover ez-f fs16 ` + (this.id) + `" @click="st($('#` + (this.id) + `').offset().top - 95);">` + (this.title) + `</div>`);
+});
+$(window).scroll(function () {
+$("section").each(function () {
+    let next = $(this).next("section");
+    let startX = $(this).offset().top - window.pageYOffset;
+    let cond = next.length
+    ? startX <= 95 && next.offset().top - window.pageYOffset > 95
+    : startX <= 95;
+    if (cond) {
+    if ($(".liveTracker").length)
+        $(".liveTracker .navi." + this.id)
+        .removeClass("text2")
+        .addClass("active text1");
+    } else {
+    if ($(".liveTracker").length)
+        $(".liveTracker .navi." + this.id)
+        .removeClass("active")
+        .addClass("text2");
+    }
+});
+});
+</script>

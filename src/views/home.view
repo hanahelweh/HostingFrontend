@@ -1,0 +1,470 @@
+<style>
+    .search-input.focused .input-sign {
+        box-shadow: -5px 0px 30px rgba(114, 64, 200, 0.6);
+    }
+
+    .input-sign::placeholder {
+        font-size: 16px;
+        color: var(--grey) !important;
+        font-weight: 500;
+    }
+
+    .error {
+        display: none;
+    }
+
+    .is-invalid .error {
+        display: block;
+    }
+
+    .colorIcon path,
+    .colorIcon * {
+        fill: white
+    }
+    @media screen and (max-width:768px){
+        .icons{
+            width: 60px !important;
+        }
+    }
+
+    @media screen and (max-width: 486px){
+        .input-sign::placeholder {
+            font-size: 13px;
+        }
+    }
+    .boxShadow:hover{
+        box-shadow: -20px -20px 19px -25px var(--purple);
+    }
+    .boxShadow2:hover{
+        box-shadow: -10px -20px 19px -25px var(--main);
+    }
+    .boxShadow3:hover{
+        box-shadow: 20px -20px 19px -25px var(--green);
+    }
+    .testimonial::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 50%;
+        height: 2px;
+        background-color: var(--main);
+        left: 0;
+    }
+    .rotate{
+        transform: rotate(180deg) !important;
+    }
+    body.light-theme .home-contact{
+        background-color: #16191c !important;
+    }
+    body.light-theme .home-contact .contact-input,body.light-theme .home-contact .contact-textarea{
+        color: var(--primary) !important;
+    }
+    body.light-theme .home-contact .submit-btn{
+        color: var(--primary) !important;
+    }
+</style>
+<div class="flexi pt80 mhv100" style="padding-bottom: 350px;">
+    <div @mouse-move="Move" class="l mt40 p40 m_m_p20 round4x" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+        <div class="oh ov z100 round4x" style="pointer-events: none;">
+            <div class="par pa" >
+                <div class="cc cursor-div">
+                    <div class=" sq roundc" style="width: 600px; background-color: var(--purple); opacity: 0.2;
+                        filter: blur(50px);
+                        transition: all 1.2s cubic-bezier(0.15, 1, 0.3, 1);
+                        mix-blend-mode: soft-light;
+                        will-change: transform;
+                        pointer-events: none;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="/pricing">
+            <div class="fs16 b600 mb10 cap" style="color: var(--secondary-grey)">faster websites & apps</div>
+        </a>
+        <div class="b fs50 m_fs40 m_m_fs30"
+            style="font-family: 'Bitter', serif; letter-spacing: 1px; max-width: 700px; background: linear-gradient(45deg, var(--main), var(--green)); -webkit-background-clip: text; color: transparent;">
+            Give your idea a place to grow online.</div>
+        <div class="w50 m_w100 mt40 mb40">
+            <label>
+                <div class="search-input round2x ez">
+                    <input type="text" name="domain-search" focus
+                        class="input-sign w100 p15 round2x b0 ez" placeholder="Find your Domain.." />
+                    <a href="/domains">
+                        <div class="ov la sbtn purple"
+                            style=" background-color: var(--purple); display: flex; justify-content: center; align-items: center;">
+                            <span class="iconify vm fs20" data-icon="mi:search"></span>
+                        </div>
+                    </a>
+                    <div class="error red fs12">
+                        <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                        <span class="vm">Kindly enter domain name</span>
+                    </div>
+                </div>
+            </label>
+            <div bind class="mt40 oh" style="color: var(--secondary-grey); mask-image: linear-gradient(to right,rgba(255,255,255,0) 0%,white calc(0% + 3rem),white calc(100% - 3rem),rgba(255,255,255,0) 100%);">
+                <div class="mb20 fs20 m_m_fs16">Pick out your trusted domain</div>
+                <grid_nm class="nw" gaph10 style="animation: smoothScroll 30s linear infinite;">
+                    <div class="c" :for="10">
+                        <span class="iconify fs40" data-icon="gridicons:domains"></span>
+                        <div class="mt10">13$</div>
+                    </div>
+                </grid_nm>
+            </div>
+        </div>
+        <div wrapper class="pa z100" style="top: calc(100% - 40px) !important; left: 10px; right: 10px;">
+            <div class="grab round4x" dgsc style="scrollbar-color: transparent transparent">
+                <grid_nm>
+                    <div class="w33 m_w75 ph20 m_ph5 vt wr">
+                        <div class="round4x p20"
+                            style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                            <span class="iconify fs40" style="color: var(--purple);"
+                                data-icon="line-md:cloud"></span>
+                            <div class="fs19 mt15 lh20 b" style="height: 40px;">Cloud Hosting</div>
+                            <div class="fs15 b" style="color: var(--secondary-grey);">$40.00</div>
+                            <div class="fs16 oh lh20 mt15" style="color: var(--secondary-grey); max-height: 80px;">Lorem
+                                ipsum dolor sit amet consectetur adipisicing elit. Saepe labore aspernatur
+                                perspiciatis nostrum laboriosam laborum accusantium eaque tempora reiciendis a
+                                veniam temporibus, repudiandae, perferendis blanditiis cumque adipisci tempore eius
+                                fugiat.</div>
+                                <a href="/hosting/cloud">
+                                    <div class="sbtn purple fs16 m_m_fs14 i mt15 b600">
+                                        <span>Get Started</span>
+                                    </div>
+                                </a>
+                                <a href="/pricing/cloud_hosting">
+                                    <div class="i mt15 sbtn outline fs16 m_m_fs14" :hover="background-color:white; color:var(--purple);">
+                                        <span class="vm">See All Plans</span>
+                                        <span class="iconify vm" data-icon="line-md:arrow-right"></span>
+                                    </div>
+                                </a>
+                        </div>
+                    </div>
+                    <div class="w33 m_w75 ph20 m_ph5 vt wr">
+                        <div class="round4x p20"
+                            style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                            <span class="iconify fs40" style="color: var(--purple);"
+                                data-icon="line-md:cloud-upload-loop"></span>
+                            <div class="fs19 mt15 lh20 b" style="height: 40px;">Professional Hosting</div>
+                            <div class="fs15 b" style="color: var(--secondary-grey);">$40.00</div>
+                            <div class="fs16 oh lh20 mt15" style="color: var(--secondary-grey); max-height: 80px;">Lorem
+                                ipsum dolor sit amet consectetur adipisicing elit. Saepe labore aspernatur
+                                perspiciatis nostrum laboriosam laborum accusantium eaque tempora reiciendis a
+                                veniam temporibus, repudiandae, perferendis blanditiis cumque adipisci tempore eius
+                                fugiat.</div>
+                                <a href="/hosting/professional">
+                                    <div class="sbtn purple fs16 m_m_fs14 i mt15 b600">
+                                        <span>Get Started</span>
+                                    </div>
+                                </a>
+                                <a href="/pricing/professional_hosting">
+                                    <div class="i mt15 sbtn outline fs16 m_m_fs14" :hover="background-color:white; color:var(--purple);">
+                                        <span class="vm">Seel All Plans</span>
+                                        <span class="iconify vm" data-icon="line-md:arrow-right"></span>
+                                    </div>
+                                </a>
+                        </div>
+                    </div>
+                    <div class="w33 m_w75 ph20 m_ph5 vt wr">
+                        <div class="round4x p20"
+                            style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                            <span class="iconify fs40" style="color: var(--purple);"
+                                data-icon="line-md:email"></span>
+                            <div class="fs19 mt15 lh20 b" style="height: 40px;">professional Emails</div>
+                            <div class="fs15 b" style="color: var(--secondary-grey);">$30.00</div>
+                            <div class="fs16 oh lh20 mt15" style="color: var(--secondary-grey); max-height: 80px;">Lorem
+                                ipsum dolor sit amet consectetur adipisicing elit. Saepe labore aspernatur
+                                perspiciatis nostrum laboriosam laborum accusantium eaque tempora reiciendis a
+                                veniam temporibus, repudiandae, perferendis blanditiis cumque adipisci tempore eius
+                                fugiat.</div>
+                                <a href="/emails">
+                                    <div class="sbtn purple fs16 m_m_fs14 i mt15 b600 ">
+                                        <span>Get Started</span>
+                                    </div>
+                                </a>
+                                <a href="/pricing/professional_emails">
+                                    <div class="i mt15 sbtn outline fs16 m_m_fs14" :hover="background-color:white; color:var(--purple);">
+                                        <span class="vm">Seel All Plans</span>
+                                        <span class="iconify vm" data-icon="line-md:arrow-right"></span>
+                                    </div>
+                                </a>
+                        </div>
+                    </div>
+                </grid_nm>
+            </div>
+        </div>
+    </div>
+</div>
+<div view="logos"></div>
+<div bind="globals" class="flexi">
+    <div class="mt100 m_mt50" view="services" :data="cloud as service"></div>
+    <div class="mt100 m_mt50" view="services" :data="pro as service"></div>
+    <div class="mt100 m_mt50" view="services" :data="emails as service"></div>
+    <div class="mt100 m_mt50" view="services" :data="domains as service"></div>
+</div>
+<div style="padding-top: 150px; padding-bottom: 50px; background-color: var(--primary-grey);">
+    <div class="custom-shape-divider-top-1704961593">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V6c0,21.6,291,111.46,741,110.26,445.39,3.6,459-88.3,459-110.26V0Z" class="shape-fill"></path>
+        </svg>
+        <style>
+            .custom-shape-divider-top-1704961593 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                overflow: hidden;
+                line-height: 0;
+            }
+
+            .custom-shape-divider-top-1704961593 svg {
+                position: relative;
+                display: block;
+                width: calc(100% + 1.3px);
+                height: 95px;
+            }
+
+            .custom-shape-divider-top-1704961593 .shape-fill {
+                fill: var(--primary);
+            }
+        </style>
+    </div>
+    <div class="flexi">
+        <div  class="fs40 m_fs28 m_m_fs20 lh60 m_lh40 m_m_lh30" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Choose the only managed hosting platform that's 100% optimized for simplicity, efficiency & speed</div>
+        <div class="fs22 m_fs18 m_m_fs16 mt20" style="display: flex; justify-content: center; color: var(--secondary-grey);">
+            <div class="lh32 m_m_lh25" style="max-width: 700px; letter-spacing: 0.9px;">The result? Faster website. Faster setup. Faster support. So you spend your workday building your business, not debugging server problems.</div>
+        </div>
+        <div class="con sq40 md_sq60" style="background-image: url('/images/earth.svg');"></div>
+    </div>
+    <div class="custom-shape-divider-bottom-1704962506">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z" class="shape-fill"></path>
+        </svg>
+        <style>
+            .custom-shape-divider-bottom-1704962506 {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                overflow: hidden;
+                line-height: 0;
+            }
+
+            .custom-shape-divider-bottom-1704962506 svg {
+                position: relative;
+                display: block;
+                width: calc(100% + 1.3px);
+                height: 43px;
+            }
+
+            .custom-shape-divider-bottom-1704962506 .shape-fill {
+                fill: var(--primary);
+            }
+        </style>
+    </div>
+</div>
+<div class="flexi">
+    <div class="round4x" wrapper style="margin-top: -120px; background-color: var(--primary-grey); border: 1px solid var(--border);">
+        <div class="grab" dgsc style="scrollbar-color: transparent transparent">
+            <grid_nm class="round4x p40 m_p20" style="box-shadow: -15px -15px 19px -25px var(--secondary-grey);">
+                <div class="w33 md_w45 m_w90 m_m_w95 p20 m_ph5 wr vt">
+                    <div class="boxShadow ez p20 round4x" style="border: 1px solid var(--border);">
+                        <div class="fs18 m_m_fs16" style="color: var(--secondary-grey);">faster websites & apps</div>
+                        <div class="fs26 m_m_fs20 b" style="color: var(--purple);">Lightning Speed</div>
+                        <div class="fs18 m_m_fs16 mb20 mt10">Professional-grade power with increased speed and a 99.99% uptime. We utilize the latest cloud technologies for fast and secure web hosting.</div>
+                        <grid_nm>
+                            <span class="iconify fs28 m_m_fs22 vm pr5" style="color: var(--secondary-grey);" data-icon="lets-icons:check-fill"></span>
+                            <div class="b vm fs15 m_m_fs13" style="color: var(--secondary-grey);">One-Click Installer</div>
+                        </grid_nm>
+                        <grid_nm>
+                            <span class="iconify fs28 m_m_fs22 vm pr5" style="color: var(--secondary-grey);" data-icon="lets-icons:check-fill"></span>
+                            <div class="b vm fs15 m_m_fs13" style="color: var(--secondary-grey);">NVMe Advanced Storage</div>
+                        </grid_nm>
+                        <grid_nm>
+                            <span class="iconify fs28 m_m_fs22 vm pr5" style="color: var(--secondary-grey);" data-icon="lets-icons:check-fill"></span>
+                            <div class="b vm fs15 m_m_fs13" style="color: var(--secondary-grey);">Terabit Network Connectivity</div>
+                        </grid_nm>
+                    </div>
+                </div>
+                <div class="w33 md_w45 m_w90 m_m_w95 p20 m_ph5 wr vt">
+                    <div class="boxShadow2 ez p20 round4x" style="border: 1px solid var(--border);">
+                        <div class="fs18 m_m_fs16" style="color: var(--secondary-grey);">faster websites & apps</div>
+                        <div class="fs26 m_m_fs20 b" style="color: var(--main);">SSL Certificate</div>
+                        <div class="fs18 m_m_fs16 mb20 mt10">Your package includes a free SSL certificate that secures your website domains and subdomains by encrypting communications between the server and visitors to your website. </div>
+                        <grid_nm>
+                            <span class="iconify fs28 m_m_fs22 vm pr5" style="color: var(--secondary-grey);" data-icon="lets-icons:check-fill"></span>
+                            <div class="b vm fs15 m_m_fs13" style="color: var(--secondary-grey);">Prevent data attacks</div>
+                        </grid_nm>
+                        <grid_nm>
+                            <span class="iconify fs28 m_m_fs22 vm pr5" style="color: var(--secondary-grey);" data-icon="lets-icons:check-fill"></span>
+                            <div class="b vm fs15 m_m_fs13" style="color: var(--secondary-grey);">Increased SEO</div>
+                        </grid_nm>
+                        <grid_nm>
+                            <span class="iconify fs28 m_m_fs22 vm pr5" style="color: var(--secondary-grey);" data-icon="lets-icons:check-fill"></span>
+                            <div class="b vm fs15 m_m_fs13" style="color: var(--secondary-grey);">Building customers trust</div>
+                        </grid_nm>
+                    </div>
+                </div>
+                <div class="w33 md_w45 m_w90 m_m_w95 p20 m_ph5 wr vt">
+                    <div class="boxShadow3 ez p20 round4x" style="border: 1px solid var(--border);">
+                        <div class="fs18 m_m_fs16" style="color: var(--secondary-grey);">faster websites & apps</div>
+                        <div class="fs26 m_m_fs20 b" style="color: var(--green);">24/7 expert support</div>
+                        <div class="fs18 m_m_fs16 mb20 mt10">Our expert team is always available to answer your questions, get you started, and help you build your online presence. You may reach out to us at any time via phone, chat, or email.</div>
+                        <grid_nm>
+                            <span class="iconify fs28 m_m_fs22 vm pr5" style="color: var(--secondary-grey);" data-icon="lets-icons:check-fill"></span>
+                            <div class="b vm fs15" style="color: var(--secondary-grey);">Always available to help</div>
+                        </grid_nm>
+                        <grid_nm>
+                            <span class="iconify fs28 m_m_fs22 vm pr5" style="color: var(--secondary-grey);" data-icon="lets-icons:check-fill"></span>
+                            <div class="b vm fs15" style="color: var(--secondary-grey);">Five minutes reply time guaranteed</div>
+                        </grid_nm>
+                        <grid_nm>
+                            <span class="iconify fs28 m_m_fs22 vm pr5" style="color: var(--secondary-grey);" data-icon="lets-icons:check-fill"></span>
+                            <div class="b vm fs15" style="color: var(--secondary-grey);">Assist via phone or email</div>
+                        </grid_nm>
+                    </div>
+                </div>
+            </grid_nm>
+        </div>
+    </div>
+</div>
+<div bind class="flexi mt100">
+    <div class="l ph50 pv100 m_ph30 m_pv30 round4x m_c _border" style="background-color: var(--primary-grey); background-image: radial-gradient(circle at 30% -30%, rgba(49, 94, 201, 0.5) 0px, transparent 30%), radial-gradient(ellipse  at 50% -20%, rgb(114, 64, 200, 0.5) 0px, transparent 40%), radial-gradient(circle at 70% -5%, rgb(46, 153, 128, 0.5) 0px, transparent 20%);">
+        <grid>
+            <div class="w30 vt pr10 m_pr0 m_mb20">
+                <div class="fs40 md_fs30 m_m_fs20 lh60 md_lh40 m_m_lh30" style="font-family: 'Bitter', serif; letter-spacing: 1px;">We value our customers' opinions</div>
+                <div class="lh32 g_nm fs22 m_m_fs18 m_m_lh25 md_fs20 mt20" style="max-width: 400px; letter-spacing: 0.9px; color: var(--secondary-grey);">Relied upon by millions of individuals and companies worldwide</div>
+            </div>
+            <div class="w70" style="color: var(--primary);" wrapper>
+                <div class="grab" dgsc style="scrollbar-color: transparent transparent">
+                    <grid_nm>
+                        <div :for="10" class="w40 md_w70 m_m_w90 wr">
+                            <div class="p20 m_p10 _cb">
+                                <div class="round2x p20 _bgw _border" style="border-bottom-right-radius: 40px !important;">
+                                    <div class="testimonial g_nm b900 fs20 m_m_fs18">Good Support</div>
+                                    <div class="mt10 mb10 _cdg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga dolor ex maiores inventore fugiat asperiores assumenda accusantium libero labore? Explicabo, sapiente quo harum nemo ea enim veritatis cumque suscipit minus.</div>
+                                    <div class="b600 fs16 m_m_fs14" style="">By Hana Helweh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </grid_nm>
+                </div>
+                <grid_nm class="r mt20">
+                    <div scroll-left="" style="background-color: var(--second); color: var(--primary);" class="round2x p10 pointer opacity ez">
+                        <div class="ph20 m_ph5 pv10">
+                            <span class="iconify fs26 m_fs16 cc" data-icon="ph:arrow-left-thin"></span>
+                        </div>
+                    </div>
+                    <div scroll-right="" style="background-color: var(--second); color: var(--primary);" class="round2x p10 pointer opacity ez ml20 m_ml5">
+                        <div class="ph20 m_ph5 pv10">
+                            <span class="iconify fs26 m_fs16 cc" data-icon="ph:arrow-right-thin"></span>
+                        </div>
+                    </div>
+                </grid_nm>
+            </div>
+        </grid>
+    </div>
+    <div class="mt100">
+        <div class="fs40 md_fs30 m_m_fs22 mb30 m_m_mb20" style="font-family: 'Bitter', serif; letter-spacing: 1px;">From The Blog</div>
+        <div view="blog_pick"></div>
+        <div class="fs16 m_m_fs14 mt20 u opacity ez">
+            <a href="/blog">
+                <span class="vm" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Go To Blog Page</span>
+                <span class="iconify fs22 m_fs16 vm" data-icon="ph:arrow-right-thin"></span>
+            </a>
+        </div>
+    </div>
+    <div class="mt150">
+        <grid bind="questAns" gaph20>
+                <div class="w30 vt fs30 m_m_fs22 m_mb70 l m_c" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Frequently Asked Questions</div>
+                <div class="w70" style="margin-top: -20px; margin-bottom: -20px;">
+                    <div view="faqs"></div>
+                </div>
+        </grid>
+    </div>
+</div>
+<div class="mt100 mb50 stre ph50 m_ph0 pv100 m_pv50">
+    <div class="cc w70 z10" style="opacity: 0.3; height: 50%; background: linear-gradient(to right, var(--main), var(--purple), var(--green)); filter: blur(300px);"></div>
+    <div class="fs40 m_fs30 m_m_fs22 lh60 md_lh40 mb100 m_mb30 z20" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Contact Us!</div>
+    <grid class="flexi z20" gaph20>
+        <div class="w50 vt l m_c m_mb20">
+            <div class="fs30 m_fs26 m_m_fs20 lh50 m_m_lh30 g_nm" style="max-width: 500px; font-family: 'Bitter', serif; letter-spacing: 1px;">Expert Guidance: Unlock Solutions and Tips for Your Challenges</div>
+            <div class="lh30 fs20 m_m_fs18 m_m_lh25 md_fs20 mt20 g_nm" style="max-width: 500px; letter-spacing: 0.9px; color: var(--secondary-grey);">If you're facing challenges or seeking guidance, don't hesitate to ask for help – we're dedicated to supporting you!</div>
+        </div>
+        <div class="w50 vt">
+            <div>
+                <div class="ov z10" style="background: linear-gradient(to right, var(--purple), var(--green)); filter: blur(20px); opacity: 0.5;">
+                <div class="ov bgb30"></div>
+                </div>
+                <grid_nm class="home-contact round4x p20 z20 _border" style="margin-left: -10px; margin-right: -10px; background-color: var(--primary-grey);">
+                    <div class="w50 p10">
+                        <div style="border-bottom:1px solid var(--secondary-grey)">
+                            <input type="text" class="w100 lh40 contact-input" name="fname" placeholder="First Name" style="background:transparent; border:none; color:var(--second)">
+                        </div>
+                    </div>
+                    <div class="w50 p10">
+                        <div style="border-bottom:1px solid var(--secondary-grey)">
+                            <input type="text" class="w100 lh40 contact-input" name="lname" placeholder="Last Name" style="background:transparent; border:none; color:var(--second)">
+                    
+                        </div>
+                    </div>
+                    <div class="w50 p10">
+                        <div style="border-bottom:1px solid var(--secondary-grey)">
+                            <input type="text" class="w100 lh40 contact-input" name="email" placeholder="Email" style="background:transparent; border:none; color:var(--second)">
+                        </div>
+                    </div>
+                    <div class="w50 p10">
+                        <div style="border-bottom:1px solid var(--secondary-grey)">
+                            <input type="text" class="w100 lh40 contact-input" name="phone" placeholder="Phone" style="background:transparent; border:none; color:var(--second)">
+                    
+                        </div>
+                    </div>
+                    <div class="p10 w100">
+                        <div style="border-bottom:1px solid var(--secondary-grey)">
+                            <textarea name="message" rows="6" class="contact-textarea w100" placeholder="Message.." style="resize: none; border:none;color:var(--second);background: transparent;"></textarea>
+                        </div>
+                    </div>
+                    <div class="p10 mt20">
+                        <div class="submit-btn opacity ez pointer ph4" style="backdrop-filter: saturate(100%) blur(40px); border-image-source: linear-gradient(90deg, var(--green) 0%, var(--purple) 52.6%, var(--main) 100%) !important; border-bottom: 1px solid; border-image-slice: 1;">
+                            <span class="vm mr8 fs16">Submit</span>
+                            <span class="iconify vm ez" data-icon="line-md:arrow-right"></span>
+                            <style>
+                                .submit-btn:hover .iconify{
+                                    transform: translateX(3px);
+                                }
+                                .contact-input::placeholder,.contact-textarea::placeholder{
+                                    color: var(--secondary-grey) !important;
+                                    font-weight: 500;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </grid_nm>
+            </div>
+        </div>
+    </grid>
+</div>
+<script>
+    st(0);
+    let flkty;
+    setTimeout(() => {
+        let opts2 = '{"autoPlay":false,"cellAlign":"center","contain": true,"freeScroll":false,"wrapAround":false,"prevNextButtons":false,"pageDots":false,"draggable":true,"pauseAutoPlayOnHover":false, "adaptiveHeight": true}';
+        flkty = $(".carousel2").show().flickity(JSON.parse(opts2));
+    });
+    
+    function Move(ev, el) {
+        const cursorParDivTop = $('.cursor-div').parent().offset().top;
+        const cursorParDivLeft = $('.cursor-div').parent().offset().left;
+        const cursorDiv = $('.cursor-div');
+        const x = ev.clientX - 350 - cursorParDivLeft;
+        const y = ev.clientY - 350 - cursorParDivTop;
+        cursorDiv.css('transform', `translate(${x}px, ${y}px)`);
+    }
+</script>
+
+<settings>
+    {
+    hasFooter: true,
+    hasHeader: false,
+    hasNav: true
+    }
+</settings>

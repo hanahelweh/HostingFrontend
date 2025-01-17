@@ -1,0 +1,98 @@
+<style>
+    .srvs:hover .brd{
+        display: block;
+    }
+    .plans pop-c {
+        max-width: 1000px;
+    }
+
+</style>
+<div bind="services" class="pb20" style="font-family: 'Hind Siliguri', sans-serif;">
+    <div class="fs30 m_fs26 m_m_fs20 g_nm mb20 p2" style="border-radius: 2rem; background: linear-gradient(to right, var(--main) 5%, var(--purple) 30%, var(--green) 99%);">
+        <div class="ph30" style="background-color: var(--primary); border-radius: 2rem;">{{services.service.Name}}</div>
+        <div class="cc sq10 w100 z10" style="background-color: var(--{{services.mainColor}}); filter: blur(100px);"></div>
+    </div>
+    <div class="fs40 m_fs28 m_m_fs20 lh60 m_lh40 m_m_lh30" style="font-family: 'Bitter', serif; letter-spacing: 1px;">{{services.mainDescription}}</div>
+    <div class="fs22 m_fs18 m_m_fs16 mt20" style="color: var(--secondary-grey);">
+        <div class="lh32 m_m_lh26 g_nm" style="max-width: 700px; letter-spacing: 0.9px;">{{services.secondDescription}}</div>
+    </div>
+    <a href="/pricing/{{services.service.Identifier}}">
+        <div class="fs16 mt20 mb50 m_m_mb20 g_nm opacity ez" style="color: var(--{{services.mainColor}}); letter-spacing: 1px;">
+            <span class="vm">See All Plans</span>
+            <span class="iconify fs22 vm" data-icon="guidance:left-arrow"></span>
+        </div>
+    </a>
+    <grid class="services" data-id="{{services.service.Identifier}}" style="margin-left: -20px; margin-right: -20px;">
+        <div :for="services.plans as plan" class="w33 p20">
+            <div @mouse-move="Move" class="round4x p20 oh srvs" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                <div class="brd round4x p20 oh ov op40 h" style="background-color: var(--primary-grey); border: 1px solid var(--{{services.mainColor}});"></div>
+                <div class="par pa h">
+                    <div class="cc cursor-div" style="pointer-events: none;">
+                        <div class="sq roundc z10" style="width: 200px; background-color: var(--{{services.mainColor}}); opacity: 0.2;
+                            filter: blur(40px);
+                            transition: all 1.2s cubic-bezier(0.15, 1, 0.3, 1);
+                            mix-blend-mode: soft-light;
+                            will-change: transform;
+                            pointer-events: none;">
+                        </div>
+                    </div>
+                </div>
+                <div class="fs22 m_m_fs18 mb20 b600 tsh" style="color: var(--{{services.mainColor}});">{{plan.Name}}</div>
+                <div class="fs26 m_m_fs20" style="color: var(--secondary-grey);">${{plan.Price}}/monthly</div>
+                <!-- <div class="fs16 m_m_fs14 mb30 mt10">+ taxes & gov't fees</div> -->
+                <!-- <div :for="plan.features as feature"> -->
+                    <div class="fs16 m_m_fs14 mb10">
+                        <span class="iconify fs20 vm" data-icon="lets-icons:check-fill" style="color: var(--{{services.mainColor}});"></span>
+                        <!-- <span class="vm">{{feature}}</span> -->
+                        <span class="vm"></span>
+
+                    </div>
+                <!-- </div> -->
+                <div class="sbtn mt20 fs16 m_m_fs14" style="background-color: var(--{{services.mainColor}});"
+                    modal="modals/checkout" modal-class="gen-modal plans" modal-title="{{plan.Name}} plan" @modal-open="ModalOpen" data-id="{{plan.objectId}}">
+                    Get Plan
+                </div>
+            </div>
+        </div>
+    </grid>
+    <div class="mt60 mb60 m_m_mt30 m_m_mb30">
+        <div style="display: flex; justify-content: center;">
+            <div class="fs36 m_fs24 m_m_fs20 m_m_lh30" style="font-family: 'Bitter', serif; max-width: 550px;">What real businesses say about our {{services.serviceName}}</div>
+        </div>
+        <grid class="mt40 m_m_mt20">
+            <div class="l w50 vm pr40 m_pr0">
+                <div class="fs30 m_fs22 m_m_fs18 lh40 m_lh30" style="max-width: 450px;">
+                    <span style="background: linear-gradient(45deg, var(--main), var(--{{services.mainColor}})); -webkit-background-clip: text; color: transparent;">{{services.serviceName}}</span>
+                    {{services.review.reviewTitle}}</div>
+                <div class="fs20 m_fs18 m_m_fs16 mt20" style="color: var(--secondary-grey);">"{{services.review.reviewSubTitle}}"</div>
+                <div class="fs18 m_m_fs16 mt10 mb10" style="color: var(--{{services.mainColor}});">{{services.review.reviewCaller}} - {{services.review.callerPosition}}</div>
+            </div>
+            <div class="w50 vm round4x" style="background: linear-gradient(45deg, var(--secondary-grey) 20%, var(--{{services.mainColor}}) 50%, var(--primary));">
+                <div class="con sq80 w90" style="background-position: left bottom; background-image: url('/images/{{services.review.callerWebsite}}');"></div>
+            </div>
+        </grid>
+    </div>
+</div>
+<script>
+    st(0);
+    var services;
+    view.scope(function(view, props){
+        view.set('services', props.service);
+    });
+    function Move(ev, el) {
+        const cursorDiv = el.find('.par');
+        const cursorParDivTop = cursorDiv.parent().offset().top;
+        const cursorParDivLeft = cursorDiv.parent().offset().left;
+        const x = ev.clientX - cursorParDivLeft;
+        const y = scrollY + ev.clientY - cursorParDivTop;
+        cursorDiv.removeClass('h')
+        cursorDiv.stop().animate({'top': `${y}px`, 'left': `${x}px`},{duration: 100});
+    }
+
+    function ModalOpen(ev,el,modal){
+        return{
+            "id":el.data('id'),
+            "serv":el.closest('.services').data('id')
+        }
+    }
+</script>

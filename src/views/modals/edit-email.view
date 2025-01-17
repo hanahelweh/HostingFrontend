@@ -1,0 +1,21 @@
+<div class="p20 _cb">
+    <div class="_cdg mb20">You can easily edit your email address at any time</div>
+    <div>
+        <label class="text lh40">
+            <input type="text" name="keyword" value="" class="w100 input ph40 lh40 round2x"
+                style="border: 1.5px solid rgba(192,201,209,0.6);" placeholder="Email" :required />
+            <div class="ov ra z10 ph10 mb2" style="left: 10px;">
+                <span class="iconify cc fs20 _cdg" data-icon="carbon:email"></span>
+            </div>
+            <div class="error red fs12">
+                <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                <span class="vm">Kindly write your email</span>
+            </div>
+        </label>
+        <div class="over-effect pa round4x"></div>
+    </div>
+    <div class="r">
+        <!-- <div class="sbtn light mt30 fs14" close-modal>Cancel</div> -->
+        <div class="sbtn primary mt30 fs14">Save</div>
+    </div>
+</div>

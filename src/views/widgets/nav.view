@@ -1,0 +1,400 @@
+<style>
+    .signup-btn:hover {
+        background-color: var(--main);
+    }
+
+    .dropdown.actv {
+        visibility: visible;
+        opacity: 1 !important;
+        transform: scale(0.99) translateY(-5px);
+        transform-origin: top;
+    }
+
+    .sub-nav:hover {
+        scale: 1.03;
+    }
+
+    .triangle-up {
+        width: 0px;
+        height: 0px;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid var(--second);
+    }
+
+    .first.openNav {
+        transform: rotate(-45deg) translateY(-3px);
+        transform-origin: bottom right;
+    }
+
+    .second.openNav {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    .third.openNav {
+        transform: rotate(45deg) translateY(3px);
+        transform-origin: top right;
+    }
+
+    .dropdown.actvTablet {
+        display: block;
+    }
+
+    .all-nav.actv {
+        color: var(--grey);
+    }
+
+    .element.actv {
+        color: var(--second);
+    }
+
+    @media screen and (max-width:768px) {
+        .nav_container .switch1 {
+            order: 2;
+            transform: translateX(25%);
+        }
+
+        .nav_container .switch2 {
+            order: 1;
+        }
+
+        .nav_container {
+            justify-content: space-between;
+        }
+
+        .navTablet.openNav {
+            display: block;
+        }
+
+        .signin_btn {
+            border: 1px solid var(--second);
+        }
+    }
+
+    @media screen and (max-width:486px) {
+        .nav_container .switch1 {
+            width: 40px !important;
+        }
+
+        .child {
+            width: 25px !important;
+        }
+
+        .first.openNav {
+            transform: rotate(-45deg) translateY(0px);
+            transform-origin: bottom right;
+        }
+
+        .second.openNav {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        .third.openNav {
+            transform: rotate(45deg) translateY(0px);
+            transform-origin: top right;
+        }
+    }
+    .switch-container.theme .switch-input.is-checked{
+        background-color: black !important;
+    }
+    .switch-container.theme .switch-circle::before{
+        left: -11px;
+    }
+</style>
+<script>
+    // var isLoggedIn = engine.isLoggedIn();
+</script>
+<div bind="isLoggedIn,globals" class="z10000 pf l0 r0"
+    style="height: 80px; box-shadow: var(--secondary-grey) 0px 0.5rem 1.2rem -1.2rem; background: var(--nav); backdrop-filter: saturate(100%) blur(40px); border-image-source: linear-gradient(90deg, var(--green) 0%, var(--purple) 52.6%, var(--main) 100%) !important; border-bottom: 1px solid; border-image-slice: 1;">
+    <div class="flexi h100 navv">
+        <div class="nav_container round2x h100">
+            <div class="nav_container m_w50">
+                <div class="switch1">
+                    <a href="/">
+                        <div class="nav-logo con vm switch1"
+                            style="filter:brightness(0) invert(1); height: 30px; width: 60px; background-image: url('/images/roxyon.svg');">
+                        </div>
+                    </a>
+                </div>
+                <div class="ml20 m_ml0 vm switch2">
+                    <div @click="OpenNav" class="h m_db m_l pointer">
+                        <div class="first child ez" style="width: 32px; height: 1px; background-color: var(--second);">
+                        </div>
+                        <div class="second child ez mt8 m_mt6 m_mb6 mb8"
+                            style="width: 32px; height: 1px; background-color: var(--second);"></div>
+                        <div class="third child ez" style="width: 32px; height: 1px; background-color: var(--second);">
+                        </div>
+                    </div>
+                    <grid_nm class="all-nav m_h">
+                        <div @mouse-over="Active" @mouse-out="DisActive" class="element mr10 ml10 pointer">
+                            <grid_nm class="nav-sel">
+                                <div class="pointer fs16 md_fs15 b500 opacity ez"
+                                    style="letter-spacing: 2px; font-family: 'Bitter', serif;">Hosting</div>
+                                <span class="iconify fs7 ml5" data-icon="formkit:down"></span>
+                            </grid_nm>
+                            <div class="pa dropdown l z100 vh w100 ez"
+                                style="opacity: 0; color: var(--primary); width: 300px;">
+                                <div class="p20 round2x mt30 sh30" style="background-color: var(--second);">
+                                    <div class="triangle-up pa l0" style="top: -10px;"></div>
+                                    <a href="/hosting/cloud">
+                                        <grid_nm class="pv8 sub-nav opacity ez">
+                                            <div class="vm" style="width: 40px;">
+                                                <span class="iconify vm fs22 mr10" data-icon="streamline:web"
+                                                    style="color: var(--main);"></span>
+                                            </div>
+                                            <div class="vm">
+                                                <div class="fs16 md_fs15">Cloud Hosting</div>
+                                                <div class="fs12" style="color: var(--grey);">For Small To Medium
+                                                    Website
+                                                </div>
+                                            </div>
+                                        </grid_nm>
+                                    </a>
+                                    <a href="/hosting/pro">
+                                        <grid_nm class="pv8 sub-nav opacity ez">
+                                            <div class="vm" style="width: 40px;">
+                                                <span class="iconify vm fs22 mr10" data-icon="mdi:cloud-outline"
+                                                    style="color: var(--main);"></span>
+                                            </div>
+                                            <div class="vm">
+                                                <div class="fs16 md_fs15">Professional Hosting</div>
+                                                <div class="fs12" style="color: var(--grey);">For Large Scale Projects
+                                                </div>
+                                            </div>
+                                        </grid_nm>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/emails">
+                            <div @mouse-over="Active" @mouse-out="DisActive"
+                                class="mr10 ml10 pointer fs16 md_fs15 opacity ez b500 element"
+                                style="letter-spacing: 2px; font-family: 'Bitter', serif;">Emails</div>
+                        </a>
+                        <a href="/domains">
+                            <div @mouse-over="Active" @mouse-out="DisActive"
+                                class="mr10 ml10 pointer fs16 md_fs15 b500 opacity ez element"
+                                style="letter-spacing: 2px; font-family: 'Bitter', serif;">Domains</div>
+                        </a>
+                        <a href="/blog">
+                            <div @mouse-over="Active" @mouse-out="DisActive"
+                                class="mr10 ml10 pointer fs16 md_fs15 b500 opacity ez element"
+                                style="letter-spacing: 2px; font-family: 'Bitter', serif;">Blog</div>
+                        </a>
+                        <div @mouse-over="Active" @mouse-out="DisActive" class="element mr10 ml10 pointer">
+                            <a href="/contact_us">
+                                <grid_nm class="nav-sel">
+                                    <div class="pointer fs16 md_fs15 b500 opacity ez"
+                                        style="letter-spacing: 2px; font-family: 'Bitter', serif;">Contact</div>
+                                    <span class="iconify fs7 ml5 mb1" data-icon="formkit:down"></span>
+                                </grid_nm>
+                            </a>
+                            <div class="pa dropdown l z100 vh w100 ez"
+                                style="opacity: 0; color: var(--primary); width: 300px;">
+                                <div class="p20 round2x mt30 sh30" style="background-color: var(--second);">
+                                    <div class="triangle-up pa l0" style="top: -10px;"></div>
+                                    <div class="fs12 mb20" style="color: var(--grey);">We are available 24/7 to help
+                                        answer questions and solve your problems.</div>
+                                    <div class="fs16 md_fs15 mb10">Call US</div>
+                                    <grid_nm class="sub-nav opacity ez">
+                                        <span class="iconify vm fs22 mr10 vm" data-icon="fluent:call-32-regular"
+                                            style="color: var(--main);"></span>
+                                        <div class="pointer fs14 opacity ez vm">+979-979478637</div>
+                                    </grid_nm>
+                                    <div class="fs16 md_fs15 mb10 mt15">Chat With US</div>
+                                    <grid_nm class="sub-nav opacity ez">
+                                        <span class="iconify vm fs22 mr10 vm" data-icon="ep:chat-round"
+                                            style="color: var(--main);"></span>
+                                        <div class="pointer fs14 opacity ez vm">Chat Now!</div>
+                                    </grid_nm>
+                                </div>
+                            </div>
+                        </div>
+                    </grid_nm>
+                </div>
+            </div>
+            <grid_nm class="m_w50 m_r">
+                <div class="vm mr10 m_h">
+                    <label class="p20">
+                        <input @change="ChangeTheme" :if="globals.Settings.Theme == 'dark'" click type="checkbox" name="Theme" value="" class="h" :required />
+                        <input @change="ChangeTheme" :else type="checkbox" name="Theme" value="" class="h" :required />
+                        <span :if="globals.Settings.Theme == 'dark'" class="iconify fs26 pointer theme-icon cc ez" data-icon="line-md:moon-loop"></span>
+                        <span :else-if="globals.Settings.Theme == 'light'" class="iconify fs26 pointer theme-icon cc ez" data-icon="line-md:sun-rising-loop"></span>
+                    </label>
+                </div>
+                <div class="vm">
+                    <grid_nm :if="!isLoggedIn">
+                        <a href="/auth/signin">
+                            <div
+                                class="signin_btn lh40 m_m_lh30 ph20 m_m_ph15 pointer fs16 md_fs15 m_m_fs13 b600 opacity ez round2x">
+                                Signin</div>
+                        </a>
+                        <a href="/auth/signup">
+                            <div class="signup-btn lh40 ph15 b600 pointer fs16 md_fs15 opacity ez round2x ez md_h"
+                                style="border: 1px solid var(--second);">SignUp</div>
+                        </a>
+                    </grid_nm>
+                    <div :else class="m_w50 m_r">
+                        <div @mouse-over="Active" @mouse-out="DisActive" class="element right">
+                            <div class="cov sq roundc pointer ez opacity" style="width: 45px; background-color: var(--main);">
+                                <div class="cc fs22 b500 _cw">H</div>
+                            </div>
+                            <div class="pa dropdown l z100 vh w100 ez r0 sh10 round2x"
+                                style="opacity: 0;width: 320px; top: 60px; color: var(--primary);">
+                                <div class="p20 round2x" style="background-color: var(--second);">
+                                    <div class="triangle-up pa r0" style="top: -10px;"></div>
+                                    <div class="pb20" style="border-bottom: 1px solid var(--secondary-grey);">
+                                        <div class="p10">
+                                            <grid_nm>
+                                                <div class="vm cov sq roundc pointer ez opacity"
+                                                    style="width: 45px; background-color: var(--main);">
+                                                    <div class="cc fs18 b500 _cw">H</div>
+                                                </div>
+                                                <div class="vm fs16 md_fs15 ml5 lh20 oh" style="height: 20px;">
+                                                    hanahelweh97@gmail.com</div>
+                                            </grid_nm>
+                                        </div>
+                                        <div class="p10 round4x"
+                                            style="background-color: rgba(60, 140, 230, 0.1); border: 1px solid var(--main);">
+                                            <grid_nm>
+                                                <div class="vm cov sq roundc pointer ez opacity"
+                                                    style="width: 45px; background-color: var(--green);">
+                                                    <div class="cc fs18 b500 _cw">HH</div>
+                                                </div>
+                                                <div class="vm fs16 md_fs15 ml5 lh20 oh" style="height: 20px;">
+                                                    hanahelweh97@gmail.com</div>
+                                            </grid_nm>
+                                        </div>
+                                    </div>
+                                    <div class="pt20">
+                                        <a href="/admin/products">
+                                            <div class="opacity-blue ez mb15">
+                                                <span class="iconify vm fs22 mr5" data-icon="lets-icons:setting-line-light"></span>
+                                                <span class="vm">Manage Account</span>
+                                            </div>
+                                        </a>
+                                        <div class="opacity-blue ez mb15">
+                                            <span class="iconify vm fs22 mr5" data-icon="ph:plus-light"></span>
+                                            <span class="vm">Add Account</span>
+                                        </div>
+                                        <div @click="engine.logout().then((r)=>{ if(r=='success') {isLoggedIn = false; pushURL('/'); }})"
+                                            class="opacity-blue ez pointer">
+                                            <span class="iconify vm fs22 mr5" data-icon="iconamoon:exit-thin"></span>
+                                            <span class="vm">Sign Out</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </grid_nm>
+        </div>
+    </div>
+</div>
+<div bind="globals" class="navTablet oya ov pf z1000 pt80 h" style="min-height: 700px; background-color: var(--primary);">
+    <div class="h100 flexi" style="display: flex; align-items: center; justify-content: center;">
+        <div class="p20 w100" style="max-width: 500px;">
+            <div class="mb40 m_m_mb20 l">
+                <label class="p20">
+                    <input @change="ChangeTheme" :if="globals.Settings.Theme == 'dark'" click type="checkbox" name="Theme" value="" class="h" :required />
+                    <input @change="ChangeTheme" :else type="checkbox" name="Theme" value="" class="h" :required />
+                    <span :if="globals.Settings.Theme == 'dark'" class="iconify fs38 m_m_fs22 pointer theme-icon cc ez" data-icon="line-md:moon-loop"></span>
+                    <span :else class="iconify fs34 m_m_fs20 pointer theme-icon cc ez" data-icon="line-md:sun-rising-loop"></span>
+                </label>
+            </div>
+            <div @click="ActiveTablet" class="pointer pv10">
+                <grid_nm>
+                    <div class="w50 l fs26 m_m_fs18 b600 opacity ez"
+                        style="letter-spacing: 2px; font-family: 'Bitter', serif;">Hosting</div>
+                    <div class="w50 r">
+                        <span class="iconify fs15 m_m_fs12" data-icon="formkit:down"
+                            style="color: var(--secondary-grey);"></span>
+                    </div>
+                </grid_nm>
+                <div class="dropdown l h">
+                    <div class="p20 m_m_p10 round2x mt15">
+                        <a href="/hosting/cloud">
+                            <grid_nm class="pv8 sub-nav opacity ez">
+                                <div class="vm">
+                                    <span class="iconify vm fs22 m_m_fs20 mr20" data-icon="streamline:web"
+                                        style="color: var(--main);"></span>
+                                </div>
+                                <div class="vm">
+                                    <div class="fs16 md_fs14">Cloud Hosting</div>
+                                    <div class="fs12" style="color: var(--grey);">For Small To Medium Website</div>
+                                </div>
+                            </grid_nm>
+                        </a>
+                        <a href="/hosting/pro">
+                            <grid_nm class="pv8 sub-nav opacity ez">
+                                <div class="vm">
+                                    <span class="iconify vm fs22 m_m_fs20 mr20" data-icon="mdi:cloud-outline"
+                                        style="color: var(--main);"></span>
+                                </div>
+                                <div class="vm">
+                                    <div class="fs16 md_fs14">Professional Hosting</div>
+                                    <div class="fs12" style="color: var(--grey);">For Large Scale Projects</div>
+                                </div>
+                            </grid_nm>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="/emails">
+                <div class="pointer pv10 fs26 m_m_fs18 l opacity ez b600"
+                    style="letter-spacing: 2px; font-family: 'Bitter', serif;">Emails</div>
+            </a>
+            <a href="/domains">
+                <div class="pointer pv10 fs26 m_m_fs18 l b600 opacity ez"
+                    style="letter-spacing: 2px; font-family: 'Bitter', serif;">Domains</div>
+            </a>
+            <a href="/blog">
+                <div class="pointer pv10 fs26 m_m_fs18 l b600 opacity ez"
+                    style="letter-spacing: 2px; font-family: 'Bitter', serif;">Blog</div>
+            </a>
+            <div @click="ActiveTablet" class="pointer pv10">
+                <a href="/contact_us">
+                    <grid_nm>
+                        <div class="w50 l fs26 m_m_fs18 b600 opacity ez"
+                            style="letter-spacing: 2px; font-family: 'Bitter', serif;">Contact</div>
+                        <div class="w50 r">
+                            <span class="iconify fs15 m_m_fs12" data-icon="formkit:down"
+                                style="color: var(--secondary-grey);"></span>
+                        </div>
+                    </grid_nm>
+                </a>
+                <div class="dropdown l h">
+                    <div class="p20 m_m_p10 round2x mt15">
+                        <div class="fs12 mb20" style="color: var(--grey);">We are available 24/7 to help answer
+                            questions and solve your problems.</div>
+                        <div class="fs16 m_m_fs14 md_fs15 mb10">Call US</div>
+                        <grid_nm class="sub-nav opacity ez">
+                            <span class="iconify vm fs22  m_m_fs20 mr20 vm" data-icon="fluent:call-32-regular"
+                                style="color: var(--main);"></span>
+                            <div class="pointer fs14 opacity ez vm">+961-104-253-826</div>
+                        </grid_nm>
+                        <div class="fs16 m_m_fs14 md_fs15 mb10 mt15">Chat With US</div>
+                        <grid_nm class="sub-nav opacity ez">
+                            <span class="iconify vm fs22 m_m_fs20 mr20 vm" data-icon="ep:chat-round"
+                                style="color: var(--main);"></span>
+                            <div class="pointer fs14 opacity ez vm">Chat Now!</div>
+                        </grid_nm>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function OpenNav(ev, el) {
+        el.children('.child').toggleClass('openNav');
+        $('.navTablet').toggleClass('openNav');
+    }
+    function ActiveTablet(ev, el) {
+        $('.dropdown').not(el.find('.dropdown')).slideUp('.actvTablet');
+        el.find('.dropdown').slideToggle('.actvTablet');
+    }
+</script>

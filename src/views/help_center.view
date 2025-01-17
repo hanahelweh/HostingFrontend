@@ -1,0 +1,148 @@
+<style>
+    .navigate{
+        display: none;
+        visibility: hidden;
+    }
+    .rotate{
+        transform: rotate(-90deg) !important;
+    }
+    .miss-text:hover{
+        text-decoration: underline;
+    }
+    .miss-text:hover ~ .tooltip{
+        visibility: visible;
+    }
+    .srch-input::placeholder{
+        color: var(--secondary-grey);
+    }
+    .colorful-svg g{
+        stroke: var(--main);
+    }
+    .boxes:hover{
+        transform: scale(0.97);
+        border-color: var(--main) !important;
+    }
+    .menu:hover > div:nth-child(1){
+        width: 50% !important;
+    }
+    .menu:hover > div:nth-child(2){
+        width: 40% !important;
+    }
+    .menu:hover > div:nth-child(3){
+        width: 50% !important;
+    }
+    @media screen and (max-width:768px){
+        .side-nav{
+            left: -300px;
+        }
+        .full{
+            margin-left: 0 !important;
+        }
+        .open-side-nav{
+            left: 0 !important;
+        }
+        .search-input{
+            width: calc(100% - 50px) !important;
+        }
+        .srch-input{
+            width: 100%;
+        }
+        .top-nav{
+            height: fit-content !important;
+        }
+    }
+</style>
+<div bind class="side-nav ez ov pf sh z10 oya z1000 l" style="scrollbar-color: transparent transparent; width: 300px; background-color: var(--primary-grey); border-right: 1px solid var(--border);">
+    <div class="ph20 pv30 fs18 b mb20" style="font-family: 'Bitter', serif; letter-spacing: 1px; border-bottom: 1px solid var(--border);">"--" Knowledge Base</div>
+    <div class="dropdown-con ph20 pv10">
+        <grid_nm style="color: var(--main);">
+            <div class="fs16 b500 mb10" style="width: calc(100% - 20px);"><span class="pointer">Getting Started</span></div>
+            <div @click="UpDown" class="pointer ez" style="width: 20px;"><span class="iconify fs10" data-icon="formkit:down"></span></div>
+        </grid_nm>
+        <grid_nm class="dropdown vv db pv5" :for="5">
+            <div class="roundc sq vm mt3 mr10" style="width: 18px; background-color: var(--main);"></div>
+            <div class="miss-text vm fs15 lh24 oe pointer" style="height: 24px; color: var(--secondary-grey); width: calc(100% - 28px);">How to manage Backups?</div>
+            <div class="tooltip pa r0 round2x vh sh20 z10 p10 w100" style="background-color: var(--primary); border: 1px solid var(--border); top: 100%;">How to manage Backups?</div>
+        </grid_nm>
+    </div>
+    <div class="dropdown-con ph20 pv10">
+        <grid_nm style="color: var(--green);">
+            <div class="fs16 b500 mb10" style="width: calc(100% - 20px);"><span class="pointer">Tools & Settings</span></div>
+            <div @click="UpDown" class="pointer ez" style="width: 20px;"><span class="iconify fs10" data-icon="formkit:down"></span></div>
+        </grid_nm>
+        <grid_nm class="dropdown vv db pv5" :for="5">
+            <div class="roundc sq vm mt3 mr10" style="width: 18px; background-color: var(--green);"></div>
+            <div class="miss-text vm fs15 lh24 oe" style="height: 24px; color: var(--secondary-grey); width: calc(100% - 28px);">How to setup password protection for a certain directory or web address (URL)</div>
+            <div class="tooltip pa r0 round2x vh sh20 z10 p10 w100" style="background-color: var(--primary); border: 1px solid var(--border); top: 100%;">How to setup password protection for a certain directory or web address (URL)</div>
+        </grid_nm>
+    </div>
+    <div class="dropdown-con ph20 pv10">
+        <grid_nm style="color: var(--pink);">
+            <div class="fs16 b500 mb10" style="width: calc(100% - 20px);"><span class="pointer">Sales & Billing issues</span></div>
+            <div @click="UpDown" class="pointer ez" style="width: 20px;"><span class="iconify fs10" data-icon="formkit:down"></span></div>
+        </grid_nm>
+        <grid_nm class="dropdown vv db pv5" :for="5">
+            <div class="roundc sq vm mt3 mr10" style="width: 18px; background-color: var(--pink);"></div>
+            <div class="miss-text vm fs15 lh24 oe" style="height: 24px; color: var(--secondary-grey); width: calc(100% - 28px);"> How to renew my hosting plan?</div>
+            <div class="tooltip pa r0 round2x vh sh20 z10 p10 w100" style="background-color: var(--primary); border: 1px solid var(--border); top: 100%;"> How to renew my hosting plan?</div>
+        </grid_nm>
+    </div>
+    <div class="dropdown-con ph20 pv10">
+        <grid_nm style="color: var(--purple);">
+            <div class="fs16 b500 mb10" style="width: calc(100% - 20px);"><span class="pointer">Sales & Billing issues</span></div>
+            <div @click="UpDown" class="pointer ez" style="width: 20px;"><span class="iconify fs10" data-icon="formkit:down"></span></div>
+        </grid_nm>
+        <grid_nm class="dropdown vv db pv5" :for="5">
+            <div class="roundc sq vm mt3 mr10" style="width: 18px; background-color: var(--purple);"></div>
+            <div class="miss-text vm fs15 lh24 oe" style="height: 24px; color: var(--secondary-grey); width: calc(100% - 28px);"> How to renew my hosting plan?</div>
+            <div class="tooltip pa r0 round2x vh sh20 z10 p10 w100" style="background-color: var(--primary); border: 1px solid var(--border); top: 100%;"> How to renew my hosting plan?</div>
+        </grid_nm>
+    </div>
+    <div class="dropdown-con ph20 pv10">
+        <grid_nm style="color: var(--orange);">
+            <div class="fs16 b500 mb10" style="width: calc(100% - 20px);"><span class="pointer">Sales & Billing issues</span></div>
+            <div @click="UpDown" class="pointer ez" style="width: 20px;"><span class="iconify fs10" data-icon="formkit:down"></span></div>
+        </grid_nm>
+        <grid_nm class="dropdown vv db pv5" :for="5">
+            <div class="roundc sq vm mt3 mr10" style="width: 18px; background-color: var(--orange);"></div>
+            <div class="miss-text vm fs15 lh24 oe" style="height: 24px; color: var(--secondary-grey); width: calc(100% - 28px);"> How to renew my hosting plan?</div>
+            <div class="tooltip pa r0 round2x vh sh20 z10 p10 w100" style="background-color: var(--primary); border: 1px solid var(--border); top: 100%;"> How to renew my hosting plan?</div>
+        </grid_nm>
+    </div>
+</div>
+<grid_nm class="pf l0 r0 pv20 ph20 z1000 l top-nav full" style="height: 82px; margin-left: 300px; background-color: var(--primary-grey); border-bottom: 1px solid var(--border);">
+    <div @click="SideNav" class="menu w100 vm pointer h m_dib" style="width: 50px;">
+        <div class="w50 ez round4x ml5" style="height: 2px; background-color: var(--secondary-grey);"></div>
+        <div class="w60 ez round4x ml5" style="height: 2px; background-color: var(--secondary-grey); margin-top: 6px; margin-bottom: 6px;"></div>
+        <div class="w50 ez round4x ml5" style="height: 2px; background-color: var(--secondary-grey);"></div>
+    </div>
+    <div class="vm fs18 b m_h" style="width: calc(100% - 290px); font-family: 'Bitter', serif; letter-spacing: 1px;">Getting Started</div>
+    <div class="vm r search-input" style="width: 240px;">
+        <div class="g_nm m_db">
+            <div class="cv mt2" style="left: 10px; color: var(--secondary-grey);"><span class="iconify fs22" data-icon="lets-icons:search-light"></span></div>
+            <input class="srch-input round2x pl40 pr20 lh40" style="background-color: transparent; color: var(--secondary-grey); border: 1px solid var(--border);" type="text" placeholder="Search">
+        </div>
+    </div>
+</grid_nm>
+<div bind="nodes" class="ph20 full" style="padding-top: 122px; padding-bottom: 40px; margin-left: 300px;">
+    <div view="_help_center/{{nodes[1]}}"></div>
+</div>
+<script>
+    st(0);
+    nodes[1] === undefined ? nodes[1] = "help" : "";
+    function UpDown(ev, el){
+        var parent = el.closest('.dropdown-con');
+        parent.find('.dropdown').toggleClass('navigate');
+        parent.find('.dropdown').hasClass('navigate') ? el.addClass('rotate') : el.removeClass('rotate');
+    }
+    function SideNav(ev, el){
+        $('.side-nav').toggleClass('open-side-nav')
+    }
+</script>
+<settings>
+    {
+    hasFooter: false,
+    hasHeader: false,
+    hasNav: false
+    }
+</settings>

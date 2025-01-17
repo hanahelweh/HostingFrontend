@@ -1,0 +1,152 @@
+<style>
+    .rto{
+        animation: rotate 20s linear infinite;
+    }
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    .hover-effect:hover{
+        box-shadow: 0px 7px 15px var(--border) !important;
+    }
+</style>
+<div class="flexi mt50 pt80" bind>
+    <div class="round4x p40" style="background-position: right; background-color: var(--purple);">
+        <div class="ov oh m_m_h">
+            <div class="pa sq roundc" style="width: 50px; background-color: transparent; border: 2px solid var(--purple); top: 10%; right: 5%; animation: animate 10s linear infinite;
+            "></div>
+            <div class="pa sq roundc" style="
+              width: 30px;
+              background-color: transparent;
+              border: 2px solid white;
+              top: 15%;
+              right: 8%;
+              animation: animate 7s linear infinite;
+            "></div>
+            <div class="pa sq roundc" style="
+              width: 30px;
+              background-color: transparent;
+              border: 2px solid white;
+              top: 50%;
+              right: 7%;
+              animation: animate 9s linear infinite;
+            "></div>
+            <div class="pa sq roundc" style="
+              width: 30px;
+              background-color: transparent;
+              border: 2px solid white;
+              top: 30%;
+              right: 12%;
+              animation: animate 10s linear infinite;
+            "></div>
+            <div class="pa sq roundc" style="
+              width: 30px;
+              background-color: transparent;
+              border: 2px solid white;
+              top: 12%;
+              right: 2%;
+              animation: animate 6s linear infinite;
+            "></div>
+            <div class="pa sq roundc" style="
+              width: 30px;
+              background-color: transparent;
+              border: 2px solid white;
+              top: 78%;
+              right: 15%;
+              animation: animate 12s linear infinite;
+            "></div>
+            <div class="pa sq roundc" style="
+              width: 30px;
+              background-color: transparent;
+              border: 2px solid white;
+              top: 65%;
+              right: 14%;
+              animation: animate 15s linear infinite;
+            "></div>
+            <div class="pa sq roundc" style="width: 30px; background-color: transparent; border: 2px solid var(--purple); top: 10%; right: 5%; animation: animate 10s linear infinite;
+            "></div>
+            <div class="pa sq roundc" style="
+                width: 30px;
+                background-color: transparent;
+                border: 2px solid white;
+                top: 15%;
+                left: 8%;
+                animation: animate 7s linear infinite;
+            "></div>
+            <div class="pa sq roundc" style="
+                width: 30px;
+                background-color: transparent;
+                border: 2px solid white;
+                top: 50%;
+                left: 7%;
+                animation: animate 9s linear infinite;
+            "></div>
+            <div class="pa sq roundc" style="
+                width: 30px;
+                background-color: transparent;
+                border: 2px solid white;
+                top: 30%;
+                left: 12%;
+                animation: animate 10s linear infinite;
+            "></div>
+            <div class="pa sq roundc" style="
+                width: 30px;
+                background-color: transparent;
+                border: 2px solid white;
+                top: 12%;
+                left: 2%;
+                animation: animate 6s linear infinite;
+            "></div>
+            <div class="pa sq roundc" style="
+                width: 30px;
+                background-color: transparent;
+                border: 2px solid white;
+                top: 78%;
+                left: 15%;
+                animation: animate 12s linear infinite;
+            "></div>
+            <div class="pa sq roundc" style="
+                width: 30px;
+                background-color: transparent;
+                border: 2px solid white;
+                top: 65%;
+                left: 14%;
+                animation: animate 15s linear infinite;
+            "></div>
+        </div>
+        <div class="vm fs40 m_fs22 m_lh30 fs40 _cw" style="font-family: 'Bitter', serif; letter-spacing: 1px;">News</div>
+        <div class="mt20">
+            <div class="g_nm fs18 m_m_fs16 m_m_lh25 cw50" style="max-width: 700px; letter-spacing: 0.9px;">Discover the stories of real-life heroes that took their dreams and ideas online with Hostinger.</div>
+        </div>
+        <a href="/blog">
+            <div class="mb20 opacity ez mt20">
+                <span class="iconify vm fs22 m_m_fs18 mr5 _cw" data-icon="gg:arrow-left-o"></span>
+                <span class="vm fs16 m_m_fs14 _cw">Back To Blog HomePage</span>
+            </div>
+        </a>
+    </div>
+    <div class="mt50 m_m_mt20">
+        <grid_nm style="margin-left: -10px; margin-right: -20px;">
+            <div :for="9" class="w33 m_w50 m_m_w100 p20 vm">
+                <a href="">
+                    <div class="round4x hover-effect ez" style="box-shadow: 0px 0px 1px var(--secondary-grey);">
+                        <div class="sq70 hover cov" style="background-image: url('/images/Online\ Poker\ Casino\ App.jpeg'); border-top-right-radius: inherit; border-top-left-radius: inherit;"></div>
+                        <div class="p20 l">
+                            <div class="lh25 oh fs20 m_m_fs16 b600 mb10" style="height: 50px;">Does Web Migration Affect SEO</div>
+                            <div class="cw50 b600" style="color: var(--secondary-grey);">2022-05-10</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </grid_nm>
+    </div>
+    <div class="sbtn light fs16 m_m_fs14 mt30 m_m_mt10">Load More</div>
+    <div view="adv"></div>
+</div>
+<script>
+    st(0);
+</script>

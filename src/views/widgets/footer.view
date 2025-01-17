@@ -1,0 +1,88 @@
+<style>
+    .hover-footer:hover{
+        color: var(--main);
+        text-decoration: underline;
+    }
+</style>
+<div class="mt100">
+    <grid_nm gap20 class="flexi l m_m_c" style="color: var(--secondary-grey);">
+        <div class="w25 m_w50 m_m_w100 vt">
+            <div class="g_nm">
+                <div class="con"
+                    style="filter:brightness(0) invert(1); height: 30px; width: 60px; background-image: url('/images/BEA\ Cloud\ Cloud.svg');">
+                </div>
+            </div>
+            <div class="fs28 b mt10" style="background: linear-gradient(45deg, var(--main), var(--green)); -webkit-background-clip: text; color: transparent;">BEA Cloud</div>
+            <div class="fs15">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi eius repellendus magnam dolore</div>
+        </div>
+        <div class="w25 m_w50 m_m_w100 vt">
+            <div class="fs22 m_m_fs16 b mb10 g_nm" style="letter-spacing: 1px; color: var(--second);">COMPANY</div>
+            <a href="/about">
+                <div class="fs17 m_m_fs14 pointer ez hover-footer">About</div>
+            </a>
+            <a href="/pricing">
+                <div class="fs17 m_m_fs14 pointer ez hover-footer">Pricing</div>
+            </a>
+            <a href="/blog">
+                <div class="fs17 m_m_fs14 pointer ez hover-footer">Blog</div>    
+            </a>
+            <div class="fs17 m_m_fs14 pointer ez hover-footer">Community</div>
+            <a href="/news">
+                <div class="fs17 m_m_fs14 pointer ez hover-footer">News</div>
+            </a>
+            <div class="fs17 m_m_fs14 pointer ez hover-footer">Reviews</div>
+            <div class="fs17 m_m_fs14 pointer ez hover-footer">Privacy Policy</div>
+            <div class="fs17 m_m_fs14 pointer ez hover-footer">Security</div>
+        </div>
+        <div class="w25 m_w50 m_m_w100 vt">
+            <div>
+                <div class="fs22 m_m_fs16 b mb10 g_nm" style="letter-spacing: 1px; color: var(--second);">SERVICES</div>
+                <a href="/hosting/cloud">
+                    <div class="fs17 m_m_fs14 pointer ez hover-footer">Cloud Hosting</div>
+                </a>
+                <a href="/hosting/pro">
+                    <div class="fs17 m_m_fs14 pointer ez hover-footer">Professional Hosting</div>
+                </a>
+                <a href="/emails">
+                    <div class="fs17 m_m_fs14 pointer ez hover-footer">Professional Emails</div>
+                </a>
+                <a href="/domains">
+                    <div class="fs17 m_m_fs14 pointer ez hover-footer">Domains</div>
+                </a>
+            </div>
+            <div class="mt20">
+                <div class="fs22 m_m_fs16 b mb10 g_nm" style="letter-spacing: 1px; color: var(--second);">SUPPORT CENTER</div>
+                <a href="/contact_us">
+                    <div class="fs17 m_m_fs14 pointer ez hover-footer">Support</div>
+                </a>
+                <a href="help_center">
+                    <div class="fs17 m_m_fs14 pointer ez hover-footer">Help</div>
+                </a>
+                <!-- <div class="fs17 m_m_fs14 pointer ez hover-footer">FAQs</div> -->
+            </div>
+        </div>
+        <div class="w25 m_w50 m_m_w100 vt">
+            <div>
+                <div class="fs22 m_m_fs16 b mb10 g_nm upper" style="letter-spacing: 1px; color: var(--second);">signup for news letter</div>
+                <div class="mb10 fs16 m_m_fs14" style="color: var(--secondary-grey);">A website's newsletter regularly shares updates and content with subscribers.
+                <div style="border-bottom:1px solid var(--secondary-grey)">
+                    <input type="text" class="w100 lh40" name="fname" placeholder="Kindly enter Your Email.." style="background:transparent; backdrop-filter: saturate(100%) blur(40px); border-image-source: linear-gradient(90deg, var(--green) 0%, var(--purple) 52.6%, var(--main) 100%) !important; border: none; border-bottom: 1px solid; border-image-slice: 1; color: var(--second);">
+                </div>
+                <style>
+                    input::placeholder{
+                        color: var(--secondary-grey) !important;
+                    }
+                </style>
+                </div>
+            </div>
+            <div class="mt40">
+                <div class="mt10">
+                    <span class="iconify pointer ez hover-footer fs22" data-icon="teenyicons:instagram-outline"></span>
+                    <span class="iconify pointer ez hover-footer fs22 ml10 mr10" data-icon="ph:linkedin-logo"></span>
+                    <span class="iconify pointer ez hover-footer fs22" data-icon="codicon:github-inverted"></span>
+                </div>
+            </div>
+        </div>
+    </grid_nm>
+    <div class="lh40 c fs13 cap mt30" style="color: var(--secondary-grey)">&copy; 2024 all rights reserved</div>
+</div>

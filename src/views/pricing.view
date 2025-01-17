@@ -1,0 +1,147 @@
+<style>
+    .custom-shape-divider-top-1701458708 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+    .custom-shape-divider-top-1701458708 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 129px;
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .custom-shape-divider-top-1701458708 svg {
+            width: calc(100% + 1.3px);
+            height: 151px;
+        }
+    }
+    .custom-shape-divider-bottom-1701458774 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    .custom-shape-divider-bottom-1701458774 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 129px;
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .custom-shape-divider-bottom-1701458774 svg {
+            width: calc(100% + 1.3px);
+            height: 151px;
+        }
+    }
+    .tblhover::before{
+        background: linear-gradient(var(--main) 0%, var(--purple) 50%, var(--green) 100%);
+        content: "";
+        position: absolute;
+        top: -1px;
+        bottom: 0;
+        left: 0;
+        width: 0.25rem;
+    }
+    a.active, .slct:hover{
+        background-color: var(--primary-grey);
+    }
+</style>
+<div class="flexi mt50 pt80" bind="price, nodes">
+    <div class="fs50 m_m_fs24 lh60 m_m_lh40 mb50 g_nm" style="max-width: 700px; font-family: 'Bitter', serif; letter-spacing: 1px;">Adaptable Pricing Solutions for Developers and Businesses</div>
+    <grid_nm style="backdrop-filter: saturate(100%) blur(40px); border-image-source: linear-gradient(to right, var(--purple) 0%, var(--green) 25%, var(--main) 75%, var(--pink) 100%) !important; border-bottom: 1px solid; border-image-slice: 1;">
+        <div class="pointer w25 fs22 m_m_fs15 lh60 m_lh30">
+            <a n1="cloud" class="db" href="/pricing/cloud" style="border-top-right-radius: 1rem; border-top-left-radius: 1rem; color: var(--purple);">Cloud Hosting</a>
+        </div>
+        <div class="pointer w25 fs22 m_m_fs15 lh60 m_lh30">
+            <a n1="pro" class="db" href="/pricing/pro" style="border-top-right-radius: 1rem; border-top-left-radius: 1rem; color: var(--green);">Professional Hosting</a>
+        </div>
+        <div class="pointer w25 fs22 m_m_fs15 lh60 m_lh30">
+            <a n1="emails" class="db" href="/pricing/emails" style="border-top-right-radius: 1rem; border-top-left-radius: 1rem; color: var(--main);">Professional Emails</a>
+        </div>
+        <div class="pointer w25 fs22 m_m_fs15 lh60 m_lh30">
+            <a n1="domains" class="db" href="/pricing/domains" style="border-top-right-radius: 1rem; border-top-left-radius: 1rem; color: var(--pink);">Domains</a>
+        </div>
+    </grid_nm>
+    <div class="mt50" view="services_plans" :data="{{nodes[1]}} as servicePlan"></div>
+</div>
+<div class="mt50 pb100 pt120" style="background-image: linear-gradient(var(--purple), var(--main), var(--green)); background-attachment: fixed;">
+    <div class="ov op50" style="background-color: var(--primary-grey);"></div>
+    <div class="custom-shape-divider-top-1701458708">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill" fill="var(--primary)"></path>
+        </svg>
+    </div>
+    <div class="pv50">
+        <div class="mb20 fs36 m_m_fs26">
+            <div class="mb20" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Unlock Opportunities: Go Online Today!</div>
+            <div class="fs20 m_m_fs16 g_nm" style="max-width: 520px;">Embark on your digital journey now with our esteemed online platform, where possibilities unfold at the click of a button.</div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 100%" width="180" height="20">
+                    <path class="curve" d="M10,20 Q100,10 190,10" fill="none" stroke="var(--second)" stroke-width="1"/>
+                    </svg>
+                    <style>
+                    .curve {
+                        stroke-dasharray: 400;
+                        stroke-dashoffset: 400;
+                        animation: draw 3s infinite;
+                    }
+
+                    @keyframes draw {
+                        to {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+                    </style>
+            </div>
+        </div>
+        <div class="g_nm">
+            <div class="ov" style="background: linear-gradient(45deg, var(--purple), var(--main), var(--green)); filter: blur(30px);"></div>
+            <div class="ov oh round2x">
+                <div class="ov" style="border-width: 6px; border-style: solid; border-image: linear-gradient(to right, var(--purple) , var(--main),var(--green)) 1;"></div>
+                <div class="ov round _bgw" style="inset: 3px;"></div>
+            </div>
+            <a href="/auth/signup">
+                <div class="opacity ez ph20 lh50 fs18 m_m_fs14 pointer _cb">Sign Up To Start!</div>
+            </a>
+        </div>
+    </div>
+    <div class="custom-shape-divider-bottom-1701458774">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill" fill="var(--primary)"></path>
+        </svg>
+    </div>
+</div>
+<div class="flexi mt100 m_m_mt50">
+    <div class="fs50 m_m_fs26 b600 mb50" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Frequently Asked Questions</div>
+    <div view="faqs"></div>
+</div>
+<div class="flexi round4x mt100 m_m_mt50 mb100 p40" style="background: linear-gradient(45deg, var(--main), var(--green), var(--purple))">
+    <div class="fs30 m_m_fs20 mb20 _cw" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Not sure which plan is right for you?</div>
+    <div>
+        <div class="fs20 m_m_fs16 mb30 g_nm _cw" style="max-width: 450px;">We’ll ensure your company is set up for success from day one.</div>
+    </div>
+    <a href="/contact_us">
+        <div class="sbtn light fs16 m_m_fs14">Talk To An Expert</div>
+    </a>
+</div>
+<script>
+    st(0);
+    setTimeout(() => {
+        AOS.init();
+    });
+    if(!nodes[1]) nodes[1] = "cloud";
+</script>
+<settings>
+    {
+    hasFooter: true,
+    hasHeader: false,
+    hasNav: "nav"
+    }
+</settings>

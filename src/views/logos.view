@@ -1,0 +1,101 @@
+<style>
+    @keyframes smoothScroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+</style>
+<div class="flexi oh" style="mask-image: linear-gradient(to right,rgba(255,255,255,0) 0%,white calc(0% + 3rem),white calc(100% - 3rem),rgba(255,255,255,0) 100%);">
+    <grid_nm class="m_pb40 nw" gaph20 style="animation: smoothScroll 30s linear infinite;">
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 692px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 173px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 1384px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 1903px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 2422px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 2595px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 2768px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 3114px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 3806px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 4152px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 4498px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 4671px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 4844px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 5017px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 5190px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 5709px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 6228px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 6747px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 7439px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 7612px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 7958px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 8996px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 9169px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 9342px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 9688px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 10380px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 10553px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+        <div class="">
+            <div class="sq imgs-invert" style="width: 110px; background-position: 0 10726px; background-image: url('/images/scripts-sprite.svg');"></div>
+        </div>
+    </grid_nm>
+</div>

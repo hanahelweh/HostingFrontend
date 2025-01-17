@@ -1,0 +1,123 @@
+<div class="p20 _cb" bind="globals">
+    <form o-sub="">
+        <grid_nm class="pv5">
+            <div class="search-con vm w50">
+                <label class="text lh40">
+                    <input type="text" name="" value="" class="w100 ph40 lh40 round2x input" placeholder="Email" :required />
+                    <div class="ov ra z10 ph10 mb2" style="left: 10px;">
+                        <span class="iconify cc fs20" style="color: var(--secondary-grey);" data-icon="gridicons:domains"></span>
+                    </div>
+                    <div class="error red fs12">
+                        <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                        <span class="vm">Kindly write first name</span>
+                    </div>
+                </label>
+                <div class="over-effect pa round4x"></div>
+            </div>
+            <div class="lh40 ph10 w5 c" style="height: 40px; color: var(--second);">@</div>
+            <div class="w45 vm">
+                <label class="select-field ez" style="animation: water 2s ease-in-out;">
+                    <input type="" name="" value="" class="input pr40 w100 pl10 lh40 pointer _border round2x" placeholder="Hosted Domains" :required/>
+                    <div class="select-options h round2x z100 pa w100 sh10 p10" style="background-color: var(--primary); color: var(--second); top: 35px;">
+                        <div class="b500 cap">common domains</div>
+                        <div class="pointer p5 ez" style="color: var(--secondary-grey);" :hover="background-color: var(--primary-grey);">hana.com</div>
+                        <div class="pointer p5 ez" style="color: var(--secondary-grey);" :hover="background-color: var(--primary-grey);">hana2.com</div>
+                        <div class="b500 cap">my domains</div>
+                        <div class="pointer p5 ez" style="color: var(--secondary-grey);" :hover="background-color: var(--primary-grey);">hana3.com</div>
+                        <div class="pointer p5 ez" style="color: var(--secondary-grey);" :hover="background-color: var(--primary-grey);">hana4.com</div>
+                    </div>
+                    <div class="icon-text ov la z10 ph10 mb2 _cdg" style="right: 10px;">
+                        <span class="iconify cc fs20 _cmain" data-icon="jam:chevron-down"></span>
+                    </div>
+                    <div class="error red fs12">
+                        <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                        <span class="vm">Kindly write your email</span>
+                    </div>
+                </label>
+                <div class="over-effect pa round4x"></div>
+            </div>
+        </grid_nm>
+        <div class="pv5">
+            <div>
+                <label class="text lh40">
+                    <input type="text" name="keyword" value="" class="w100 ph40 lh40 round2x input" placeholder="Password" :required />
+                    <div class="ov ra z10 ph10 mb2" style="left: 10px;">
+                        <span class="iconify cc fs20" style="color: var(--secondary-grey);" data-icon="teenyicons:password-outline"></span>
+                    </div>
+                    <div class="error red fs12">
+                        <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                        <span class="vm">Kindly write your email</span>
+                    </div>
+                </label>
+                <div class="over-effect pa round4x"></div>
+            </div>
+        </div>
+        <div class="pv5">
+            <div>
+                <label class="text lh40">
+                    <input type="text" name="keyword" value="" class="w100 ph40 lh40 round2x input" placeholder="Forward To (optional)" />
+                    <div class="ov ra z10 ph10 mb2" style="left: 10px;">
+                        <span class="iconify cc fs20" style="color: var(--secondary-grey);" data-icon="teenyicons:password-outline"></span>
+                    </div>
+                    <div class="error red fs12">
+                        <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                        <span class="vm">Kindly write your email</span>
+                    </div>
+                </label>
+                <div class="over-effect pa round4x"></div>
+            </div>
+        </div>
+        <div class="pv5">
+            <div>
+                <label class="text lh40">
+                    <textarea type="text" rows="4" name="AutoReply" value="" class="w100 input ph40 pv10 round2x fs13"
+                        placeholder="Auto Reply (optional)" style="resize: none;"></textarea>
+                    <div class="ov ra z10 ph10 mb2" style="left: 10px;">
+                        <span class="iconify cc fs20" style="color: var(--secondary-grey);" data-icon="carbon:email"></span>
+                    </div>
+                    <div class="error red fs12">
+                        <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                        <span class="vm">Kindly write your email</span>
+                    </div>
+                </label>
+                <div class="over-effect pa round4x"></div>
+            </div>
+        </div>
+        <div class="pv5">
+            <div>
+                <label class="select-field ez" style="animation: water 2s ease-in-out;">
+                    <input type="" name="" value="" class="input pr40 w100 pl10 lh40 pointer _border round2x" placeholder="Size Limit" :required/>
+                    <div class="select-options h round2x z100 pa w100 sh10 p10" style="background-color: var(--primary); color: var(--second); top: 35px;">
+                        <div class="pointer p5 ez" style="color: var(--secondary-grey);" :hover="background-color: var(--primary-grey);">10GB</div>
+                        <div class="pointer p5 ez" style="color: var(--secondary-grey);" :hover="background-color: var(--primary-grey);">20MB</div>
+                    </div>
+                    <div class="icon-text ov la z10 ph10 mb2 _cdg" style="right: 10px;">
+                        <span class="iconify cc fs20 _cmain" data-icon="jam:chevron-down"></span>
+                    </div>
+                    <div class="error red fs12">
+                        <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                        <span class="vm">Kindly write your email</span>
+                    </div>
+                </label>
+                <div class="over-effect pa round4x"></div>
+            </div>
+        </div>
+    </form>
+    <div class="sbtn primary cap w100 mt20">add mailbox</div>
+</div>
+<script>
+    function BillingDetails(f, d){
+        engine.put("/Users/"+globals.User.objectId,{
+            firstName:d.firstName,
+            lastName:d.lastName,
+            mobile:d.mobile
+        }).then((r)=>{
+            if(r?.results?.[0]?.objectId){
+                globals.User.firstName = d.firstName;
+                globals.User.lastName = d.lastName;
+                globals.User.mobile = d.mobile;
+                $("[close-modal]:last").click();
+            }
+        })
+    }
+</script>

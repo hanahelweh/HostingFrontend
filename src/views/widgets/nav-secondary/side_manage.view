@@ -1,0 +1,201 @@
+<style>
+    .dropdown.actv {
+        display: block;
+        opacity: 1 !important;
+    }
+    .service.active .subscriptions{
+        display: block;
+    }
+    .service.active .chevron{
+        transform: rotate(90deg);
+    }
+    .sub.active{
+        background-color:rgba(60, 140, 230, 0.1);
+        color: #3C8CE6;
+    }
+</style>
+<nav-secondary class="pf ov ra z300 l ez _border-right" style="background-color: var(--primary-grey); color: var(--second); width: 244px;">
+    <div @click="$('body').toggleClass('side_open');" class="h m_db p15 round2x _bgg _border pa z100000 pointer" style="top: 20px; right: -15px;"><span class="iconify fs18 cc" data-icon="line-md:chevron-double-left"></span></div>
+    <div bind="globals" class="drop_contain ph20">
+        <div @click="Act" class="pointer lh80" style="border-bottom: 1px dotted #bec1c5; height: 70px;">
+            <div class="fs18 b500 oe pr10" tip="venice_shop.lb">Subscriptions</div>
+            <div class="ov la ph20"><span class="iconify fs20 cc" data-icon="jam:chevron-down"></span></div>
+        </div>
+        <div class="dropdown h pa" style="width: 300px;">
+            <div class="mt5 _border sh10 round2x z10000" style="background-color: var(--primary);">
+                <div class="oya" style="max-height: 300px;">
+                    <div class="cap pv15 ph20 pointer" style="background-color: var(--primary-grey);">
+                        <span class="iconify vm mr2 fs16 _cmain" data-icon="tabler:plus"></span>
+                        <span>Add new subscription</span>
+                    </div>
+                    <div n3="`{{Subscription.objectId}}`" :for="globals.User.Privileges[nodes[2]]" class="sub oe lh30 pointer pv8 ez-f ph20" :hover="background-color: var(--primary-grey);" tip="{{Subscription.Name}}">{{Subscription.Name}}</div>
+                    <div :if="!globals.User.Privileges[nodes[2]].length" class="_cdg ph20">No subscriptions yet</div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div bind="nodes" class="oya pv20 ov" style="top:80px; scrollbar-color: transparent transparent;">
+        <div class="b500 fs18 ph30 oe">Manage</div>
+        <!-- <div class="_cdg fs13 ph30 pv10">Options</div> -->
+        <div class="ph30 pv2 mt10">
+            <div class="accordion pointer l lh40 oh pr40 hov ez-f" n4="dashboard">
+                <a href="/admin/manage/{{nodes[2]}}/{{nodes[3]}}/dashboard/home">
+                    <div class="fs16 oe nw cap b600" tip="Dashboard">Dashboard</div>
+                </a>
+            </div>
+        </div>
+        <!-- <div class="_cdg fs13 ph30 pv10">Options</div> -->
+        <div class="ph30 pv2 active" n4="hosting">
+            <div class="accordion pointer l lh40 oh pr40 hov ez-f" n4="hosting">
+                <a href="/admin/manage/{{nodes[2]}}/{{nodes[3]}}/hosting/plan-details">
+                    <div class="fs16 oe nw cap b600" tip="Notifications">Hosting</div>
+                    <div class="pa p20 icon ez" style="top:0px; right:0px;">
+                        <span class="iconify fs20 cc" data-icon="jam:chevron-right"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="bfr ez-f h">
+                <a href="/admin/manage/{{nodes[2]}}/{{nodes[3]}}/hosting/plan-details">
+                    <div n5="plan-details" class="drop vv db round2x pointer l lh40 oh fs15 oe cap" style="height: 40px; color: var(--secondary-grey); padding-left: 40px; font-weight: normal;" tip="Plan Details">Plan Details</div>
+                </a>
+                <a href="/admin/manage/{{nodes[2]}}/{{nodes[3]}}/hosting/plan-usage">
+                    <div n5="plan-usage" class="drop vv db round2x pointer l lh40 oh fs15 oe cap" style="height: 40px; color: var(--secondary-grey); padding-left: 40px; font-weight: normal;" tip="Plan Usage">Plan Usage</div>
+                </a>
+            </div>
+        </div>
+        <div class="ph30 pv2" n4="domains">
+            <div class="accordion pointer l lh40 oh pr40 hov ez-f" n4="domains">
+                <a href="/admin/manage/{{nodes[2]}}/{{nodes[3]}}/domains/hosted-domains">
+                    <div class="fs16 oe nw cap b600" tip="Domains">Domains</div>
+                    <div class="pa p20 icon ez" style="top:0px; right:0px;">
+                        <span class="iconify fs20 cc" data-icon="jam:chevron-right"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="bfr ez-f h">
+                <a href="/admin/manage/{{nodes[2]}}/{{nodes[3]}}/domains/hosted-domains">
+                    <div n5="hosted-domains" class="drop vv db round2x pointer l lh40 oh fs15 oe cap" style="height: 40px; color: var(--secondary-grey); padding-left: 40px; font-weight: normal;" tip="Hosted Domains">Hosted Domains</div>
+                </a>
+                <a href="/admin/manage/{{nodes[2]}}/{{nodes[3]}}/domains/registered-domains">
+                    <div n5="registered-domains" class="drop vv db round2x pointer l lh40 oh fs15 oe cap" style="height: 40px; color: var(--secondary-grey); padding-left: 40px; font-weight: normal;" tip="Registered Domains">Registered Domains</div>
+                </a>
+            </div>
+        </div>
+        <div class="ph30 pv2" n4="emails">
+            <div class="accordion pointer l lh40 oh pr40 hov ez-f" n4="emails">
+                <a href="/admin/manage/{{nodes[2]}}/{{nodes[3]}}/emails/mailboxes">
+                    <div class="fs16 oe nw cap b600" tip="Emails">Emails</div>
+                    <div class="pa p20 icon ez" style="top:0px; right:0px;">
+                        <span class="iconify fs20 cc" data-icon="jam:chevron-right"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="bfr ez-f h">
+                <a href="/admin/manage/{{nodes[2]}}/{{nodes[3]}}/emails/mailboxes">
+                    <div n5="mailboxes" class="drop vv db round2x pointer l lh40 oh fs15 oe cap" style="height: 40px; color: var(--secondary-grey); padding-left: 40px; font-weight: normal;" tip="Mailboxes">Mailboxes</div>
+                </a>
+            </div>
+        </div>
+        <div class="ph30 pv2 active" n4="health-analysis">
+            <div class="accordion pointer l lh40 oh pr40 hov ez-f" n4="health-analysis">
+                <a href="/admin/manage/{{nodes[2]}}/{{nodes[3]}}/health-analysis/page-speed">
+                    <div class="fs16 oe nw cap b600" tip="Performance">Health analysis</div>
+                    <div class="pa p20 icon ez" style="top:0px; right:0px;">
+                        <span class="iconify fs20 cc" data-icon="jam:chevron-right"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="bfr ez-f h">
+                <a href="/admin/manage/{{nodes[2]}}/{{nodes[3]}}/performance/page-speed">
+                    <div n5="page-speed" class="drop vv db round2x pointer l lh40 oh fs15 oe cap" style="height: 40px; color: var(--secondary-grey); padding-left: 40px; font-weight: normal;" tip="Page Speed">Page Speed</div>
+                </a>
+            </div>
+            <div class="bfr ez-f h">
+                <a href="/admin/manage/{{nodes[2]}}/{{nodes[3]}}/performance/malware-scanner">
+                    <div n5="malware-scanner" class="drop vv db round2x pointer l lh40 oh fs15 oe cap" style="height: 40px; color: var(--secondary-grey); padding-left: 40px; font-weight: normal;" tip="Malware Scanner">Malware Scanner</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav-secondary>
+<script>
+    function Act(ev, el) {
+        var dropdown = el.closest('.drop_contain').children('.dropdown');
+        if (dropdown.length) {
+            dropdown.toggleClass('actv');
+        }
+    }
+</script>
+<!-- <style>
+    .dropdown.actv {
+        display: block;
+        opacity: 1 !important;
+    }
+    .service.active .subscriptions{
+        display: block;
+    }
+    .service.active .chevron{
+        transform: rotate(90deg);
+    }
+    .text.focused ~ .over-effect {
+        animation: overEffect 0.3s ease forwards;
+    }
+    .text.focused .iconify{
+        color: #3C8CE6;
+    }
+    .sub.active{
+        background-color:rgba(60, 140, 230, 0.1);
+        color: #3C8CE6;
+    }
+</style>
+<nav-secondary class="pf ov ra z300 _bgg _cb l ez br" style="width: 244px;">
+    <div @click="$('body').toggleClass('side_open');" class="h m_db p15 round2x _bgg _border pa z100000 pointer" style="top: 20px; right: -15px;"><span class="iconify fs18 cc" data-icon="line-md:chevron-double-left"></span></div>
+    <div bind="globals" class="drop_contain ph20">
+        <div @click="Act" class="pointer lh80" style="border-bottom: 1px dotted #bec1c5; height: 70px;">
+            <div class="fs18 b500 oe pr10" tip="venice_shop.lb">Subscriptions</div>
+            <div class="ov la ph20"><span class="iconify fs20 cc" data-icon="jam:chevron-down"></span></div>
+        </div>
+        <div class="dropdown h pa" style="width: 300px;">
+            <div class="mt5 _bgw _border sh10 round2x z10000">
+                <div class="oya" style="max-height: 300px;">
+                    <div class="cap pv15 ph20 _bgg">
+                        <span class="iconify vm mr2 fs16" data-icon="tabler:plus"></span>
+                        <span>Add new subscription</span>
+                    </div>
+                    <div n3="`{{Subscription.objectId}}`" :for="globals.User.Privileges[nodes[2]]" class="sub oe lh30 pointer pv8 ez-f ph20" :hover="background-color: #f8fafc;" tip="{{Subscription.Name}}">{{Subscription.Name}}</div>
+                    <div :if="!globals.User.Privileges[nodes[2]].length" class="_cdg ph20">No subscriptions yet</div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div bind="nodes" class="oya pv20 ov" style="top:80px; scrollbar-color: transparent transparent;">
+        <div class="b500 fs18 ph30 oe">Manage</div>
+        <div class="_cdg fs13 ph30 pv10">Options</div>
+        <div class="ph30 pv2">
+            <div class="accordion pointer l lh40 oh pr40 hov ez-f" n4="domains">
+                <a href="/admin/manage/{{nodes[2]}}/{{nodes[3]}}/domains">
+                    <div class="fs16 oe nw cap b600" tip="Domains">Domains</div>
+                    <div class="pa p20 icon ez" style="top:0px; right:0px;">
+                        <span class="iconify fs20 cc" data-icon="jam:chevron-right"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="bfr ez-f h">
+                <a href="/admin/manage/{{nodes[2]}}/{{nodes[3]}}/domains/hosted-domains">
+                    <div n5="hosted-domains" class="drop vv db round2x pointer l lh40 oh fs15 oe cap" style="height: 40px; color: var(--secondary-grey); padding-left: 40px; font-weight: normal;" tip="Hosted Domains">Hosted Domains</div>
+                </a>
+                <a href="/admin/manage/{{nodes[2]}}/{{nodes[3]}}/domains/registered-domains">
+                    <div n5="registered-domains" class="drop vv db round2x pointer l lh40 oh fs15 oe cap" style="height: 40px; color: var(--secondary-grey); padding-left: 40px; font-weight: normal;" tip="Registered Domains">Registered Domains</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav-secondary>
+<script>
+    function Act(ev, el) {
+        var dropdown = el.closest('.drop_contain').children('.dropdown');
+        if (dropdown.length) {
+            dropdown.toggleClass('actv');
+        }
+    }
+</script> -->

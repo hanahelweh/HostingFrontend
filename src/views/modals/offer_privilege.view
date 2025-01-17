@@ -1,0 +1,106 @@
+<style>
+    .plan-input.is-checked .radio-button {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .plan-input.is-checked .radio-con {
+        border: 1px solid #3c8be6 !important;
+        background-color: var(--primary-grey);
+    }
+</style>
+<div class="p20  _cb">
+    <form o-sub="">
+        <div class="cap b700 mb10" style="font-family: Montserrat, sans-serif; color: var(--second);">Client's Email</div>
+        <div class="mb20">
+            <label class="text lh40">
+                <input type="text" name="keyword" value="" class="w100 input ph40 lh40 round2x"
+                    placeholder="Email" :required />
+                <div class="ov ra z10 ph10 mb2" style="left: 10px;">
+                    <span class="iconify cc fs20 _cdg" data-icon="carbon:email"></span>
+                </div>
+                <div class="error red fs12">
+                    <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                    <span class="vm">Kindly write your email</span>
+                </div>
+            </label>
+            <div class="over-effect pa round4x"></div>
+        </div>
+        <div class="mb20">
+            <div class="cap b700 mb10" style="font-family: Montserrat, sans-serif; color: var(--second);">Permission level</div>
+            <div class="pv5">
+                <label class="plan-input">
+                    <input @change="" type="radio" name="PermissionLevel" value="" class="h" click :required />
+                    <div class="radio-con ph20 pv15 db pointer round2x ez" style="border: 1px solid var(--border);">
+                        <div class="ov ra p25"><span class="iconify cc fs26 _cmain" data-icon="ph:key"></span></div>
+                        <div class="pl40">
+                            <div class="b600 _cmain">Service Management</div>
+                            <div class="_cdg">Manage services</div>
+                        </div>
+                        <div class="radio-button pa p15 _border sh10 roundc _cmain vh"
+                                style="top: 5px; right: 5px;"><span class="iconify cc"
+                                data-icon="la:check"></span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <div class="pv5">
+                <label class="plan-input">
+                    <input @change="" type="radio" name="PermissionLevel" value="" class="h" :required />
+                    <div class="radio-con ph20 pv15 db pointer round2x ez" style="border: 1px solid var(--border);">
+                        <div class="ov ra p25"><span class="iconify cc fs26 _cmain" data-icon="mynaui:lock-open-keyhole"></span></div>
+                        <div class="pl40">
+                            <div class="b600 _cmain">Complete Access</div>
+                            <div class="_cdg">Manage services and make purchases using added payment method</div>
+                        </div>
+                        <div class="radio-button pa p15 _border sh10 roundc _cmain vh"
+                                style="top: 5px; right: 5px;"><span class="iconify cc"
+                                data-icon="la:check"></span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="mb20">
+            <div class="cap b700 mb10" style="font-family: Montserrat, sans-serif; color: var(--second);">Select services that will be allowed to manage:</div>
+            <div bind="services">
+                <label class="select-field ez" style="animation: water 2s ease-in-out;">
+                    <input type="" name="" value="" class="input pr40 w100 pl10 lh40 pointer round2x" placeholder="Service" :required/>
+                    <div class="select-options h round2x z100 pa w100 sh10 p10" style="top: 35px; background-color: var(--primary-grey); border: 1px solid var(--border); color: var(--second);">
+                        <div :if="services">
+                            <div class="pointer p5 ez" :hover="background-color: #f3f4f6;">Service1</div>
+                            <div class="pointer p5 ez" :hover="background-color: #f3f4f6;">Service2</div>
+                        </div>
+                        <div :else>
+                            <div class="pointer p5 ez" :hover="background-color: #f3f4f6;">No Services</div>
+                        </div>
+                    </div>
+                    <div class="icon-text ov la z10 ph10 mb2 _cdg" style="right: 10px;">
+                        <span class="iconify cc fs20 _cmain" data-icon="jam:chevron-down"></span>
+                    </div>
+                    <div class="error red fs12">
+                        <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                        <span class="vm">Kindly write your email</span>
+                    </div>
+                </label>
+                <div class="over-effect pa round4x"></div>
+            </div>
+        </div>
+        <div class="cap b700 mb10" style="font-family: Montserrat, sans-serif; color: var(--second);">Send Message</div>
+        <div class="mb20">
+            <label class="text lh40">
+                <textarea type="text" rows="4" name="EmailMessage" value="" class="w100 input ph40 pv10 round2x fs13"
+                    style="resize: none;" placeholder="" :required>Hello!, please provide me with access to manage your service. Thanks!</textarea>
+                <div class="ov ra z10 ph10 mb2" style="left: 10px;">
+                    <span class="iconify cc fs20 _cdg" data-icon="carbon:email"></span>
+                </div>
+                <div class="error red fs12">
+                    <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                    <span class="vm">Kindly write your email</span>
+                </div>
+            </label>
+            <div class="over-effect pa round4x"></div>
+        </div>
+        <button type="submit" class="_cw cap sbtn primary lg w100 mb20 m_fs12">Send Offer</button>
+    </form>
+</div>

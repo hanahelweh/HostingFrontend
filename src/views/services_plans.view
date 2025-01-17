@@ -1,0 +1,92 @@
+<style>
+    .chosenBill_main.active{
+        background-color: var(--main) !important;
+        color: var(--second);
+    }
+    .chosenBill_green.active{
+        background-color: var(--green) !important;
+                color: var(--second);
+    }
+    .chosenBill_purple.active{
+        background-color: var(--purple) !important;
+                color: var(--second);
+    }
+    .chosenBill_pink.active{
+        background-color: var(--pink) !important;
+                color: var(--second);
+    }
+    .plans pop-c {
+        max-width: 1000px;
+    }
+</style>
+<div bind="servicesPlans,period">
+    <div class="fs30 m_fs28 m_m_fs22 m_m_lh30" style="font-family: 'Bitter', serif; letter-spacing: 1px;">{{servicesPlans.service.Name}}</div>
+    <div>
+        <div class="mt10 fs18 m_m_lh25 mb30 g_nm"  style="max-width: 650px; color: var(--secondary-grey);">{{servicesPlans.mainDescription}}</div>
+    </div>
+    <grid_nm class="g_nm round2x" style="border: 1px solid var(--{{servicesPlans.mainColor}});">
+        <div class="cc sq10" style="width: 300px; background-color: var(--{{servicesPlans.mainColor}}); filter: blur(90px);"></div>
+        <button @click="Period" data-id="1" actv=".bill" class="bill active chosenBill_{{servicesPlans.mainColor}} ph10 round2x lh40 m_m_lh30 m_m_fs13 pointer b0 opacity ez" style="color: var(--second); background-color: transparent;">1 year</button>
+        <button @click="Period" data-id="2" actv=".bill" class="bill chosenBill_{{servicesPlans.mainColor}} ph10 round2x lh40 m_m_lh30 m_m_fs13 pointer b0 opacity ez" style="color: var(--second); background-color: transparent;">2 years (10% OFF)</button>
+        <button @click="Period" data-id="3" actv=".bill" class="bill chosenBill_{{servicesPlans.mainColor}} ph10 round2x lh40 m_m_lh30 m_m_fs13 pointer b0 opacity ez" style="color: var(--second); background-color: transparent;">3 years (20% OFF)</button>
+    </grid_nm>
+    <div class="oxa">
+        <div style="min-width: 800px;">
+            <tbl_nm fixed class="ps z10 mt50 mb70 pl20 pv20"
+                style="border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem; border: 1px solid var(--border); top: 80px; background-color: var(--primary-grey);">
+                <rw class="b600 ps z10" style="top: 70px;">
+                    <cl class="w25"></cl>
+                    <cl class="w75">
+                        <tbl_nm>
+                            <cl :for="servicesPlans.plans as plan" class="w33">
+                                <div class="fs18 m_m_fs16" style="color: var(--second);">{{plan.Name}}</div>
+                                <div class="fs22 m_m_fs18 mb5 mt2" style="color: var(--second);">${{((plan.Price)*(period==3? 0.8 :(period==2?0.9:1))).toFixed(2)}}/mo</div>
+                                <div class="mb15 n400" style="color: var(--secondary-grey);">The customer support plan for individuals, startups, and small businesses.</div>
+                                <div class="sbtn light" modal="modals/checkout" modal-class="gen-modal plans" modal-title="{{plan.Name}} plan" @modal-open="ModalOpen" data-id="{{plan.objectId}}">Get Plan</div>
+                            </cl>
+                        </tbl_nm>
+                    </cl>
+                </rw>
+            </tbl_nm>
+            <div class="l mt40 m_m_mt20" :for="5">
+                <div>
+                    <span class="iconify vm mr10 fs28 m_m_fs22" data-icon="mdi:laptop" style="color: var(--{{servicesPlans.mainColor}});"></span>
+                    <span class="fs20 m_m_fs18">Channels</span>
+                </div>
+                <tbl_nm class="mt20 tblhover pl20">
+                    <rw :for="5" class="l">
+                        <cl class="w25">
+                            Website
+                        </cl>
+                        <cl class="w75 c">
+                            <tbl_nm class="w100">
+                                <cl :for="servicesPlans.plans.length" class="w33">
+                                    <span class="chat-icon iconify fs28 m_m_fs22 p5 roundc cdb _cw" style="background-color: var(--{{servicesPlans.mainColor}});"
+                                        data-icon="mdi:check"></span>
+                                </cl>
+                            </tbl_nm>
+                        </cl>
+                    </rw>
+                </tbl_nm>
+            </div>
+        </div>
+    </div>
+    <div class="p10"></div>
+</div>
+
+<script>
+    var servicesPlans,period=1;
+    view.scope(function (view, props){
+        cl("..",props.servicePlan)
+        view.set('servicesPlans', props.servicePlan);
+    });
+    function Period(ev, el){
+        period = el.data("id");
+    }
+    function ModalOpen(ev,el,modal){
+        return{
+            "id":el.data('id'),
+            "serv":nodes[1]
+        }
+    }
+</script>

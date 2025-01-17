@@ -1,0 +1,48 @@
+<div class="oh">
+    <div class="rotate pa" style="top: 10px; right: 50px; animation: infinite-rotate 20s linear infinite;">
+        <svg width="340" height="329" viewBox="0 0 340 329" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="112.5" y="0.5" width="227" height="225" stroke="var(--secondary-grey)"/>
+            <rect x="0.5" y="113.5" width="225" height="205" stroke="var(--secondary-grey)"/>
+            <circle cx="226" cy="319" r="10" fill="var(--main)"/>
+        </svg>        
+    </div>
+<div bind="nodes" class="oh pv80 mhv100 flexi" style="display: flex; align-items: center; margin: auto;">
+    <div class="con vm pa"
+        style="top: 30px; left: 20px; filter:brightness(0) invert(1); height: 30px; width: 60px; background-image: url('/images/roxyon.svg');">
+    </div>
+    <grid style="margin-left: -20px;">
+        <div class="w50 p20 vm l">
+            <div  class="fs26 m_fs28 m_m_fs22 m_m_lh30 lh40 m_lh40" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Choose the only managed hosting platform that's 100% optimized for simplicity, efficiency & speed</div>
+            <div class="fs18 m_m_fs18 m_m_lh25 mt20" style="color: var(--secondary-grey); letter-spacing: 0.9px;">The result? Faster website. Faster setup. Faster support. So you spend your workday building your business, not debugging server problems</div>
+            <div style="color: var(--main);">
+                <a href="">
+                    <span class="vb opacity ez u">Privacy policy</span>
+                </a>
+                <span class="iconify fs32 vm" data-icon="fad:digital-dot"></span>
+                <a href="">
+                    <span class="vb opacity ez u">Terms of use</span>
+                </a>
+            </div>
+        </div>
+        <div class="w50 p20 vm round4x auth-form"  data-aos="zoom-in" data-aos-duration="1000" style="background-color: var(--second); box-shadow: 0px 2px 15px var(--secondary-grey)">
+            <div view="_auth/{{nodes[1]}}"></div>
+        </div>
+        <style>
+            body.light-theme .auth-form, body.light-theme ._or{
+                background-color: #f8fafc !important;
+            }
+        </style>
+    </grid>
+</div>
+</div>
+
+<script>
+    nodes[1] = nodes[1] == "signup" ? "signup" : "signin";
+</script>
+<settings>
+    {
+    hasFooter: false,
+    hasHeader: false,
+    hasNav: false
+    }
+</settings>

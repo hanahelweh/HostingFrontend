@@ -1,0 +1,9 @@
+<div class="round4x mt100 m_m_mt50 p40" style="background-color :var(--main);">
+    <div class="fs30 m_m_fs20 mb20" style="font-family: 'Bitter', serif; letter-spacing: 1px; color: var(--primary);">Join the "--" Cloud Community</div>
+    <div>
+        <div class="fs20 m_m_fs16 mb30 g_nm" style="max-width: 450px; ">Sign up and get $200 in credit for your first 60 days with DigitalOcean.</div>
+    </div>
+    <a href="/auth/signup">
+        <div class="sbtn light fs16 m_m_fs14">Sign Up</div>
+    </a>
+</div>

@@ -1,0 +1,110 @@
+<style>
+    .dropdown.actv {
+        display: block;
+        opacity: 1 !important;
+    }
+    .service.active .subscriptions{
+        display: block;
+    }
+    .service.active .chevron{
+        transform: rotate(90deg);
+    }
+</style>
+<nav-secondary bind class="pf ov ra z300 l ez _border-right" style="background-color: var(--primary-grey); color: var(--second); width: 244px;">
+    <div @click="$('body').toggleClass('side_open');" class="h m_db p15 round2x _bgg _border pa z100000 pointer" style="top: 20px; right: -15px;"><span class="iconify fs18 cc" data-icon="line-md:chevron-double-left"></span></div>
+    <div bind="globals" class="drop_contain ph20">
+        <div @click="Act" class="pointer lh80" style="border-bottom: 1px dotted #bec1c5; height: 70px;">
+            <div class="fs18 b500 oe pr10" tip="venice_shop.lb">Services</div>
+            <div class="ov la ph20"><span class="iconify fs20 cc" data-icon="jam:chevron-down"></span></div>
+        </div>
+        <div class="dropdown h pa" style="width: 300px;">
+            <div class="mt5 _border sh10 round2x p20 z10000" style="background-color: var(--primary);">
+                <div class="search-con">
+                    <label class="text lh40">
+                        <input @keyup="Search" type="text" name="keyword" value="" class="w100 input ph40 lh40 round2x" placeholder="Search" :required />
+                        <div class="ov ra z10 ph10 mb2" style="left: 10px;">
+                            <span class="iconify cc fs20 _cdg" data-icon="mingcute:search-line"></span>
+                        </div>
+                        <div class="error red fs12">
+                            <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                            <span class="vm">Kindly write your email</span>
+                        </div>
+                    </label>
+                    <div @click="Clear" class="clearMe h ov la z10 ph20 ez lh38 mb1 pointer" style="border-top-right-radius: 0.5rem; border-bottom-right-radius: 0.5rem;" :hover="background-color: #100f0f; color: white;">
+                        <span class="iconify cc fs20" data-icon="ic:outline-cancel"></span>
+                    </div>
+                    <div class="over-effect pa round4x"></div>
+                </div>
+                <div class="b600 fs16 mt20 mb10 pl10">Services</div>
+                <div class="oya pb10" style="max-height: 300px;">
+                    <div actv=".service" :for="globals.servicesArr" class="service round2x">
+                        <div class="oh">
+                            <div class="pr20 lh50 round2x pointer ez" :hover="background-color: rgba(60, 140, 230, 0.1); color:var(--main);">
+                                <div class="pa z100" style="height: 60px; width: 60px;">
+                                    <span class="iconify fs28 cc" data-icon="simple-icons:bisecthosting"></span>
+                                </div>
+                                <div class="fs16 b600 oe nw pl60 oe" tip="{{Name}}">{{Name}}</div>
+                                <div class="ov la ph10 chevron ez"><span class="iconify fs20 cc" data-icon="jam:chevron-right"></span></div>
+                            </div>
+                            <div class="subscriptions h pl60 pr20">
+                                <div class="oh" style="max-height: 90px;">
+                                    <div :for="globals.User.Privileges[Identifier]" :hover="text-decoration: underline" class="fs16 oe lh30 pointer _cdg" tip="{{Subscription.Name}}">{{Subscription.Name}}</div>
+                                    <div :if="!globals.User.Privileges[Identifier].length" style="color: var(--secondary-grey);">No subscriptions yet</div> 
+                                </div>
+                                <a href="/admin/products/{{Identifier}}">
+                                    <div class="mt5 _cmain b500 u pointer opacity ez" :if="globals.User.Privileges[Identifier].length > 3">Click here to see all services</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <a href="/admin/add">
+                    <div class="ph10 lh40 b600 fs15 c pointer _cmain _border round2x mb10 ez" :hover="background-color:rgba(60, 140, 230, 0.1);">Add New Service</div>
+                </a> -->
+            </div>
+        </div>
+    </div>
+    <div class="oya pv20 ov" style="top:80px; scrollbar-color: transparent transparent;">
+        <div class="b500 fs18 ph30 oe">Billing</div>
+        <div class="_cdg fs13 ph30 pv10">Options</div>
+        <div class="ph30 pv2 active" n2="invoices">
+            <div class="accordion pointer l lh40 oh pr40 hov ez-f" n2="invoices">
+                <a href="/admin/billing/invoices">
+                    <div class="fs16 oe nw cap b600" tip="Notifications">Invoices</div>
+                    <div class="pa p20 icon ez" style="top:0px; right:0px;">
+                        <span class="iconify fs20 cc" data-icon="jam:chevron-right"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="bfr ez-f h">
+                <a href="/admin/billing/invoices/paid">
+                    <div n3="paid" class="drop vv db round2x pointer l lh40 oh fs15 oe cap" style="height: 40px; color: var(--secondary-grey); padding-left: 40px; font-weight: normal;" tip="Paid">Paid</div>
+                </a>
+                <a href="/admin/billing/invoices/unpaid">
+                    <div n3="unpaid" class="drop vv db round2x pointer l lh40 oh fs15 oe cap" style="height: 40px; color: var(--secondary-grey); padding-left: 40px; font-weight: normal;" tip="UnPaid">UnPaid</div>
+                </a>
+                <a href="/admin/billing/invoices/refund">
+                    <div n3="refund" class="drop vv db round2x pointer l lh40 oh fs15 oe cap" style="height: 40px; color: var(--secondary-grey); padding-left: 40px; font-weight: normal;" tip="Refund">Refund</div>
+                </a>
+            </div>
+        </div>
+        <div class="ph30 pv2">
+            <a href="/admin/billing/subscriptions">
+                <div n2="subscriptions" class="accordion pointer l lh40 oh pr40 hov ez-f fs16 oe nw cap b600" tip="Notifications">Subscriptions</div>
+            </a>
+        </div>
+        <div class="ph30 pv2">
+            <a href="/admin/billing/payment-method">
+                <div n2="payment-method" class="accordion pointer l lh40 oh pr40 hov ez-f fs16 oe nw cap b600" tip="Notifications">Add Payment Method</div>
+            </a>
+        </div>
+    </div>
+</nav-secondary>
+<script>
+    function Act(ev, el) {
+        var dropdown = el.closest('.drop_contain').children('.dropdown');
+        if (dropdown.length) {
+            dropdown.toggleClass('actv');
+        }
+    }
+</script>

@@ -1,0 +1,59 @@
+<style>
+    .chosenBill.active{
+        background-color: var(--green) !important;
+        color: #fcfcfc !important;
+    }
+    body.light-theme .plans-boxes{
+        background-color: #f8fafc !important;
+    }
+</style>
+<div bind="hostingPlans,period">
+    <div class="fs40 m_fs26 m_m_fs22 mb20 cap" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Choose Your {{hostingPlans.service.Name}} Plan</div>
+    <div class="mt10 fs24 m_fs18 mb30 m_m_mb20" style="color: var(--secondary-grey);">{{hostingPlans.description}}</div>
+    <div class="b fs20 m_m_fs18 mb30 m_m_mb20" style="color: var(--green);">No Hidden fees</div>
+    <grid_nm class="g_nm round2x mb50" style="border: 1px solid var(--green);">
+        <div class="cc sq10" style="width: 300px; background-color: var(--green); filter: blur(90px);"></div>
+        <button @click="Period" data-id="1" actv=".bill" class="bill active chosenBill ph10 round2x lh40 m_m_lh30 m_m_fs13 pointer b0 opacity ez" style="color: var(--second); background-color: transparent;">1 year</button>
+        <button @click="Period" data-id="2" actv=".bill" class="bill chosenBill ph10 round2x lh40 m_m_lh30 m_m_fs13 pointer b0 opacity ez" style="color: var(--second); background-color: transparent;">2 years (10% OFF)</button>
+        <button @click="Period" data-id="3" actv=".bill" class="bill chosenBill ph10 round2x lh40 m_m_lh30 m_m_fs13 pointer b0 opacity ez" style="color: var(--second); background-color: transparent;">3 years (20% OFF)</button>
+    </grid_nm>
+    <grid gap20>
+        <div :for="hostingPlans.plans as plan" class="w33">
+            <div class="p20 round4x trans-top ez plans-boxes _border _cb" style="background-color: var(--second);">
+                <div class="fs20 m_m_fs18 b600 mb10">{{plan.Name}}</div>
+                <div class="fs28 m_fs22 m_m_fs20 b mb20 m_m_mb10" style="color: var(--green);">${{((plan.Price)*(period==3? 0.8 :(period==2?0.9:1))).toFixed(2)}}/mo</div>
+                <div class="fs16 m_fs14" style="color: var(--grey);">description</div>
+                <div class="sbtn green fs16 m_m_fs14 mt20" modal="modals/checkout" modal-class="gen-modal plans" modal-title="{{plan.Name}} plan" @modal-open="ModalOpen" data-id="{{plan.objectId}}">Get Plan</div>
+                <div class="fs18 m_fs16 b600 mt20 l mb10">Core features</div>
+                <grid_nm :for="5" class="l">
+                    <div class="vm roundc" style="width: 30px;">
+                        <span class="iconify fs20 m_m_fs18" style="color: var(--green);" data-icon="bx:check"></span>
+                    </div>
+                    <div class="vm fs16 m_fs14" style="width: calc(100% - 30px);">lorem ipsum db</div>
+                </grid_nm>
+                <div class="fs18 m_fs16 b600 mt20 l mb10">Plus</div>
+                <grid_nm :for="5" class="l">
+                    <div class="vm" style="width: 30px;">
+                        <span class="iconify fs20" style="color: var(--green);" data-icon="bx:check"></span>
+                    </div>
+                    <div class="vm fs16 m_fs14" style="width: calc(100% - 30px);">lorem ipsum db</div>
+                </grid_nm>
+            </div>
+        </div>
+    </grid>
+</div>
+<script>
+    var hostingPlans,period;
+    view.scope(function (view, props){
+        view.set('hostingPlans', props.hostingPlan);
+    });
+    function Period(ev, el){
+        period = el.data("id");
+    }
+    function ModalOpen(ev,el,modal){
+        return{
+            "id":el.data('id'),
+            "serv":nodes[1]
+        }
+    }
+</script>

@@ -1,0 +1,35 @@
+<style>
+    .error{
+        display: none;
+    }
+    @media screen and (max-width:486px){
+        .cm-input::placeholder{
+            font-size: 12px;
+        }
+    }
+</style>
+<div class="flexi hv100" style="min-height: 500px;">
+    <div class="h100" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div class="fs60 m_m_fs34 b700 cap" style="background: linear-gradient(45deg, var(--purple), var(--main), var(--green)); -webkit-background-clip: text; color: transparent;">
+            coming soon
+        </div>
+        <div class="fs20 m_m_fs18 mb50 c" style="color: var(--secondary-grey); max-width: 500px;">description about this service Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <label class="w50 m_w100" style="animation: brdr-animate 0.3s ease-in;">
+            <div style="height: 50px;">
+                <input type="text" name="" value="" class="cm-input b0 w100 ph10 lh50 round2x" placeholder="Please Enter Your Email Address" :required/>
+                <div class="ov5 la _cw _bgb lh40 ph15 round2x pointer opacity ez m_m_fs12">Notify Me</div>
+                <div class="error red fs12">
+                    <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                    <span class="vm">Kindly write your email</span>
+                </div>
+            </div>
+        </label>
+    </div>
+</div>
+<settings>
+    {
+    hasFooter: false,
+    hasHeader: false,
+    hasNav: false
+    }
+</settings>

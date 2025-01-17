@@ -1,0 +1,29 @@
+<style>
+    .dropdown.actv {
+        visibility: visible;
+        opacity: 1 !important;
+    }
+
+    .error {
+        display: none;
+    }
+
+    .navigate {
+        display: none;
+        visibility: hidden;
+    }
+
+    .accordion.active, .accordion:hover {
+        color: var(--main);
+        font-weight: 600;
+    }
+</style>
+<nav-secondary bind class="pf ov ra z300 l ez _border-right" style="background-color: var(--primary-grey); color: var(--second); width: 244px;">
+    <div @click="$('body').toggleClass('side_open');" class="h m_db p15 round2x _border pa z100000 pointer" style="background-color: var(--primary-grey); top: 20px; right: -15px;"><span class="iconify fs18 cc" data-icon="line-md:chevron-double-left"></span></div>
+    <div class="oya p30 ov" style="top:0px; scrollbar-color: transparent transparent;">
+        <div class="b500 fs18 mb30 oe">Products</div>
+        <div :for="globals.servicesArr" class="l lh50">
+            <a href="/admin/products/{{Identifier}}"><div n2="{{Identifier}}" class="accordion ez-f fs16 oe">{{Name}}</div></a>
+        </div>
+    </div>
+</nav-secondary>

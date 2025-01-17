@@ -1,0 +1,81 @@
+<style>
+    .plan-input.is-checked .radio-button {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .plan-input.is-checked .radio-con {
+        border: 1px solid #3c8be6 !important;
+        background-color: var(--primary-grey);
+    }
+</style>
+<div class="p20">
+    <form o-sub="">
+        <div class="cap b700 mb10" style="font-family: Montserrat, sans-serif;">Client's Email</div>
+        <div class="mb20">
+            <label class="text lh40">
+                <input type="text" name="keyword" value="" class="w100 input ph40 lh40 round2x"
+                     placeholder="Email" :required />
+                <div class="ov ra z10 ph10 mb2" style="left: 10px;">
+                    <span class="iconify cc fs20" style="color: var(--secondary-grey);" data-icon="carbon:email"></span>
+                </div>
+                <div class="error red fs12">
+                    <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                    <span class="vm">Kindly write your email</span>
+                </div>
+            </label>
+            <div class="over-effect pa round4x"></div>
+        </div>
+        <div class="mb20">
+            <div class="cap b700 mb10" style="font-family: Montserrat, sans-serif;">Permission level</div>
+            <div class="pv5">
+                <label class="plan-input">
+                    <input @change="" type="radio" name="PermissionLevel" value="" class="h" click :required />
+                    <div class="radio-con ph20 pv15 db pointer round2x ez" style="border: 1px solid var(--border);">
+                        <div class="ov ra p25"><span class="iconify cc fs26 _cmain" data-icon="ph:key"></span></div>
+                        <div class="pl40">
+                            <div class="b600 _cmain">Service Management</div>
+                            <div class="_cdg">Set up, access and manage services.</div>
+                        </div>
+                        <div class="radio-button pa p15 _border sh10 roundc _cmain vh"
+                                style="top: 5px; right: 5px;"><span class="iconify cc"
+                                data-icon="la:check"></span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <div class="pv5">
+                <label class="plan-input">
+                    <input @change="" type="radio" name="PermissionLevel" value="" class="h" :required />
+                    <div class="radio-con ph20 pv15 db pointer round2x ez" style="border: 1px solid var(--border);">
+                        <div class="ov ra p25"><span class="iconify cc fs26 _cmain" data-icon="mynaui:lock-open-keyhole"></span></div>
+                        <div class="pl40">
+                            <div class="b600 _cmain">Complete Access</div>
+                            <div class="_cdg">Set up, access, manage and buy services using the payment method already configured in the client's account (Note that you will not have access to view or modify his payment details).</div>
+                        </div>
+                        <div class="radio-button pa p15 _border sh10 roundc _cmain vh"
+                                style="top: 5px; right: 5px;"><span class="iconify cc"
+                                data-icon="la:check"></span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="cap b700 mb10" style="font-family: Montserrat, sans-serif;">Send Message</div>
+        <div class="mb20">
+            <label class="text lh40">
+                <textarea type="text" rows="4" name="EmailMessage" value="" class="w100 input ph40 pv10 round2x fs13"
+                    placeholder="" style="resize: none;" :required>Hello!, please provide me with access to manage your service. Thanks!</textarea>
+                <div class="ov ra z10 ph10 mb2" style="left: 10px;">
+                    <span class="iconify cc fs20 _cdg" data-icon="carbon:email"></span>
+                </div>
+                <div class="error red fs12">
+                    <span class="iconify vm fs16 ml5" data-icon="mdi:information-outline"></span>
+                    <span class="vm">Kindly write your email</span>
+                </div>
+            </label>
+            <div class="over-effect pa round4x"></div>
+        </div>
+        <button type="submit" class="_cw cap sbtn primary lg w100 mb20 m_fs12">Send request</button>
+    </form>
+</div>

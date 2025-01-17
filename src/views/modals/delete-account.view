@@ -1,0 +1,9 @@
+<div class="p20 c">
+    <span class="iconify fs60 c red" data-icon="typcn:delete-outline"></span>
+    <div class="b600 fs18 mb10">Are you sure you want to delete your account?</div>
+    <div class="_cdg mb20">Before proceeding, please note that by deleting your account, you will lose access to services and content tied to it</div>
+    <div class="r">
+        <!-- <div class="sbtn light mt30 fs14" close-modal>Cancel</div> -->
+        <div class="sbtn danger mt30 fs14">Delete</div>
+    </div>
+</div>

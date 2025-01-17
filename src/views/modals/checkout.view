@@ -1,0 +1,272 @@
+<style>
+    .plan-input.is-checked .radio-button {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .plan-input.is-checked .radio-con {
+        border: 1.5px solid #3C8CE6 !important;
+    }
+
+    .input-check.is-checked .inputRadio .iconify {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .input-check.is-checked .over-effect {
+        animation: radioEffect 0.3s ease forwards;
+    }
+
+    .input-check.wallet.is-checked~.balance {
+        display: block;
+    }
+</style>
+<form>
+    <grid gap10 class="p40 m_p20">
+        <div class="vt w60">
+            <div class="p20 round2x" style="border: 1px solid var(--border);">
+                <div class="w50 fs16 cap b700 mb20" style="font-family: Montserrat, sans-serif;">subscription period
+                </div>
+                <grid gap5 bind="plan">
+                    <div :for="3" class="w33 vt">
+                        <label class="plan-input">
+                            <input @change="PeriodChange" type="radio" name="Period" value="{{index+1}}" class="h"
+                                :if="index==0" click :required />
+                            <input @change="PeriodChange" type="radio" name="Period" value="{{index+1}}" class="h" :else
+                                :required />
+                            <div class="radio-con ph20 pv15 db pointer round2x ez" style="border: 1px solid var(--border);">
+                                <div class="radio-button pa p10 sh10 roundc _cmain vh"
+                                    style="top: 5px; right: 5px; border: 1px solid var(--border);"><span class="iconify fs10 cc"
+                                        data-icon="la:check"></span>
+                                </div>
+                                <div class="">{{index + 1}} year</div>
+                                <div class="b600">${{((plan.Price)*(index==2? 0.8:(index==1?0.9:1))).toFixed(2)}}/month
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </grid>
+                <div class="encourage mt20 ph20 pv10 round2x l b500" style="background-color: var(--primary-grey);" bind="encourage">
+                    <span class="iconify vm _cmain fs16" data-icon="ic:round-discount"></span>
+                    <span class="vm ml5">{{encourage}}</span>
+                </div>
+            </div>
+            <div class="mt20 round2x p20 l" style="border: 1px solid var(--border);" bind="globals">
+                <div class="w50 fs16 cap b700 mb10" style="font-family: Montserrat, sans-serif;">billing details</div>
+                <div class="pointer" modal="modals/billing_details" modal-class="gen-modal" modal-title="Edit">
+                    <div class="pv15 pl30">
+                        <div class="ov ra z10 ph10 mb2">
+                            <span class="iconify cc fs20" data-icon="ph:user-fill"></span>
+                        </div>
+                        <div class="b600">First Name</div>
+                        <div class="_cdg" :if="globals.User.firstName">{{globals.User.firstName}}</div>
+                        <div :else class="_cdg">--</div>
+                        <div class="p20 pa r0 cv"><span class="iconify cc" data-icon="gravity-ui:chevron-right"></span>
+                        </div>
+                    </div>
+                    <div class="pv15 pl30 bb bt">
+                        <div class="ov ra z10 ph10 mb2">
+                            <span class="iconify cc fs20" data-icon="ph:user-light"></span>
+                        </div>
+                        <div class="b600">Last Name: </div>
+                        <div class="_cdg" :if="globals.User.lastName">{{globals.User.lastName}}</div>
+                        <div :else class="_cdg">--</div>
+                        <div class="p20 pa r0 cv"><span class="iconify cc" data-icon="gravity-ui:chevron-right"></span>
+                        </div>
+                    </div>
+                    <div class="pv15 pl30">
+                        <div class="ov ra z10 ph10 mb2">
+                            <span class="iconify cc fs20" data-icon="clarity:mobile-solid"></span>
+                        </div>
+                        <div class="b600">Mobile: </div>
+                        <div class="_cdg" :if="globals.User.Mobile">{{globals.User.Mobile}}</div>
+                        <div :else class="_cdg">--</div>
+                        <div class="p20 pa r0 cv"><span class="iconify cc" data-icon="gravity-ui:chevron-right"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .input-check .checkbox-box {
+                stroke-dasharray: 800;
+                stroke-dashoffset: 800;
+                transition: stroke-dashoffset 0.6s ease-in;
+            }
+
+            .input-check.is-checked .checkbox-box {
+                stroke-dashoffset: 0;
+            }
+        </style>
+        <div class="w40">
+            <div class="mb20 round2x p20 l" style="border: 1px solid var(--border);">
+                <div class="w50 fs16 cap b700 mb10" style="font-family: Montserrat, sans-serif;">payment method</div>
+                <div class="pv15" style="border-bottom: 1px solid var(--border);">
+                    <label class="input-check wallet pointer">
+                        <input @change="PaymentChange" type="radio" name="PaymentMethod" value="wallet" class="h" click
+                            :required />
+                        <div class="pa">
+                            <div class="inputRadio roundc _cmain z10" style="padding: 12px; border: 1px solid var(--border);">
+                                <span class="iconify fs12 cc vh" data-icon="la:check"></span>
+                            </div>
+                            <div class="over-effect roundc cc p15"></div>
+                            <svg class="checkbox-box cc" width="25" height="25" viewBox="0 0 31 31" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15.5" cy="15.5" r="15" fill="transparent" stroke="#3C8CE6"
+                                    stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div class="pl40 b600 cap">your wallet</div>
+                    </label>
+                    <div class="balance h ml40 cap round2x ph20 pv10 mt10" style="background-color: var(--primary-grey);">
+                        <span>available balance: 123</span>
+                        <span class="sbtn primary md">Add money</span>
+                    </div>
+                </div>
+                <div class="pv15">
+                    <label class="input-check pointer">
+                        <input @change="PaymentChange" type="radio" name="PaymentMethod" value="credit-card" class="h"
+                            :required />
+                        <div class="pa">
+                            <div class="inputRadio roundc _cmain z10" style="padding: 12px; border: 1px solid var(--border);">
+                                <span class="iconify fs12 cc vh" data-icon="la:check"></span>
+                            </div>
+                            <div class="over-effect roundc cc p15"></div>
+                            <svg class="checkbox-box cc" width="25" height="25" viewBox="0 0 31 31" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15.5" cy="15.5" r="15" fill="transparent" stroke="#3C8CE6"
+                                    stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div class="pl40 b600 cap">credit-card</div>
+                    </label>
+                </div>
+            </div>
+            <div class="ph20 round2x" style="border: 1px solid var(--border); background-color: var(--primary-grey);" bind="plan,subTotal,taxes">
+                <div class="pv20 bb">
+                    <div class="flex-sb">
+                        <div class="upper fs16 b700">total</div>
+                        <div class="b600 fs20">${{subTotal*1+taxes*1}}</div>
+                    </div>
+                </div>
+                <div class="pv20">
+                    <div class="pv5 flex-sb">
+                        <div class="upper fs13 b500 l" style="font-family: Montserrat, sans-serif;">subtotal</div>
+                        <div class="b600">${{subTotal}}</div>
+                    </div>
+                    <div class="pv5 flex-sb">
+                        <div class="upper fs13 b500 l" style="font-family: Montserrat, sans-serif;">taxes</div>
+                        <div class="b600">${{taxes}}</div>
+                    </div>
+                </div>
+                <!-- <div class="l mt20">By proceeding with your purchase, you acknowledge and agree to abide by our <a href=""
+            class="u _cmain">Terms of Service</a> and affirm that you have reviewed our <a href=""
+                class="u _cmain">Privacy Policy</a></div>
+            </div> -->
+                <button type="submit" class="_cw cap sbtn primary lg w100 mb20 m_fs12">choose payment method</button>
+            </div>
+            </grid_nm>
+</form>
+<script>
+    // var PlanID, plan, subTotal = 0, taxes = 12, encourage = 'Choose 2 years and enjoy 20% discount!', service;
+    // view.scope(function (view, props) {
+    //     try {
+    //         PlanID = props.modal.id;
+    //         serv = props.modal.serv;
+    //         service = nodes[2] ? nodes[2] : serv;
+    //         plan = ObjFromArr(globals.plans[service], PlanID);
+    //         subTotal = ((plan.Price) * 12).toFixed(2);
+    //     }
+    //     catch (x) {
+    //         cl(x)
+    //     };
+    // })
+    // function PeriodChange(ev, el) {
+    //     let val = el.val();
+    //     subTotal = ((plan.Price) * (12 * val) * ((val == 3 ?
+    //         0.8 : (val == 2 ? 0.9 : 1)))).toFixed(2);
+    //     if (val * 1 + 1 == 4) {
+    //         encourage = "Top plan chosen! Max discount unlocked. Enjoy!";
+    //     } else {
+    //         encourage = `Choose ${val * 1 + 1} years and enjoy ${(val * 1) * 10}% discount!`
+    //     }
+    // }
+//     async function AddSubscription(f, d) {
+//         try {
+//             let subscription = {
+//                 Plan: plan.objectId,
+//                 ExpDate: "2026-09-10",
+//                 Name: "HanaPlan",
+//                 Period: d.Period
+//             };
+//             subscription["_then"] = [{
+//                 path: "/Privileges",
+//                 method: "post",
+//                 body: {
+//                     Subscription: "LAST_INSERT_ID",
+//                     Type: "owner",
+//                     User: globals?.User?.objectId,
+//                 }
+//             }, {
+//                 path: "/Invoices",
+//                 method: "post",
+//                 body: {
+//                     Subscription: "LAST_INSERT_ID",
+//                     User: globals?.User?.objectId,
+//                     Amount: subTotal * 1 + taxes,
+//                     IssueDate: "2024-08-03",
+//                     DueDate: "2024-08-03",
+//                     Currency: "USD",
+//                     Status: "unpaid",
+//                     PaymentMethod: d.PaymentMethod,
+//                 }
+//             }];
+//             let subsc = await engine.post("/Subscriptions", subscription);
+//             if (!subsc?.results?.[0]?.objectId) {
+
+//                 return;
+//             }
+//             subsc = subsc.results[0];
+//             $('pop-x').click();
+//             const payment = await API.post("https://pay.bea.com.lb/create", {
+//                 amount: subTotal * 1 + taxes,
+//                 currency: "USD",
+//                 description: "Order from ROXYON",
+//                 statement_description: "dmoei",
+//                 customer: {
+//                     first_name: globals?.User?.firstName,
+//                     middle_name: "",
+//                     last_name: globals?.User?.lastName,
+//                     email: globals?.User?.Email
+//                 },
+//                 metadata: {
+//                     SubscriptionID: subsc.objectId
+//                 },
+//                 options: {
+//                     receipt: {
+//                         email: true,
+//                         sms: true
+//                     },
+//                     redirect: "http://localhost:3050/admin/products/" + service
+//                 }
+//             });
+//             await engine.put("/Subscriptions/" + subsc.objectId, {
+//                 PaymentID: payment?.id
+//             });
+//             window.location.href= payment?.transaction?.url;
+
+// // var d = `
+// // <div class="gosell-gateway ov pf" style="z-index: 2147483647; background-color: rgb(0,0,0,0.2);">
+// // <iframe id="gosell-gateway"
+// // src="${payment.transaction.url}" width="100%"
+// // height="100%"
+// // style="display: block; position: absolute; inset: 0px; margin: auto; border: 0px; background: transparent;"></iframe>
+// // </div>
+// // `;
+// //             $("body").append(d);
+//         } catch (error) {
+//             cl(error);
+//         }
+//     }
+
+</script>

@@ -1,0 +1,210 @@
+<style>
+    .bfr-line::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 8px;
+        background-color: var(--purple);
+        border-radius: 1rem;
+        filter: drop-shadow(0px 0px 15px var(--purple));
+    }
+    body.light-theme .bfr-line::before{
+        filter: drop-shadow(0px 0px 0px var(--purple));
+
+    }
+    @media screen and (max-width:768px){
+        .featured-news{
+            margin: auto !important;
+        }
+    }
+    .error{
+        display: none;
+    }
+</style>
+<div bind class="flexi pt80 mt100 m_m_mt70">
+    <grid class="l" gap40 m_m_gap20 style="margin-left: 10px;">
+        <div class="w50 vm bfr-line pl40 m_m_pl30" style="max-width: 600px;">
+            <div class="fs60 m_fs50 m_m_fs22 m_m_lh30 b" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Welcome To "--" Cloud Newsroom</div>
+            <div class="fs22 m_m_fs18 m_m_lh25 mt20" style="color: var(--secondary-grey);">Embark on a virtual expedition into the beating heart of information with our Newsroom, where every headline is a pulse, and every story echoes the rhythm of the world</div>
+        </div>
+        <div class="w50 vm m_m_mt20">
+            <div class="sh20 featured-news" style="margin-left: auto; max-width: 400px; ">
+                <div class="sq round4x z100 sh40 p40" style="display: flex; flex-direction: column; justify-content: center; background-color: var(--primary-grey); border: 1px solid var(--border);">
+                    <div class="fs28 m_m_fs22 m_m_lh30 b mb40 m_m_mb20 tsh" style="background: linear-gradient(45deg, var(--purple), var(--main)); -webkit-background-clip: text; color: transparent; font-family: 'Bitter', serif; letter-spacing: 1px;">Featured News</div>
+                    <div class="carousel">
+                        <div :for="3" class="w100 round4x">
+                            <div class="lh30 oh b500 fs20 m_m_fs16" style="height: 90px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolor, nisi quia iure ad numquam non velit temporibus qui debitis cumque recusandae nihil excepturi eaque cupiditate iste quasi mollitia aspernatur.</div>
+                            <div class="fs18 m_m_fs14 mt20" style="color: var(--secondary-grey);">"--" Cloud - Jan 24 2024</div>
+                            <div class="fs18 m_m_fs16 mt10 u pointer opacity ez" style="color: var(--purple);">
+                                <span>Read Article</span>
+                                <span class="iconify vm" data-icon="line-md:arrow-right"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ov round4x z10" style="background-color: var(--second); opacity: 0.3; transform: rotate(-3deg);"></div>
+                <div class="ov roundc" style="background-color: var(--purple); opacity: 0.6; filter: blur(70px);"></div>
+            </div>
+        </div>
+    </grid>
+    <div class="mt50" view="logos"></div>
+    <div class="mt150 m_m_mt50">
+        <div class="fs50 m_fs40 m_m_fs22 m_m_lh30 mb50 m_m_mb20" style="font-family: 'Bitter', serif; letter-spacing: 1px;">Latest News</div>
+        <div wrapper>
+            <div>
+                <grid_nm class="l" gap10>
+                    <div class="w33 m_w90 wr">
+                        <div class="trans-top p40 round4x ez" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                            <div class="fs18 m_m_fs14 mb20" style="color: var(--secondary-grey);">"--" Cloud - Jan 24 2024</div>
+                            <div class="lh30 oh b500 fs20 m_m_fs16"" style="height: 90px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolor, nisi quia iure ad numquam non velit temporibus qui debitis cumque recusandae nihil excepturi eaque cupiditate iste quasi mollitia aspernatur.</div>
+                            <div class="fs18 m_m_fs16 mt10 u pointer opacity ez" style="color: var(--purple);">
+                                <span>Read Article</span>
+                                <span class="iconify vm" data-icon="line-md:arrow-right"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w33 m_w90 wr">
+                        <div class="trans-top p40 round4x ez" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                            <div class="fs18 m_m_fs14 mt20" style="color: var(--secondary-grey);">"--" Cloud - Jan 24 2024</div>
+                            <div class="lh30 oh b500 fs20 m_m_fs16" style="height: 90px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolor, nisi quia iure ad numquam non velit temporibus qui debitis cumque recusandae nihil excepturi eaque cupiditate iste quasi mollitia aspernatur.</div>
+                            <div class="fs18 m_m_fs16 mt10 u pointer opacity ez" style="color: var(--purple);">
+                                <span>Read Article</span>
+                                <span class="iconify vm" data-icon="line-md:arrow-right"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w33 m_w90 wr">
+                        <div class="trans-top p40 round4x ez" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                            <div class="fs18 m_m_fs14 mt20" style="color: var(--secondary-grey);">"--" Cloud - Jan 24 2024</div>
+                            <div class="lh30 oh b500 fs20 m_m_fs16" style="height: 90px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolor, nisi quia iure ad numquam non velit temporibus qui debitis cumque recusandae nihil excepturi eaque cupiditate iste quasi mollitia aspernatur.</div>
+                            <div class="fs18 m_m_fs16 mt10 u pointer opacity ez" style="color: var(--purple);">
+                                <span>Read Article</span>
+                                <span class="iconify vm" data-icon="line-md:arrow-right"></span>
+                            </div>
+                        </div>
+                    </div>
+                </grid_nm>
+            </div>
+        </div>
+    </div>
+    <div class="mt150 m_m_mt50">
+        <div class="fs50 m_fs40 m_m_fs22 m_m_lh30 mb50 m_m_mb20" style="font-family: 'Bitter', serif; letter-spacing: 1px;">News Releases</div>
+        <grid_nm class="l" gap10>
+            <div class="w33 m_w100">
+                <div class="trans-top p40 round4x ez" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                    <div class="fs18 m_m_fs14 mb20" style="color: var(--secondary-grey);">"--" Cloud - Jan 24 2024</div>
+                    <div class="lh30 oh b500 fs20 m_m_fs16" style="height: 90px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolor, nisi quia iure ad numquam non velit temporibus qui debitis cumque recusandae nihil excepturi eaque cupiditate iste quasi mollitia aspernatur.</div>
+                    <div class="fs18 m_m_fs16 mt10 u pointer opacity ez" style="color: var(--purple);">
+                        <span>Read Article</span>
+                        <span class="iconify vm" data-icon="line-md:arrow-right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="w33 m_w100">
+                <div class="trans-top p40 round4x ez" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                    <div class="fs18 m_m_fs14 mb20" style="color: var(--secondary-grey);">"--" Cloud - Jan 24 2024</div>
+                    <div class="lh30 oh b500 fs20 m_m_fs16" style="height: 90px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolor, nisi quia iure ad numquam non velit temporibus qui debitis cumque recusandae nihil excepturi eaque cupiditate iste quasi mollitia aspernatur.</div>
+                    <div class="fs18 m_m_fs16 mt10 u pointer opacity ez" style="color: var(--purple);">
+                        <span>Read Article</span>
+                        <span class="iconify vm" data-icon="line-md:arrow-right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="w33 m_w100">
+                <div class="trans-top p40 round4x ez" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                    <div class="fs18 m_m_fs14 mb20" style="color: var(--secondary-grey);">"--" Cloud - Jan 24 2024</div>
+                    <div class="lh30 oh b500 fs20 m_m_fs16" style="height: 90px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolor, nisi quia iure ad numquam non velit temporibus qui debitis cumque recusandae nihil excepturi eaque cupiditate iste quasi mollitia aspernatur.</div>
+                    <div class="fs18 m_m_fs16 mt10 u pointer opacity ez" style="color: var(--purple);">
+                        <span>Read Article</span>
+                        <span class="iconify vm" data-icon="line-md:arrow-right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="w50 m_w100">
+                <div class="trans-top p40 round4x ez" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                    <div class="fs18 m_m_fs14 mb20" style="color: var(--secondary-grey);">"--" Cloud - Jan 24 2024</div>
+                    <div class="lh30 oh b500 fs20 m_m_fs16" style="height: 90px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolor, nisi quia iure ad numquam non velit temporibus qui debitis cumque recusandae nihil excepturi eaque cupiditate iste quasi mollitia aspernatur.</div>
+                    <div class="fs18 m_m_fs16 mt10 u pointer opacity ez" style="color: var(--purple);">
+                        <span>Read Article</span>
+                        <span class="iconify vm" data-icon="line-md:arrow-right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="w50 m_w100">
+                <div class="trans-top p40 round4x ez" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                    <div class="fs18 m_m_fs14 mb20" style="color: var(--secondary-grey);">"--" Cloud - Jan 24 2024</div>
+                    <div class="lh30 oh b500 fs20 m_m_fs16" style="height: 90px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolor, nisi quia iure ad numquam non velit temporibus qui debitis cumque recusandae nihil excepturi eaque cupiditate iste quasi mollitia aspernatur.</div>
+                    <div class="fs18 m_m_fs16 mt10 u pointer opacity ez" style="color: var(--purple);">
+                        <span>Read Article</span>
+                        <span class="iconify vm" data-icon="line-md:arrow-right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="w100">
+                <div class="trans-top p40 round4x ez" style="background-color: var(--primary-grey); border: 1px solid var(--border);">
+                    <div class="fs18 m_m_fs14 mb20" style="color: var(--secondary-grey);">"--" Cloud - Jan 24 2024</div>
+                    <div class="lh30 oh b500 fs20 m_m_fs16" style="height: 90px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolor, nisi quia iure ad numquam non velit temporibus qui debitis cumque recusandae nihil excepturi eaque cupiditate iste quasi mollitia aspernatur.</div>
+                    <div class="fs18 m_m_fs16 mt10 u pointer opacity ez" style="color: var(--purple);">
+                        <span>Read Article</span>
+                        <span class="iconify vm" data-icon="line-md:arrow-right"></span>
+                    </div>
+                </div>
+            </div>
+        </grid_nm>
+        <a href="all_news">
+            <div class="sbtn purple fs16 m_m_fs14 mt20">View All</div>
+        </a>
+    </div>
+    <div class="mt150 m_m_mt50">
+        <div view=adv2></div>
+    </div>
+    <div class="mt150 m_m_mt50">
+        <div class="fs50 m_fs40 m_m_fs22 m_m_lh30 g_nm mb50 m_m_mb20" style=" font-family: 'Bitter', serif; letter-spacing: 1px;">Join our mailing list for the freshest updates delivered directly to your inbox</div>
+        <label>
+            <div class="round4x ph100 m_ph20">
+                <div class="round4x">
+                    <input type="email" name="" value="" class="input-email _bgw b0 w100 ph20 m_m_ph10 lh60 m_m_lh40 round4x fs20 m_m_fs16 pr140 m_m_pr80" placeholder="Kindly Enter Your Email.." :required value="" />
+                    <div class="pa t0 r0 b0 fs20 m_m_fs14 b500 pv15 m_m_pv10 opacity ez ph30 m_m_ph10 pointer _cw" style="background-color: var(--main); border-top-right-radius: 1rem; border-bottom-right-radius: 1rem;">Submit</div>
+                </div>
+            </div>
+            <div class="error red fs16">
+              <span class="iconify vm ml5" data-icon="mdi:information-outline"></span><span class="vm">
+                Kindly write your email
+              </span>
+            </div>
+          </label>
+          <style>
+            body.light-theme .input-email{
+                background-color: #f8fafc;
+            }
+            .input-email::placeholder{
+                color: var(--secondary-grey) !important;
+                font-size: 20px;
+                font-weight: 500;
+            }
+            @media screen and (max-width:486px) {
+                .input-email::placeholder{
+                font-size: 12px;
+            }
+            }
+          </style>
+    </div>
+    <div  class="mt150 m_m_mt50" view="adv"></div>
+</div>
+<script>
+    st(0);
+    let flkty;
+    setTimeout(() => {
+        let opts = '{"autoPlay":true,"cellAlign":"center","contain": true,"freeScroll":false,"wrapAround":false,"prevNextButtons":false,"pageDots":false,"draggable":true,"pauseAutoPlayOnHover":false, "adaptiveHeight": true}';
+        flkty = $(".carousel").show().flickity(JSON.parse(opts));
+    });
+</script>
+<settings>
+    {
+    hasFooter: true,
+    hasHeader: false,
+    hasNav: true
+    }
+</settings>
