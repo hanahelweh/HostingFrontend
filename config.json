@@ -22,7 +22,7 @@
         "host": "roxyon.com",
         "username": "gwf",
         "password": "18789Raad7555",
-        "remotePath": "/",
+        "remotePath": "/hosting-front-eight.vercel.app/",
         "concurrency": 4,
         "protocol": "ftp",
         "port": 21,
