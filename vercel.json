@@ -8,9 +8,6 @@
           "distDir": "dist"
         }
       }
-    ],
-    "scripts": {
-      "build": "npx lm build"
-    }
+    ]
   }
   
