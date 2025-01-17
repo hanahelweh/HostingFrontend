@@ -1,9 +1,0 @@
-{
-  "devDependencies": {
-    "lm": "^0.0.0"
-  },
-  "scripts": {
-    "build": "lm build",
-    "start": "lm run"
-  }
-}
