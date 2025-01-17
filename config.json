@@ -11,7 +11,7 @@
     },
     "apis": [
         {
-            "baseURL": "https://www.beaapis.com/1",
+            "baseURL": "",
             "headers": {
                 "X-BEA-Application-ID": "YOUR_APPLICATION_ID",
                 "X-BEA-Authorization": "YOUR_REST_API_KEY"
@@ -19,9 +19,9 @@
         }
     ],
     "ftp": {
-        "host": "ftp_host",
-        "username": "ftp_username",
-        "password": "ftp_password",
+        "host": "roxyon.com",
+        "username": "gwf",
+        "password": "18789Raad7555",
         "remotePath": "/",
         "concurrency": 4,
         "protocol": "ftp",
