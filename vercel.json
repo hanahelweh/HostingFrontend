@@ -1,0 +1,21 @@
+{
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/node",
+        "config": {
+          "maxLambdaSize": "50mb"
+        },
+        "scripts": {
+          "start": "lm run"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.js"
+      }
+    ],
+  }
+  
